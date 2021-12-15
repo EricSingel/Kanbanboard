@@ -1,0 +1,110 @@
+body {
+    display: flex;
+}
+
+.AddTask-top-section {
+    padding: 25px;
+}
+
+.AddTask-top-section-1 {
+    margin-bottom: 5px;
+}
+
+.AddTask-top-section-2 {
+    color: rgb(11, 33, 133);
+}
+
+.Addtask-table-section {
+    height: 80vh;
+    width: 167vh;
+    background-color: #ebf2f8;
+    border-radius: 5px;
+    margin: 25px;
+}
+
+.Addtask-table-section-Row {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px;
+}
+
+.Addtask-table-section-span {
+    font-weight: bold;
+    color: rgb(11, 33, 133);
+}
+
+.Addtask-table-section-input {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    height: 50px;
+    width: 500px;
+}
+
+.Addtask-table-section-input-date {
+    width: 508px;
+    display: flex;
+    align-items: center;
+}
+
+.Addtask-table-section-input-date-input {
+    width: 458px;
+    height: 50px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-right: 0;
+    border-left: 2px solid gray;
+    border-bottom: 2px solid gray;
+    border-top: 2px solid gray;
+}
+
+.calender-btn {
+    border: 2px solid gray;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.calender-btn img {
+    margin: 2px;
+}
+
+.Addtask-table-section-input-description {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    height: 225px;
+    width: 500px;
+}
+
+.Addtask-table-section-thirdRow-assignedTo {
+    width: 508px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.Addtask-table-section-buttons-section {
+    display: flex;
+    justify-content: end;
+}
+
+.cancel-createTask-buttons {
+    color: rgb(11, 33, 133);
+    margin-right: 10px;
+    margin-left: 10px;
+    font-weight: bold;
+    height: 50px;
+    border-radius: 5px;
+    background-color: transparent;
+    border: 0;
+}
+
+.cancel-createTask-buttons:hover {
+    background-color: rgb(11, 33, 133);
+    color: white;
+    cursor: pointer;
+}
