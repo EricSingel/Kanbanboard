@@ -1,15 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Backlog</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
     <script src="js/index.js"></script>
-    <link rel="stylesheet" href="css/nav-bar.css">
-    <link rel="stylesheet" href="css/main.css">
-</head>
-<body onload="includeHTML()">
+    <script src="js/backlog.js"></script>
+    <link rel="stylesheet" href="css/nav-bar.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/backlog.css" />
+  </head>
+  <body onload="init()">
     <div w3-include-html="templates/nav-bar.html"></div>
-</body>
+    <main>
+      <div class="header-section">
+        <h1>Backlog</h1>
+        <span class="text">Learning Management System Project</span>
+      </div>
+      <div class="table-container">
+        <table id="backlogTable">
+          <tr>
+            <th>ASSIGNED TO</th>
+            <th>CATEGORY</th>
+            <th>DETAILS</th>
+          </tr>
+          <tr class="task-row">
+            <td>
+              <div class="user-container">
+                <div id="userColor"></div>
+                <img id="userImg" src="assets/img/icon plus.png" alt="" />
+                <div class="name-div">
+                  <span>Eric Singelmann-Seimel</span>
+                  <span class="email">eric@gmail.com</span>
+                </div>
+              </div>
+            </td>
+            <td>Marketing</td>
+            <td>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio
+              similique, tempora atque rem ea delectus minus sed maxime nisi.
+              Sed dolor maxime placeat. Ipsum possimus ab unde expedita vero
+              perspiciatis.
+            </td>
+          </tr>
+        </table>
+      </div>
+    </main>
+  </body>
 </html>
