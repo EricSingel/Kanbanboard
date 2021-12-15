@@ -22,8 +22,7 @@ main {
 
 table {
   width: 100%;
-  border-collapse: collapse;
-  border-spacing: 0;
+  border-spacing: 0 8px;
 }
 table tr:first-child {
   height: 48px;
@@ -43,6 +42,9 @@ table th:first-child {
 }
 table th:nth-child(2) {
   text-align: left;
+}
+table td:hover {
+  cursor: pointer;
 }
 
 .task-row {

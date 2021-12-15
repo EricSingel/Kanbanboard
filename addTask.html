@@ -1,68 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-        rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
     <script src="js/index.js"></script>
-    <link rel="stylesheet" href="css/nav-bar.css">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/addTask.css">
-</head>
+    <link rel="stylesheet" href="css/nav-bar.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/addTask.css" />
+  </head>
 
-<body onload="includeHTML()">
+  <body onload="includeHTML()">
     <div w3-include-html="templates/nav-bar.html"></div>
     <div class="AddTask-section">
-        <div class="AddTask-top-section">
-            <h1 class="AddTask-top-section-1">Add Task</h1>
-            <span class="AddTask-top-section-2">Learning Management System Project</span>
+      <div class="AddTask-top-section">
+        <h1 class="AddTask-top-section-1">Add Task</h1>
+        <span class="AddTask-top-section-2"
+          >Learning Management System Project</span
+        >
+      </div>
+      <div class="Addtask-table-section">
+        <div class="Addtask-table-section-Row">
+          <div class="Addtask-table-section-firstRow-title">
+            <span class="Addtask-table-section-span">TITLE</span><br />
+            <input
+              class="Addtask-table-section-input"
+              type="text"
+              placeholder="Management meeting preparation"
+            />
+          </div>
+          <div class="Addtask-table-section-firstRow-dueDate">
+            <span class="Addtask-table-section-span">DUE DATE</span><br />
+            <div class="Addtask-table-section-input-date">
+              <input
+                class="Addtask-table-section-input-date-input"
+                type="text"
+              />
+              <div class="calender-btn">
+                <img src="assets/img/icons8-calendar-150.png" />
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="Addtask-table-section">
-            <div class="Addtask-table-section-Row">
-                <div class="Addtask-table-section-firstRow-title">
-                    <span class="Addtask-table-section-span">TITLE</span><br>
-                    <input class="Addtask-table-section-input" type="text" placeholder="Management meeting preparation">
-                </div>
-                <div class="Addtask-table-section-firstRow-dueDate">
-                    <span class="Addtask-table-section-span">DUE DATE</span><br>
-                    <div class="Addtask-table-section-input-date">
-                        <input class="Addtask-table-section-input-date-input" type="text">
-                        <div class="calender-btn"><img src="assets/img/icons8-calendar-150.png"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="Addtask-table-section-Row">
-                <div class="Addtask-table-section-firstRow-title">
-                    <span class="Addtask-table-section-span">CATEGORY</span><br>
-                    <input class="Addtask-table-section-input" type="text">
-                </div>
-                <div class="Addtask-table-section-firstRow-dueDate">
-                    <span class="Addtask-table-section-span">URGENCY</span><br>
-                    <input class="Addtask-table-section-input" type="text">
-                </div>
-            </div>
-            <div class="Addtask-table-section-Row">
-                <div class="Addtask-table-section-firstRow-title">
-                    <span class="Addtask-table-section-span">DESCRIPTION</span><br>
-                    <input class="Addtask-table-section-input-description" type="text">
-                </div>
-                <div class="Addtask-table-section-thirdRow-assignedTo">
-                    <span class="Addtask-table-section-span">ASSIGNED TO</span><br>
-                    <div class="Addtask-table-section-buttons-section">
-                        <button class="cancel-createTask-buttons">CANCEL</button>
-                        <button class="cancel-createTask-buttons">CREATE TASK</button>
-                    </div>
-                </div>
-            </div>
+        <div class="Addtask-table-section-Row">
+          <div class="Addtask-table-section-firstRow-title">
+            <span class="Addtask-table-section-span">CATEGORY</span><br />
+            <input class="Addtask-table-section-input" type="text" />
+          </div>
+          <div class="Addtask-table-section-firstRow-dueDate">
+            <span class="Addtask-table-section-span">URGENCY</span><br />
+            <input class="Addtask-table-section-input" type="text" />
+          </div>
         </div>
+        <div class="Addtask-table-section-Row">
+          <div class="Addtask-table-section-firstRow-title">
+            <span class="Addtask-table-section-span">DESCRIPTION</span><br />
+            <input
+              class="Addtask-table-section-input-description"
+              type="text"
+            />
+          </div>
+          <div class="Addtask-table-section-thirdRow-assignedTo">
+            <span class="Addtask-table-section-span">ASSIGNED TO</span><br />
+            <div class="Addtask-table-section-buttons-section">
+              <button class="cancel-createTask-buttons">CANCEL</button>
+              <button class="cancel-createTask-buttons">CREATE TASK</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
-</body>
-
+    <!-- DropdownMenu -->
+    <select id="cars" name="cars">
+      <option value="volvo">Volvo</option>
+      <option value="saab">Saab</option>
+      <option value="fiat">Fiat</option>
+      <option value="audi">Audi</option>
+    </select>
+  </body>
 </html>
