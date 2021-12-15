@@ -2,17 +2,21 @@ body {
     display: flex;
 }
 
-.AddTask-top-section {
+/*Addtask header*/
+
+.AddTask-header {
     padding: 25px;
 }
 
-.AddTask-top-section-2 {
+.AddTask-header-subtitle {
     color: rgb(68, 68, 209);
     font-weight: bold;
 }
 
+/*Addtask table*/
+
 .Addtask-table-section {
-    height: 80vh;
+    height: 70vh;
     width: 167vh;
     background-color: #ebf2f8;
     border-radius: 5px;
@@ -30,52 +34,69 @@ body {
     color: rgb(68, 68, 209);
 }
 
-.Addtask-table-section-input {
+.title-input {
     margin-top: 10px;
     margin-bottom: 10px;
     border-radius: 5px;
-    height: 50px;
-    width: 500px;
+    height: 48px;
+    width: 489px;
+    border: 1px solid grey;
+    padding-left: 15px;
 }
 
-.Addtask-table-section-input-date {
+.title-input {
+    outline: none;
+}
+
+.Addtask-table-section-date-input {
     width: 508px;
     display: flex;
     align-items: center;
 }
 
-.Addtask-table-section-input-date-input {
-    width: 458px;
-    height: 50px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-    border-right: 0;
-    border-left: 2px solid gray;
-    border-bottom: 2px solid gray;
-    border-top: 2px solid gray;
-}
-
-.calender-btn {
-    border: 2px solid gray;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
-    background-color: white;
-    cursor: pointer;
-    display: flex;
-}
-
-.calender-btn img {
-    margin: 4px;
-}
-
-.Addtask-table-section-input-description {
+.calender {
     margin-top: 10px;
     margin-bottom: 10px;
     border-radius: 5px;
-    height: 225px;
+    height: 50px;
     width: 500px;
+    border: 1px solid grey;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.calender:focus {
+    outline: none;
+}
+
+.dropdown-menu {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    height: 52px;
+    width: 508px;
+    padding: 15px;
+    cursor: pointer;
+}
+
+.dropdown-menu:focus {
+    outline: none;
+}
+
+.description {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    width: 476px;
+    height: 125px;
+    border: 1px solid grey;
+    padding: 15px;
+    resize: none;
+    font-family: inherit;
+}
+
+.description:focus {
+    outline: none;
 }
 
 .Addtask-table-section-thirdRow-assignedTo {
