@@ -15,8 +15,46 @@ main{
     align-items: center;
 }
 
-.board-div div{
+.blue{
+    background-color: blue;
+}
+
+.yellow{
+    background-color: rgb(229, 255, 0);
+}
+
+.red{
+    background-color: rgb(255, 0, 0);
+}
+
+.green{
+    background-color: rgb(30, 255, 0);
+}
+
+#color-line{
+    background-color: rgb(11, 33, 133);
+    height: 10px;
+}
+
+.board-field{
     height: 800px;
     width: 300px;
     background-color: rgb(238, 238, 238);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#allTasks{
+    background-color: white;
+    height: 100px;
+    width: 270px;
+    margin-top: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+#allTasks p{
+    margin-left: 10px;
 }

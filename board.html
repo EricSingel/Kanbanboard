@@ -7,16 +7,14 @@
     <title>Document</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"rel="stylesheet"/>
     <script src="js/index.js"></script>
+    <script src="js/board.js"></script>
     <link rel="stylesheet" href="css/nav-bar.css" />
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/board.css" />
   </head>
-  <body onload="includeHTML()">
+  <body onload="includeHTML() & showTasks()">
     <main>
       <div>
         <div w3-include-html="templates/nav-bar.html"></div>
@@ -25,22 +23,30 @@
       <div class="board-fields">
         <div class="board-div">
           <h1>ToDo</h1>
-          <div></div>
+          <div class="board-field" ondrop="moveTo('ToDo')" ondragover="allowDrop(event)" id="ToDo">
+
+          </div>
         </div>
 
         <div class="board-div">
           <h1>In Progress</h1>
-          <div></div>
+          <div class="board-field" ondrop="moveTo('inProgress')" ondragover="allowDrop(event)" id="inProgress">
+
+          </div>
         </div>
 
         <div class="board-div">
           <h1>Testing</h1>
-          <div></div>
+          <div class="board-field" ondrop="moveTo('Testing')" ondragover="allowDrop(event)" id="Testing">
+
+          </div>
         </div>
 
         <div class="board-div">
           <h1>Done</h1>
-          <div></div>
+          <div class="board-field" ondrop="moveTo('Done')" ondragover="allowDrop(event)" id="Done">
+
+          </div>
         </div>
       </div>
     </main>
