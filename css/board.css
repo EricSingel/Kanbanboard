@@ -47,14 +47,39 @@ main{
 
 #allTasks{
     background-color: white;
-    height: 100px;
+    height: 150px;
     width: 270px;
     margin-top: 10px;
     border-radius: 10px;
     cursor: pointer;
     overflow: hidden;
+    position: relative;
+}
+
+#allTasks button{
+    border: none;
+    background-color: rgb(255, 0, 0);
+    color: white;
+    font-size: 10px;
+    padding: 4px;
+    border-radius: 3px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+#allTasks img{
+    width: 30px;
+    margin-left: 10px;
 }
 
 #allTasks p{
     margin-left: 10px;
+}
+
+.person-info{
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
 }

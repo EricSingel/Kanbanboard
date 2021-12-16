@@ -3,22 +3,32 @@
 let tasks = [{
     'id': 0,
     'title': 'Nav-Bar erstellen',
+    'img' : 'assets/img/icon plus.png',
+    'person': 'Dieter',
     category: 'ToDo'
 }, {
     'id': 1,
     'title': 'E-Mails beantworten',
+    'img' : 'assets/img/icon plus.png',
+    'person': 'Dieter',
     category: 'inProgress'
 }, {
     'id': 2,
     'title': 'Kundengespräch',
+    'img' : 'assets/img/icon plus.png',
+    'person': 'Jürgen',
     category: 'Done'
 },{
     'id': 3,
     'title': 'software testen',
+    'img' : 'assets/img/icon plus.png',
+    'person': 'Hans',
     category: 'Testing'
 },{
     'id': 4,
     'title': 'app responsive machen',
+    'img' : 'assets/img/icon plus.png',
+    'person': 'Hans',
     category: 'ToDo'
 }];
 
@@ -57,23 +67,24 @@ for(let i = 0;i < testingTask.length; i++){
     const element = testingTask[i];
     document.getElementById('Testing').innerHTML += generateTask(element);
 }
-paintTasks();
+
+paintTasks(0);
 }
 
-function paintTasks(){
-    if(tasks.category == 'ToDO'){
+function paintTasks(i){
+    if(tasks[i].category == 'ToDo'){
         document.getElementById('color-line').classList.add('blue');
     }
 
-    if(tasks.category == 'inProgress'){
+    if(tasks[i].category == 'inProgress'){
         document.getElementById('color-line').classList.add('yellow');
     }
 
-    if(tasks.category == 'Testing'){
+    if(tasks[i].category == 'Testing'){
         document.getElementById('color-line').classList.add('red');
     }
 
-    if(tasks.category == 'Done'){
+    if(tasks[i].category == 'Done'){
         document.getElementById('color-line').classList.add('green');
     }
 }
@@ -81,8 +92,13 @@ function paintTasks(){
 function generateTask(element){
     return `
     <div id="allTasks" ondragstart="startDragging(${element['id']})" draggable="true">
-    <div id="color-line"></div>
-    <p>${element['title']}</p>
+        <div id="color-line"></div>
+        <p>${element['title']}</p>
+            <div class="person-info">
+                <img src="${element['img']}">
+                <p>${element['person']}</p>
+            </div>
+        <button>Delete</button>
     </div>`;
 }
 
