@@ -1,6 +1,6 @@
-function init() {
+async function init() {
   includeHTML();
-  load();
+  await load();
 }
 
 function addTask() {
