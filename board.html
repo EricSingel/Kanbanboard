@@ -23,28 +23,28 @@
       <div class="board-fields">
         <div class="board-div">
           <h1>ToDo</h1>
-          <div class="board-field" ondrop="moveTo('ToDo')" ondragover="allowDrop(event)" id="ToDo">
+          <div class="board-field" ondragleave="removeHighlight('ToDo')" ondrop="moveTo('ToDo'); removeHighlight('ToDo')" ondragover="allowDrop(event); highlight('ToDo')" id="ToDo">
 
           </div>
         </div>
 
         <div class="board-div">
           <h1>In Progress</h1>
-          <div class="board-field" ondrop="moveTo('inProgress')" ondragover="allowDrop(event)" id="inProgress">
+          <div class="board-field" ondragleave="removeHighlight('inProgress')" ondrop="moveTo('inProgress'); removeHighlight('inProgress')" ondragover="allowDrop(event); highlight('inProgress')" id="inProgress">
 
           </div>
         </div>
 
         <div class="board-div">
           <h1>Testing</h1>
-          <div class="board-field" ondrop="moveTo('Testing')" ondragover="allowDrop(event)" id="Testing">
+          <div class="board-field" ondragleave="removeHighlight('Testing')" ondrop="moveTo('Testing'); removeHighlight('Testing')" ondragover="allowDrop(event); highlight('Testing')" id="Testing">
 
           </div>
         </div>
 
         <div class="board-div">
           <h1>Done</h1>
-          <div class="board-field" ondrop="moveTo('Done')" ondragover="allowDrop(event)" id="Done">
+          <div class="board-field" ondragleave="removeHighlight('Done')" ondrop="moveTo('Done'); removeHighlight('Done')" ondragover="allowDrop(event); highlight('Done')" id="Done">
 
           </div>
         </div>

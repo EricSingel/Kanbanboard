@@ -94,3 +94,7 @@ main{
     align-items: center;
     margin-top: 15px;
 }
+
+.background-fields{
+    background-color: rgb(209, 209, 209);
+}
