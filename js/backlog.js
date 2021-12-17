@@ -1,13 +1,17 @@
 function init() {
   includeHTML();
-  addNewBacklogTR();
+  load();
+  renderBacklogTask();
 }
 
 function renderBacklogTask() {
-  let table = document.getElementById('backlogTable');
+  for (let i = 0; i < tasks.length; i++) {
+    const task = tasks[i];
+    addNewBacklogTR(task, i);
+  }
 }
 
-function addNewBacklogTR() {
+function addNewBacklogTR(task, i) {
   let table = document.getElementById('backlogTable');
   let newRow = table.insertRow(table.rows.length);
   newRow.classList.add('task-row');
@@ -19,28 +23,42 @@ function addNewBacklogTR() {
 
   cell1.innerHTML = `
   <div class="user-container">
-    <div id="userColorBL"></div>
-    <img id="userImgBL" src="assets/img/icon plus.png" alt="" />
+    <div id="userColorBL${i}"></div>
+    <img id="userImgBL${i}" src="assets/img/icon plus.png" alt="" />
     <div class="name-div">
-      <span id='nameBL'>Eric Singelmann-Seimel</span>
-      <span id='emailBL' class="email">eric@gmail.com</span>
+      <span id='nameBL${i}'>Eric Singelmann-Seimel</span>
+      <span id='emailBL${i}' class="email">eric@gmail.com</span>
     </div>
   </div>
   `;
 
   cell2.innerHTML = `
-  <div id='categoryBL'>
+  <div id='categoryBL${i}'>
     Marketing
   </div>
   `;
 
   cell3.innerHTML = `
-  <div id = 'descriptionBL'>
+  <div id = 'detailsBL${i}'>
   Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio
   similique, tempora atque rem ea delectus minus sed maxime nisi.
   Sed dolor maxime placeat. Ipsum possimus ab unde expedita vero
   perspiciatis.
   </div>
+  `;
+
+  addTasksValues(task, i);
+}
+
+function addTasksValues(task, i) {
+  let category = document.getElementById('categoryBL' + i);
+  let details = document.getElementById('detailsBL' + i);
+
+  category.innerHTML = task.category;
+  details.innerHTML = `
+  ${task.title}<br>
+  Due Date: ${task.date}<br>
+  Urgency: ${task.urgency}
   `;
 }
 

@@ -1,47 +1,51 @@
-//TODO Beispielkarte
+function init() {
+  includeHTML();
+  load();
+  showTasks();
+}
 
-let tasks = [
+let taskss = [
   {
     id: 0,
     title: 'Nav-Bar erstellen',
     img: 'assets/img/icon plus.png',
     person: 'Dieter',
-    category: 'ToDo',
+    status: 'ToDo',
   },
   {
     id: 1,
     title: 'E-Mails beantworten',
     img: 'assets/img/icon plus.png',
     person: 'Dieter',
-    category: 'inProgress',
+    status: 'inProgress',
   },
   {
     id: 2,
     title: 'Kundengespräch',
     img: 'assets/img/icon plus.png',
     person: 'Jürgen',
-    category: 'Done',
+    status: 'Done',
   },
   {
     id: 3,
     title: 'software testen',
     img: 'assets/img/icon plus.png',
     person: 'Hans',
-    category: 'Testing',
+    status: 'Testing',
   },
   {
     id: 4,
     title: 'app responsive machen',
     img: 'assets/img/icon plus.png',
     person: 'Hans',
-    category: 'ToDo',
+    status: 'ToDo',
   },
 ];
 
 let currentDragged;
 
 function showTasks() {
-  let ToDoTask = tasks.filter((t) => t['category'] == 'ToDo');
+  let ToDoTask = tasks.filter((t) => t['status'] == 'ToDo');
   document.getElementById('ToDo').innerHTML = '';
 
   for (let i = 0; i < ToDoTask.length; i++) {
@@ -53,7 +57,7 @@ function showTasks() {
     paintTasks(element.id);
   }
 
-  let inProgressTask = tasks.filter((t) => t['category'] == 'inProgress');
+  let inProgressTask = tasks.filter((t) => t['status'] == 'inProgress');
   document.getElementById('inProgress').innerHTML = '';
 
   for (let i = 0; i < inProgressTask.length; i++) {
@@ -65,7 +69,7 @@ function showTasks() {
     paintTasks(element.id);
   }
 
-  let doneTask = tasks.filter((t) => t['category'] == 'Done');
+  let doneTask = tasks.filter((t) => t['status'] == 'Done');
   document.getElementById('Done').innerHTML = '';
 
   for (let i = 0; i < doneTask.length; i++) {
@@ -77,7 +81,7 @@ function showTasks() {
     paintTasks(element.id);
   }
 
-  let testingTask = tasks.filter((t) => t['category'] == 'Testing');
+  let testingTask = tasks.filter((t) => t['status'] == 'Testing');
   document.getElementById('Testing').innerHTML = '';
 
   for (let i = 0; i < testingTask.length; i++) {
@@ -91,19 +95,19 @@ function showTasks() {
 }
 
 function paintTasks(i) {
-  if (tasks[i].category == 'ToDo') {
+  if (tasks[i].status == 'ToDo') {
     document.getElementById('color-line' + i).classList.add('blue');
   }
 
-  if (tasks[i].category == 'inProgress') {
+  if (tasks[i].status == 'inProgress') {
     document.getElementById('color-line' + i).classList.add('yellow');
   }
 
-  if (tasks[i].category == 'Testing') {
+  if (tasks[i].status == 'Testing') {
     document.getElementById('color-line' + i).classList.add('red');
   }
 
-  if (tasks[i].category == 'Done') {
+  if (tasks[i].status == 'Done') {
     document.getElementById('color-line' + i).classList.add('green');
   }
 }
@@ -137,8 +141,8 @@ function allowDrop(ev) {
   ev.preventDefault();
 }
 
-function moveTo(category) {
-  tasks[currentDragged]['category'] = category;
+function moveTo(status) {
+  tasks[currentDragged]['status'] = status;
 
   showTasks();
 }

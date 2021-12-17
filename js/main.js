@@ -17,3 +17,17 @@ let users = [
 ];
 
 let tasks = [];
+
+function save() {
+  let tasksAsText = JSON.stringify(tasks);
+  localStorage.setItem('tasks', tasksAsText);
+}
+
+function load() {
+  let tasksAsText = localStorage.getItem('tasks');
+  tasks = JSON.parse(tasksAsText);
+  for (let i = 0; i < tasks.length; i++) {
+    const task = tasks[i];
+    task.id = i;
+  }
+}

@@ -21,9 +21,10 @@
     <script src="js/addTask.js"></script>
   </head>
 
-  <body onload="includeHTML()">
+  <body onload="init()">
     <div w3-include-html="templates/nav-bar.html"></div>
-    <form class="AddTask-section" onsubmit="addTask(); return false;">
+    <div class="AddTask-section">
+      <!--onsubmit="addTask(); return false;"-->
       <div class="AddTask-header">
         <h1>Add Task</h1>
         <span class="AddTask-header-subtitle"
@@ -100,13 +101,14 @@
             <span class="Addtask-table-section-span">ASSIGNED TO</span><br />
             <div class="Addtask-table-section-buttons-section">
               <button class="cancel-createTask-buttons">CANCEL</button>
-              <button type="submit" class="cancel-createTask-buttons">
+              <button onclick="addTask()" class="cancel-createTask-buttons">
+                <!--type="submit"-->
                 CREATE TASK
               </button>
             </div>
           </div>
         </div>
       </div>
-    </form>
+    </div>
   </body>
 </html>

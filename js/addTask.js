@@ -1,3 +1,8 @@
+function init() {
+  includeHTML();
+  load();
+}
+
 function addTask() {
   let title = document.getElementById('title').value;
   let date = document.getElementById('date').value;
@@ -10,7 +15,9 @@ function addTask() {
     category: category,
     urgency: urgency,
     description: description,
+    status: 'ToDo',
   };
 
   tasks.push(task);
+  save();
 }
