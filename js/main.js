@@ -2,6 +2,7 @@
 setURL(
   'http://gruppe-141.developerakademie.net/Kanbanboard/smallest_backend_ever-master'
 );
+
 let users = [
   {
     name: 'Hans',

@@ -4,44 +4,6 @@ async function init() {
   showTasks();
 }
 
-let taskss = [
-  {
-    id: 0,
-    title: 'Nav-Bar erstellen',
-    img: 'assets/img/icon plus.png',
-    person: 'Dieter',
-    status: 'ToDo',
-  },
-  {
-    id: 1,
-    title: 'E-Mails beantworten',
-    img: 'assets/img/icon plus.png',
-    person: 'Dieter',
-    status: 'inProgress',
-  },
-  {
-    id: 2,
-    title: 'Kundengespräch',
-    img: 'assets/img/icon plus.png',
-    person: 'Jürgen',
-    status: 'Done',
-  },
-  {
-    id: 3,
-    title: 'software testen',
-    img: 'assets/img/icon plus.png',
-    person: 'Hans',
-    status: 'Testing',
-  },
-  {
-    id: 4,
-    title: 'app responsive machen',
-    img: 'assets/img/icon plus.png',
-    person: 'Hans',
-    status: 'ToDo',
-  },
-];
-
 let currentDragged;
 
 function showTasks() {
@@ -116,11 +78,12 @@ function generateTask(element, i) {
   return `
     <div id="allTasks" ondragstart="startDragging(${element['id']})" draggable="true">
         <div id="color-line${i}" class="color-line"></div>
-        <p>${element['title']}</p>
+        <p class="title">${element['title']}</p>
             <div class="person-info">
                 <img src="${users[0].img}">
-                <p>${element['person']}</p>
+                <p>${users[0].name}</p>
             </div>
+            <p class="description">${element['description']}</p>
         <button>Delete</button>
     </div>`;
 }
