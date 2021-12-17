@@ -31,24 +31,24 @@ function showTasks() {
     paintTasks(element.id);
   }
 
-  let doneTask = tasks.filter((t) => t['status'] == 'Done');
-  document.getElementById('Done').innerHTML = '';
-
-  for (let i = 0; i < doneTask.length; i++) {
-    const element = doneTask[i];
-    document.getElementById('Done').innerHTML += generateTask(
-      element,
-      element.id
-    );
-    paintTasks(element.id);
-  }
-
   let testingTask = tasks.filter((t) => t['status'] == 'Testing');
   document.getElementById('Testing').innerHTML = '';
 
   for (let i = 0; i < testingTask.length; i++) {
     const element = testingTask[i];
     document.getElementById('Testing').innerHTML += generateTask(
+      element,
+      element.id
+    );
+    paintTasks(element.id);
+  }
+
+  let doneTask = tasks.filter((t) => t['status'] == 'Done');
+  document.getElementById('Done').innerHTML = '';
+
+  for (let i = 0; i < doneTask.length; i++) {
+    const element = doneTask[i];
+    document.getElementById('Done').innerHTML += generateTask(
       element,
       element.id
     );
@@ -65,12 +65,12 @@ function paintTasks(i) {
     document.getElementById('color-line' + i).classList.add('yellow');
   }
 
-  if (tasks[i].status == 'Testing') {
-    document.getElementById('color-line' + i).classList.add('red');
-  }
-
   if (tasks[i].status == 'Done') {
     document.getElementById('color-line' + i).classList.add('green');
+  }
+
+  if (tasks[i].status == 'Testing') {
+    document.getElementById('color-line' + i).classList.add('red');
   }
 }
 
