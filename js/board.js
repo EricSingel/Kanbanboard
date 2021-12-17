@@ -106,12 +106,22 @@ function startDragging(id){
     currentDragged = id;
 }
 
+function highlight(id){
+    document.getElementById(id).classList.add('background-fields');
+}
+
+function removeHighlight(id){
+    document.getElementById(id).classList.remove('background-fields');
+}
+
 function allowDrop(ev) {
     ev.preventDefault();
+    
 }
 
 function moveTo(category){
     tasks[currentDragged]['category'] = category;
+    
     showTasks();
    
 }
