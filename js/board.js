@@ -118,7 +118,7 @@ function generateTask(element, i) {
         <div id="color-line${i}" class="color-line"></div>
         <p>${element['title']}</p>
             <div class="person-info">
-                <img src="${element['img']}">
+                <img src="${users[0].img}">
                 <p>${element['person']}</p>
             </div>
         <button>Delete</button>
