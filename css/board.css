@@ -1,100 +1,99 @@
-main{
-    display: flex;
+main {
+  display: flex;
 }
 
-.board-fields{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    flex: 1;
+.board-fields {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex: 1;
 }
 
-.board-div{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.board-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.blue{
-    background-color: blue;
+.blue {
+  background-color: blue;
 }
 
-.yellow{
-    background-color: rgb(229, 255, 0);
+.yellow {
+  background-color: rgb(229, 255, 0);
 }
 
-.red{
-    background-color: rgb(255, 0, 0);
+.red {
+  background-color: rgb(255, 0, 0);
 }
 
-.green{
-    background-color: rgb(30, 255, 0);
+.green {
+  background-color: rgb(30, 255, 0);
 }
 
-#color-line{
-    background-color: rgb(11, 33, 133);
-    height: 10px;
+.color-line {
+  height: 10px;
 }
 
-.board-field{
-    height: 800px;
-    width: 300px;
-    background-color: rgb(238, 238, 238);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border-radius: 15px;
+.board-field {
+  height: 800px;
+  width: 300px;
+  background-color: rgb(238, 238, 238);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 15px;
 }
 
-#allTasks{
-    background-color: white;
-    height: 150px;
-    width: 270px;
-    margin-top: 10px;
-    border-radius: 10px;
-    cursor: pointer;
-    overflow: hidden;
-    position: relative;
-    transition: 200ms ease-in-out;
+#allTasks {
+  background-color: white;
+  height: 150px;
+  width: 270px;
+  margin-top: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  transition: 200ms ease-in-out;
 }
 
-#allTasks:hover{
-    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+#allTasks:hover {
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-#allTasks button{
-    border: none;
-    background-color: rgb(255, 0, 0);
-    color: white;
-    font-size: 10px;
-    padding: 4px;
-    border-radius: 3px;
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
-    cursor: pointer;
-    transition: 200ms ease-in-out;
+#allTasks button {
+  border: none;
+  background-color: rgb(255, 0, 0);
+  color: white;
+  font-size: 10px;
+  padding: 4px;
+  border-radius: 3px;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  cursor: pointer;
+  transition: 200ms ease-in-out;
 }
 
-#allTasks button:hover{
-    background-color: rgb(214, 0, 0);
+#allTasks button:hover {
+  background-color: rgb(214, 0, 0);
 }
 
-#allTasks img{
-    width: 30px;
-    margin-left: 10px;
+#allTasks img {
+  width: 30px;
+  margin-left: 10px;
 }
 
-#allTasks p{
-    margin-left: 10px;
+#allTasks p {
+  margin-left: 10px;
 }
 
-.person-info{
-    display: flex;
-    align-items: center;
-    margin-top: 15px;
+.person-info {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
 }
 
-.background-fields{
-    background-color: rgb(209, 209, 209);
+.background-fields {
+  background-color: rgb(209, 209, 209);
 }

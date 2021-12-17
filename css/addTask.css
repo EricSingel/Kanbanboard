@@ -1,129 +1,128 @@
 body {
-    display: flex;
+  display: flex;
 }
 
 /*Addtask header*/
 
 .AddTask-header {
-    padding: 25px;
+  padding: 25px;
 }
 
 .AddTask-header-subtitle {
-    color: rgb(68, 68, 209);
-    font-weight: bold;
+  color: var(--text-color);
+  font-weight: bold;
 }
 
 /*Addtask table*/
 
 .Addtask-table-section {
-    height: 70vh;
-    width: 167vh;
-    background-color: #ebf2f8;
-    border-radius: 5px;
-    margin: 25px;
+  width: 90%;
+  background-color: #ebf2f8;
+  border-radius: 5px;
+  margin: auto;
 }
 
 .Addtask-table-section-Row {
-    display: flex;
-    justify-content: space-between;
-    padding: 25px;
+  display: flex;
+  justify-content: space-between;
+  padding: 25px;
 }
 
 .Addtask-table-section-span {
-    font-weight: bold;
-    color: rgb(68, 68, 209);
+  font-weight: bold;
+  color: var(--text-color);
 }
 
 .title-input {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    height: 48px;
-    width: 489px;
-    border: 1px solid grey;
-    padding-left: 15px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  height: 48px;
+  width: 489px;
+  border: 1px solid grey;
+  padding-left: 15px;
 }
 
 .title-input {
-    outline: none;
+  outline: none;
 }
 
 .Addtask-table-section-date-input {
-    width: 508px;
-    display: flex;
-    align-items: center;
+  width: 508px;
+  display: flex;
+  align-items: center;
 }
 
 .calender {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    height: 50px;
-    width: 500px;
-    border: 1px solid grey;
-    padding-left: 15px;
-    padding-right: 15px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  height: 50px;
+  width: 500px;
+  border: 1px solid grey;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .calender:focus {
-    outline: none;
+  outline: none;
 }
 
 .dropdown-menu {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    height: 52px;
-    width: 508px;
-    padding: 15px;
-    cursor: pointer;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  height: 52px;
+  width: 508px;
+  padding: 15px;
+  cursor: pointer;
 }
 
 .dropdown-menu:focus {
-    outline: none;
+  outline: none;
 }
 
 .description {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    width: 476px;
-    height: 125px;
-    border: 1px solid grey;
-    padding: 15px;
-    resize: none;
-    font-family: inherit;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  width: 476px;
+  height: 125px;
+  border: 1px solid grey;
+  padding: 15px;
+  resize: none;
+  font-family: inherit;
 }
 
 .description:focus {
-    outline: none;
+  outline: none;
 }
 
 .Addtask-table-section-thirdRow-assignedTo {
-    width: 508px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  width: 508px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .Addtask-table-section-buttons-section {
-    display: flex;
-    justify-content: end;
+  display: flex;
+  justify-content: end;
 }
 
 .cancel-createTask-buttons {
-    color: rgb(68, 68, 209);
-    margin-right: 10px;
-    margin-left: 10px;
-    font-weight: bold;
-    height: 50px;
-    border-radius: 5px;
-    background-color: transparent;
-    border: 0;
+  color: rgb(68, 68, 209);
+  margin-right: 10px;
+  margin-left: 10px;
+  font-weight: bold;
+  height: 50px;
+  border-radius: 5px;
+  background-color: transparent;
+  border: 0;
 }
 
 .cancel-createTask-buttons:hover {
-    background-color: rgb(68, 68, 209);
-    color: white;
-    cursor: pointer;
+  background-color: rgb(68, 68, 209);
+  color: white;
+  cursor: pointer;
 }

@@ -35,10 +35,12 @@ function addNewBacklogTR() {
   `;
 
   cell3.innerHTML = `
+  <div id = 'descriptionBL'>
   Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio
   similique, tempora atque rem ea delectus minus sed maxime nisi.
   Sed dolor maxime placeat. Ipsum possimus ab unde expedita vero
   perspiciatis.
+  </div>
   `;
 }
 
