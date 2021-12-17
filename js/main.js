@@ -15,3 +15,5 @@ let users = [
     email: 'juergen@web.de',
   },
 ];
+
+let tasks = [];

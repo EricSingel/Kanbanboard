@@ -19,17 +19,19 @@ function addNewBacklogTR() {
 
   cell1.innerHTML = `
   <div class="user-container">
-    <div id="userColor"></div>
-    <img id="userImg" src="assets/img/icon plus.png" alt="" />
+    <div id="userColorBL"></div>
+    <img id="userImgBL" src="assets/img/icon plus.png" alt="" />
     <div class="name-div">
-      <span>Eric Singelmann-Seimel</span>
-      <span class="email">eric@gmail.com</span>
+      <span id='nameBL'>Eric Singelmann-Seimel</span>
+      <span id='emailBL' class="email">eric@gmail.com</span>
     </div>
   </div>
   `;
 
   cell2.innerHTML = `
-  Marketing
+  <div id='categoryBL'>
+    Marketing
+  </div>
   `;
 
   cell3.innerHTML = `

@@ -1,5 +1,3 @@
-let tasks = [];
-
 function addTask() {
   let title = document.getElementById('title').value;
   let date = document.getElementById('date').value;

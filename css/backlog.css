@@ -50,6 +50,7 @@ table td:hover {
 .task-row {
   width: 100%;
   height: 80px;
+  max-height: 100px;
   background-color: rgb(215, 221, 228);
   font-weight: bold;
 }
@@ -65,19 +66,19 @@ table td:hover {
 }
 
 .user-container {
-  height: 100%;
+  height: 100px;
   display: flex;
   align-items: center;
 }
 
-#userColor {
+#userColorBL {
   margin: 0;
-  width: 1.5%;
-  height: 90px;
+  width: 8px;
+  height: inherit;
   background-color: tomato;
 }
 
-#userImg {
+#userImgBL {
   margin-left: 12px;
 }
 
