@@ -2,10 +2,15 @@ body {
   display: flex;
 }
 
+.AddTask-section {
+  width: 100%;
+  padding: 24px;
+}
+
 /*Addtask header*/
 
 .AddTask-header {
-  padding: 25px;
+  margin-bottom: 24px;
 }
 
 .AddTask-header-subtitle {
@@ -16,93 +21,94 @@ body {
 /*Addtask table*/
 
 .Addtask-table-section {
-  width: 90%;
   background-color: #ebf2f8;
   border-radius: 5px;
-  margin: auto;
 }
 
 .Addtask-table-section-Row {
   display: flex;
-  justify-content: space-between;
-  padding: 25px;
+  justify-content: space-around;
+  padding: 24px;
+}
+
+.title-container {
+  width: 20rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .Addtask-table-section-span {
   font-weight: bold;
   color: var(--text-color);
-}
-
-.title-input {
-  margin-top: 10px;
   margin-bottom: 10px;
-  border-radius: 5px;
-  height: 48px;
-  width: 489px;
-  border: 1px solid grey;
-  padding-left: 15px;
 }
 
 .title-input {
+  border-radius: 5px;
+  border: 1px solid grey;
+  width: 95,5%;
+  height: 35px;
+  padding-left: 10px;
   outline: none;
 }
 
-.Addtask-table-section-date-input {
-  width: 508px;
+.calender-container {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  width: 20rem;
 }
 
-.calender {
-  margin-top: 10px;
-  margin-bottom: 10px;
+.calender-input {
   border-radius: 5px;
-  height: 50px;
-  width: 500px;
   border: 1px solid grey;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-.calender:focus {
+  width: 95,5%;
+  height: 35px;
+  padding-left: 10px;
   outline: none;
 }
 
-.dropdown-menu {
-  margin-top: 10px;
-  margin-bottom: 10px;
+.dropdown-container {
+  width: 20rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdown-input {
   border-radius: 5px;
-  height: 52px;
-  width: 508px;
-  padding: 15px;
+  border: 1px solid grey;
+  width: 100%;
+  height: 35px;
+  padding-left: 10px;
   cursor: pointer;
-}
-
-.dropdown-menu:focus {
   outline: none;
 }
 
-.description {
-  margin-top: 10px;
-  margin-bottom: 10px;
+.description-container {
+  width: 20rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.description-input {
   border-radius: 5px;
-  width: 476px;
-  height: 125px;
   border: 1px solid grey;
-  padding: 15px;
   resize: none;
   font-family: inherit;
+  border-radius: 5px;
+  width: 95,5%;
+  height: 135px;
+  padding-left: 10px;
 }
 
-.description:focus {
+.description-input:focus {
   outline: none;
 }
 
 .Addtask-table-section-thirdRow-assignedTo {
-  width: 508px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  width: 20rem;
 }
 
 .Addtask-table-section-buttons-section {
@@ -115,7 +121,7 @@ body {
   margin-right: 10px;
   margin-left: 10px;
   font-weight: bold;
-  height: 50px;
+  height: 40px;
   border-radius: 5px;
   background-color: transparent;
   border: 0;
