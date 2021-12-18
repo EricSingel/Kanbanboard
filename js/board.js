@@ -17,6 +17,7 @@ function showTasks() {
       element.id
     );
     paintTasks(element.id);
+    
   }
 
   let inProgressTask = tasks.filter((t) => t['status'] == 'inProgress');
@@ -29,6 +30,7 @@ function showTasks() {
       element.id
     );
     paintTasks(element.id);
+    
   }
 
   let testingTask = tasks.filter((t) => t['status'] == 'Testing');
@@ -41,6 +43,7 @@ function showTasks() {
       element.id
     );
     paintTasks(element.id);
+    
   }
 
   let doneTask = tasks.filter((t) => t['status'] == 'Done');
@@ -76,7 +79,7 @@ function paintTasks(i) {
 
 function generateTask(element, i) {
   return `
-    <div onclick="showWholeTask()" id="allTasks" ondragstart="startDragging(${element['id']})" draggable="true">
+    <div onclick="wholeTask(${i})" id="allTasks" ondragstart="startDragging(${element['id']})" draggable="true">
         <div id="color-line${i}" class="color-line"></div>
         <p class="title">${element['title']}</p>
             <div class="person-info">
@@ -86,6 +89,25 @@ function generateTask(element, i) {
             <p class="description">${element['description']}</p>
         <button>Delete</button>
     </div>`;
+}
+
+function wholeTask(i){
+  
+  document.getElementById('taskBigger').innerHTML = '';
+  const task = tasks[i]
+  for(let i = 0;i < tasks.length; i++){
+    
+    document.getElementById('taskBigger').innerHTML = `
+    <div>
+      <button onclick="closeWholeTask()">Close</button>
+      <h1>${task['title']}</h1>
+      <p>${task['description']}</p>
+      <p>${users[0].name}</p>
+    </div>
+    `;
+  } 
+  
+    showWholeTask();
 }
 
 function showWholeTask(){
