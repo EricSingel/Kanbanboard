@@ -76,7 +76,7 @@ function paintTasks(i) {
 
 function generateTask(element, i) {
   return `
-    <div id="allTasks" ondragstart="startDragging(${element['id']})" draggable="true">
+    <div onclick="showWholeTask()" id="allTasks" ondragstart="startDragging(${element['id']})" draggable="true">
         <div id="color-line${i}" class="color-line"></div>
         <p class="title">${element['title']}</p>
             <div class="person-info">
@@ -86,6 +86,14 @@ function generateTask(element, i) {
             <p class="description">${element['description']}</p>
         <button>Delete</button>
     </div>`;
+}
+
+function showWholeTask(){
+  document.getElementById('taskBigger').classList.add('transform-task');
+}
+
+function closeWholeTask(){
+  document.getElementById('taskBigger').classList.remove('transform-task');
 }
 
 function startDragging(id) {
