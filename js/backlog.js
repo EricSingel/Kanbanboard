@@ -1,6 +1,6 @@
-function init() {
+async function init() {
   includeHTML();
-  load();
+  await load();
   renderBacklogTask();
 }
 
@@ -16,7 +16,6 @@ function addNewBacklogTR(task, i) {
   let newRow = table.insertRow(table.rows.length);
   newRow.classList.add('task-row');
   newRow.setAttribute('id', newRow.rowIndex);
-  console.log(newRow.rowIndex);
   let cell1 = newRow.insertCell(0);
   let cell2 = newRow.insertCell(1);
   let cell3 = newRow.insertCell(2);

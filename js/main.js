@@ -2,6 +2,7 @@
 setURL(
   'http://gruppe-141.developerakademie.net/Kanbanboard/smallest_backend_ever-master'
 );
+
 let users = [
   {
     name: 'Hans',
@@ -22,23 +23,25 @@ let users = [
 
 let tasks = [];
 
-function saveUsers() {
-  backend.setItem('users', JSON.stringify(users));
+async function saveUsers() {
+  await backend.setItem('users', JSON.stringify(users));
   // let usersAsText = JSON.stringify(users);
   // localStorage.setItem('users', usersAsText);
 }
-saveUsers();
 
-function save() {
-  backend.setItem('tasks', JSON.stringify(tasks));
+async function save() {
+  await backend.setItem('tasks', JSON.stringify(tasks));
   // let tasksAsText = JSON.stringify(tasks);
   // localStorage.setItem('tasks', tasksAsText);
+  await saveUsers();
+
+  load();
 }
 
 async function load() {
   await downloadFromServer();
-  users = JSON.parse(backend.getItem('users')) || [];
-  tasks = JSON.parse(backend.getItem('tasks')) || [];
+  users = (await JSON.parse(backend.getItem('users'))) || [];
+  tasks = (await JSON.parse(backend.getItem('tasks'))) || [];
   // let tasksAsText = localStorage.getItem('tasks');
   // tasks = JSON.parse(tasksAsText);
   // let usersAsText = localStorage.getItem('users');

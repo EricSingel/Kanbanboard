@@ -97,3 +97,13 @@ main {
 .background-fields {
   background-color: rgb(209, 209, 209);
 }
+
+.title{
+    font-size: 20px;
+}
+
+.description{
+    color: grey;
+    font-size: 12px;
+    margin-top: 5px;
+}
