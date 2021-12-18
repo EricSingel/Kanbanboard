@@ -86,7 +86,6 @@ function generateTask(element, i) {
                 <img src="${users[0].img}">
                 <p>${users[0].name}</p>
             </div>
-            <p class="description">${element['description']}</p>
         <button>Delete</button>
     </div>`;
 }
@@ -99,10 +98,19 @@ function wholeTask(i){
     
     document.getElementById('taskBigger').innerHTML = `
     <div>
-      <button onclick="closeWholeTask()">Close</button>
-      <h1>${task['title']}</h1>
-      <p>${task['description']}</p>
-      <p>${users[0].name}</p>
+      <div class="close-whole-task">
+        <img onclick="closeWholeTask()" src="assets/img/chevron-up.png">
+      </div>
+      
+      <div class="task-title-div">
+        <h1>${task['title']}</h1>
+        <p>${task['description']}</p>
+      </div> <hr>
+      
+      <div class="user-div">
+        <img src="${users[0].img}">
+        <p>${users[0].name}</p>
+      </div> 
     </div>
     `;
   } 

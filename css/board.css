@@ -124,3 +124,42 @@ main {
 .transform-task{
   transform: translateY(0px);
 }
+
+.close-whole-task{
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.close-whole-task img{
+  width: 30px;
+  cursor: pointer;
+}
+
+.task-title-div{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.user-div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.user-div p{
+  font-size: 30px;
+  margin-left: 20px;
+}
+
+hr{
+  width: 70%;
+  margin: auto;
+  margin-top: 50px;
+}
+
