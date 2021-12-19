@@ -43,13 +43,18 @@ main {
   flex-direction: column;
   align-items: center;
   border-radius: 15px;
+  overflow: scroll;
+}
+
+.board-field::-webkit-scrollbar {
+  display: none;
 }
 
 #allTasks {
   background-color: white;
-  height: 150px;
+  min-height: 150px;
   width: 270px;
-  margin-top: 10px;
+  margin: 10px 0px;
   border-radius: 10px;
   cursor: pointer;
   overflow: hidden;

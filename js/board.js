@@ -43,7 +43,6 @@ function showTasks() {
       element.id
     );
     paintTasks(element.id);
-    
   }
 
   let doneTask = tasks.filter((t) => t['status'] == 'Done');
