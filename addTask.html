@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -8,8 +7,10 @@
     <title>Document</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-      rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
     <script src="js/mini_backend.js"></script>
     <script src="js/index.js"></script>
     <script src="js/main.js"></script>
@@ -19,30 +20,49 @@
     <link rel="stylesheet" href="css/addTask.css" />
   </head>
 
-
   <body onload="init()">
     <div w3-include-html="templates/nav-bar.html"></div>
     <div class="AddTask-section">
       <!--onsubmit="addTask(); return false;"-->
       <div class="AddTask-header">
         <h1>Add Task</h1>
-        <span class="AddTask-header-subtitle">Learning Management System Project</span>
+        <span class="AddTask-header-subtitle"
+          >Learning Management System Project</span
+        >
       </div>
       <div class="Addtask-table-section">
         <div class="Addtask-table-section-Row">
           <div class="title-container">
             <span class="Addtask-table-section-span">TITLE</span>
-            <input id="title" class="title-input" type="text" placeholder="Write a title for your new task" required />
+            <input
+              id="title"
+              class="title-input"
+              type="text"
+              placeholder="Write a title for your new task"
+              required
+            />
           </div>
           <div class="calender-container">
             <span class="Addtask-table-section-span">DUE DATE</span>
-            <input id="date" min="2022-01-01" max="2022-12-31" required class="calender-input" type="date" />
+            <input
+              id="date"
+              min="2022-01-01"
+              max="2022-12-31"
+              required
+              class="calender-input"
+              type="date"
+            />
           </div>
         </div>
         <div class="Addtask-table-section-Row">
           <div class="dropdown-container">
             <span class="Addtask-table-section-span">CATEGORY</span>
-            <select class="dropdown-input" id="category" name="category" required>
+            <select
+              class="dropdown-input"
+              id="category"
+              name="category"
+              required
+            >
               <option value="" disabled selected>
                 Select the task category
               </option>
@@ -66,10 +86,30 @@
         <div class="Addtask-table-section-Row">
           <div class="description-container">
             <span class="Addtask-table-section-span">DESCRIPTION</span>
-            <textarea class="description-input" id="description" name="description" required></textarea>
+            <textarea
+              class="description-input"
+              id="description"
+              name="description"
+              required
+            ></textarea>
           </div>
           <div class="Addtask-table-section-thirdRow-assignedTo">
             <span class="Addtask-table-section-span">ASSIGNED TO</span>
+            <div class="Addtask-table-section-Users">
+              <div
+                id="userImages"
+                class="Addtask-table-section-Users-Img"
+              ></div>
+              <div id="userSelectMenu" class="Addtask-table-section-Users-Menu">
+                <img
+                  class="Addtask-table-section-Users-Button"
+                  onclick="showUsers()"
+                  src="assets/img/icon plus.png"
+                  alt="User"
+                />
+                <div id="userSelect"></div>
+              </div>
+            </div>
             <div class="Addtask-table-section-buttons-section">
               <button class="cancel-createTask-buttons">CANCEL</button>
               <button onclick="addTask()" class="cancel-createTask-buttons">
@@ -82,5 +122,4 @@
       </div>
     </div>
   </body>
-
 </html>

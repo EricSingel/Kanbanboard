@@ -8,6 +8,67 @@ body {
   width: calc(100% - 210px - 48px);
 }
 
+.d-none {
+  display: none;
+}
+
+.Addtask-table-section-Users {
+  position: relative;
+}
+
+.Addtask-table-section-Users-Button {
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.Addtask-table-section-Users-Img {
+}
+
+.Addtask-table-section-Users-Menu {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  width: max-content;
+  height: min-content;
+  position: absolute;
+  top: -50px;
+  right: 0;
+  clip-path: circle(52px at 100% 0);
+  transition: ease-in-out 225ms;
+  border-radius: 16px;
+}
+
+.userSelectOpen {
+  clip-path: circle(150% at 100% 0);
+  background-color: rgb(142, 165, 143);
+}
+
+#userSelect {
+  padding-top: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+#userSelect img {
+  height: 40px;
+  width: 40px;
+}
+
+.Addtask-table-section-Users-Select {
+  align-items: center;
+  margin: 4px;
+  display: flex;
+}
+.Addtask-table-section-Users-Select span {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
 /*Addtask header*/
 
 .AddTask-header {
