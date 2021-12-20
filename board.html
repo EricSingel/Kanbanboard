@@ -18,15 +18,12 @@
     <link rel="stylesheet" href="css/nav-bar.css" />
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/board.css" />
-    
- 
   </head>
   <body onload="init()">
+    <div>
+      <div w3-include-html="templates/nav-bar.html"></div>
+    </div>
     <main>
-      <div>
-        <div w3-include-html="templates/nav-bar.html"></div>
-      </div>
-
       <div class="board-fields">
         <div class="board-div">
           <h1>ToDo</h1>
@@ -75,7 +72,5 @@
     </main>
   </body>
 
-  <div class="task-bigger" id="taskBigger">
-    
-  </div>
+  <div class="task-bigger" id="taskBigger"></div>
 </html>

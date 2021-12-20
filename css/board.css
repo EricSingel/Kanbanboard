@@ -1,5 +1,12 @@
+body {
+  display: flex;
+  justify-content: flex-end;
+}
+
 main {
   display: flex;
+  justify-content: flex-end;
+  width: calc(100% - 210px);
 }
 
 .board-fields {
@@ -7,12 +14,14 @@ main {
   justify-content: space-evenly;
   align-items: center;
   flex: 1;
+  width: 100%;
 }
 
 .board-div {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 24%;
 }
 
 .blue {
@@ -36,8 +45,8 @@ main {
 }
 
 .board-field {
-  height: 800px;
-  width: 300px;
+  height: 90vh;
+  width: 100%;
   background-color: rgb(238, 238, 238);
   display: flex;
   flex-direction: column;
@@ -53,7 +62,7 @@ main {
 #allTasks {
   background-color: white;
   min-height: 150px;
-  width: 270px;
+  width: 95%;
   margin: 10px 0px;
   border-radius: 10px;
   cursor: pointer;
@@ -103,17 +112,17 @@ main {
   background-color: rgb(209, 209, 209);
 }
 
-.title{
-    font-size: 20px;
+.title {
+  font-size: 20px;
 }
 
-.description{
-    color: grey;
-    font-size: 12px;
-    margin-top: 5px;
+.description {
+  color: grey;
+  font-size: 12px;
+  margin-top: 5px;
 }
 
-.task-bigger{
+.task-bigger {
   position: fixed;
   top: 0;
   left: 0;
@@ -126,11 +135,11 @@ main {
   transition: 225ms ease-in-out;
 }
 
-.transform-task{
+.transform-task {
   transform: translateY(0px);
 }
 
-.close-whole-task{
+.close-whole-task {
   height: 10vh;
   display: flex;
   justify-content: center;
@@ -138,33 +147,32 @@ main {
   align-items: center;
 }
 
-.close-whole-task img{
+.close-whole-task img {
   width: 30px;
   cursor: pointer;
 }
 
-.task-title-div{
+.task-title-div {
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
 }
 
-.user-div{
+.user-div {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 50px;
 }
 
-.user-div p{
+.user-div p {
   font-size: 30px;
   margin-left: 20px;
 }
 
-hr{
+hr {
   width: 70%;
   margin: auto;
   margin-top: 50px;
 }
-

@@ -1,10 +1,11 @@
 body {
   display: flex;
+  justify-content: flex-end;
 }
 
 .AddTask-section {
-  width: 100%;
   padding: 24px;
+  width: calc(100% - 210px - 48px);
 }
 
 /*Addtask header*/
@@ -46,7 +47,7 @@ body {
 .title-input {
   border-radius: 5px;
   border: 1px solid grey;
-  width: 95,5%;
+  width: 95, 5%;
   height: 35px;
   padding-left: 10px;
   outline: none;
@@ -61,7 +62,7 @@ body {
 .calender-input {
   border-radius: 5px;
   border: 1px solid grey;
-  width: 95,5%;
+  width: 95, 5%;
   height: 35px;
   padding-left: 10px;
   outline: none;
@@ -95,7 +96,7 @@ body {
   resize: none;
   font-family: inherit;
   border-radius: 5px;
-  width: 95,5%;
+  width: 95, 5%;
   height: 135px;
   padding-left: 10px;
 }

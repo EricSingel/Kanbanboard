@@ -1,9 +1,10 @@
 body {
   display: flex;
+  justify-content: flex-end;
 }
 main {
   padding: 24px;
-  width: 100%;
+  width: calc(100% - 210px - 48px);
   height: 100vh;
 }
 
