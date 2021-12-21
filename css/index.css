@@ -19,24 +19,64 @@ video{
 }
 
 .login-div{
-    width: 50%;
-    height: 40vh;
+    width: 55%;
+    height: 45vh;
     background-color: rgba(0, 0, 0, 0.479);
     z-index: 5;
     border-radius: 15px;
+    position: relative;
+    overflow: hidden;
 }
 
 .login-div h1{
     color: white;
     display: flex;
+    font-size: 40px;
     justify-content: center;
     margin-top: 20px;
 }
 
 .login-div a{
+    display: flex;
+    justify-content: center;
     text-decoration: none;
     color: white;
-    background-color: black;
-    padding: 10px 20px;
-    border-radius: 5px;
+    background-color: rgb(0, 43, 78);
+    padding: 15px 30px;
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    font-size: 20px;
+    transition: ease-in-out 225ms;
+}
+
+.login-div a:hover{
+    background-color: rgb(0, 72, 131);
+}
+
+.name-form-div{
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+.email-form-div{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+label{
+    color: white;
+    margin-right: 20px;
+    font-size: 25px;
+}
+
+input{
+    width: 40%;
+    outline: none;
+    background: none;
+    border: none;
+    border-bottom: 1px solid white;
 }
