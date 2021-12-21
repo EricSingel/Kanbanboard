@@ -16,8 +16,7 @@ function showTasks() {
       element,
       element.id
     );
-    paintTasks(element.id);
-    
+    paintTasks(element.id);   
   }
 
   let inProgressTask = tasks.filter((t) => t['status'] == 'inProgress');

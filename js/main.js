@@ -6,17 +6,19 @@ setURL(
 let users = [
   {
     name: 'Alex Todor',
-    img: 'assets/img/icon plus.png',
+    img: 'assets/img/user1.jpg',
     email: 'hans@gmail.com',
   },
+
   {
     name: 'Vincent Botella',
-    img: 'assets/img/icon plus.png',
+    img: 'assets/img/user2.jpg',
     email: 'dieter@gmx.de',
   },
+
   {
     name: 'Eric Singelmann-Seimel',
-    img: 'assets/img/icon plus.png',
+    img: 'assets/img/user3.jpg',
     email: 'juergen@web.de',
   },
 ];
