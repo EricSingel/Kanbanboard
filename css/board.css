@@ -131,8 +131,12 @@ main {
   height: 100%;
   transform: translateY(-1100px);
   z-index: 55;
-  background-color: rgb(255, 255, 255);
-  transition: 225ms ease-in-out;
+  background: url("/assets/img/light-bg.jpg") rgba(0,0,0,0.4);
+  background-blend-mode: darken;
+  background-size: cover;
+  background-position: left;
+  transition: 300ms ease-in-out;
+  color: white;
 }
 
 .transform-task {
@@ -157,13 +161,24 @@ main {
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  background-color: rgba(0,0,0,0.5);
+  width: 90%;
+  padding: 20px;
+  margin: auto;
+  border-radius: 15px;
 }
 
 .user-div {
   display: flex;
-  justify-content: center;
+  
+  flex-direction: column;
   align-items: center;
   margin-top: 50px;
+  background-color: rgba(0,0,0,0.5);
+  width: 50%;
+  margin-left: 4.5em;
+  height: 30vh;
+  border-radius: 15px;
 }
 
 .user-div p {

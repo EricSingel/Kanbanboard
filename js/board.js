@@ -99,13 +99,14 @@ function wholeTask(i){
       <div class="close-whole-task">
         <img onclick="closeWholeTask()" src="assets/img/chevron-up.png">
       </div>
-      
+     
       <div class="task-title-div">
         <h1>${task['title']}</h1>
         <p>${task['description']}</p>
-      </div> <hr>
+      </div>
       
       <div class="user-div">
+        <p>Assigned to</p>
         <img src="${users[0].img}">
         <p>${users[0].name}</p>
       </div> 
