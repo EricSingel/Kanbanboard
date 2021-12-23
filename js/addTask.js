@@ -3,12 +3,15 @@ async function init() {
   await load();
 }
 
+TheUsers = [];
+
 function addTask() {
   let title = document.getElementById('title').value;
   let date = document.getElementById('date').value;
   let category = document.getElementById('category').value;
   let urgency = document.getElementById('urgency').value;
   let description = document.getElementById('description').value;
+  let user = TheUsers[TheUsers.length - 1];
   let task = {
     title: title,
     date: date,
@@ -16,6 +19,7 @@ function addTask() {
     urgency: urgency,
     description: description,
     status: 'ToDo',
+    user: user,
   };
 
   tasks.push(task);
@@ -32,11 +36,15 @@ function showUsers() {
     const user = users[i];
     userSelect.innerHTML += `
     <div onclick="addUserToTask(${i})" class="Addtask-table-section-Users-Select">
-      <img src="${user.img}" alt="" />
+      <img src="${user.img}" class="cursor-pointer" alt="" />
       <span>${user.name}</span>
     </div>
     `;
   }
 }
 
-function addUserToTask(i) {}
+function addUserToTask(i) {
+  TheUsers.push(users[i].name);
+  let userSelectMenu = document.getElementById('userSelectMenu');
+  userSelectMenu.classList.toggle('userSelectClose');
+}
