@@ -25,8 +25,8 @@ function addNewBacklogTR(task, i) {
     <div id="userColorBL${i}"></div>
     <img id="userImgBL${i}" src="assets/img/icon plus.png" alt="" />
     <div class="name-div">
-      <span id='nameBL${i}'>Eric Singelmann-Seimel</span>
-      <span id='emailBL${i}' class="email">eric@gmail.com</span>
+      <span id='nameBL${i}'>${task.user}</span>
+      <span id='emailBL${i}' class="email">${task.user}</span>
     </div>
   </div>
   `;
