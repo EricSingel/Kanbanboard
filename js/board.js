@@ -12,10 +12,7 @@ function showTasks() {
 
   for (let i = 0; i < ToDoTask.length; i++) {
     const element = ToDoTask[i];
-    document.getElementById('ToDo').innerHTML += generateTask(
-      element,
-      element.id
-    );
+    document.getElementById('ToDo').innerHTML += generateTask(element, element.id);
     paintTasks(element.id);   
   }
 
@@ -24,10 +21,7 @@ function showTasks() {
 
   for (let i = 0; i < inProgressTask.length; i++) {
     const element = inProgressTask[i];
-    document.getElementById('inProgress').innerHTML += generateTask(
-      element,
-      element.id
-    );
+    document.getElementById('inProgress').innerHTML += generateTask(element, element.id);
     paintTasks(element.id);
     
   }
@@ -37,10 +31,7 @@ function showTasks() {
 
   for (let i = 0; i < testingTask.length; i++) {
     const element = testingTask[i];
-    document.getElementById('Testing').innerHTML += generateTask(
-      element,
-      element.id
-    );
+    document.getElementById('Testing').innerHTML += generateTask(element, element.id);
     paintTasks(element.id);
   }
 
@@ -49,10 +40,7 @@ function showTasks() {
 
   for (let i = 0; i < doneTask.length; i++) {
     const element = doneTask[i];
-    document.getElementById('Done').innerHTML += generateTask(
-      element,
-      element.id
-    );
+    document.getElementById('Done').innerHTML += generateTask(element, element.id);
     paintTasks(element.id);
   }
 }
@@ -97,18 +85,20 @@ function wholeTask(i){
     document.getElementById('taskBigger').innerHTML = `
     <div>
       <div class="close-whole-task">
-        <img onclick="closeWholeTask()" src="assets/img/chevron-up.png">
+        <img onclick="closeWholeTask()" src="assets/img/chevron-up.ico">
       </div>
      
       <div class="task-title-div">
         <h1>${task['title']}</h1>
         <p>${task['description']}</p>
       </div>
-      
+     
       <div class="user-div">
         <p>Assigned to</p>
-        <img src="${users[0].img}">
-        <p>${users[0].name}</p>
+          <div class="user-div-person">
+            <img src="${users[0].img}">
+            <p>${users[0].name}</p>
+          </div>      
       </div> 
     </div>
     `;
