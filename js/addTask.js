@@ -1,6 +1,5 @@
-async function init() {
+function init() {
   includeHTML();
-  await load();
 }
 
 TheUsers = [];
