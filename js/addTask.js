@@ -17,7 +17,7 @@ function addTask() {
     category: category,
     urgency: urgency,
     description: description,
-    status: 'ToDo',
+    status: '',
     user: user,
     board: 'false',
   };

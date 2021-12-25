@@ -70,6 +70,9 @@ function addRowHandler(table) {
     let row = table.rows[i];
     row.onclick = () => {
       tasks[row.rowIndex].board = 'true';
+      tasks[row.rowIndex].status = 'ToDo';
+      save();
+      table.deleteRow(row.rowIndex);
     };
   }
 }

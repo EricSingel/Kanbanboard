@@ -12,8 +12,11 @@ function showTasks() {
 
   for (let i = 0; i < ToDoTask.length; i++) {
     const element = ToDoTask[i];
-    document.getElementById('ToDo').innerHTML += generateTask(element, element.id);
-    paintTasks(element.id);   
+    document.getElementById('ToDo').innerHTML += generateTask(
+      element,
+      element.id
+    );
+    paintTasks(element.id);
   }
 
   let inProgressTask = tasks.filter((t) => t['status'] == 'inProgress');
@@ -21,9 +24,11 @@ function showTasks() {
 
   for (let i = 0; i < inProgressTask.length; i++) {
     const element = inProgressTask[i];
-    document.getElementById('inProgress').innerHTML += generateTask(element, element.id);
+    document.getElementById('inProgress').innerHTML += generateTask(
+      element,
+      element.id
+    );
     paintTasks(element.id);
-    
   }
 
   let testingTask = tasks.filter((t) => t['status'] == 'Testing');
@@ -31,7 +36,10 @@ function showTasks() {
 
   for (let i = 0; i < testingTask.length; i++) {
     const element = testingTask[i];
-    document.getElementById('Testing').innerHTML += generateTask(element, element.id);
+    document.getElementById('Testing').innerHTML += generateTask(
+      element,
+      element.id
+    );
     paintTasks(element.id);
   }
 
@@ -40,7 +48,10 @@ function showTasks() {
 
   for (let i = 0; i < doneTask.length; i++) {
     const element = doneTask[i];
-    document.getElementById('Done').innerHTML += generateTask(element, element.id);
+    document.getElementById('Done').innerHTML += generateTask(
+      element,
+      element.id
+    );
     paintTasks(element.id);
   }
 }
@@ -69,19 +80,17 @@ function generateTask(element, i) {
         <div id="color-line${i}" class="color-line"></div>
         <p class="title">${element['title']}</p>
             <div class="person-info">
-                <img src="${users[0].img}">
-                <p>${users[0].name}</p>
+                <img src="${element.user.img}">
+                <p>${element.user.name}</p>
             </div>
         <button>Delete</button>
     </div>`;
 }
 
-function wholeTask(i){
-  
+function wholeTask(i) {
   document.getElementById('taskBigger').innerHTML = '';
-  const task = tasks[i]
-  for(let i = 0;i < tasks.length; i++){
-    
+  const task = tasks[i];
+  for (let i = 0; i < tasks.length; i++) {
     document.getElementById('taskBigger').innerHTML = `
     <div>
       <div class="close-whole-task">
@@ -102,16 +111,16 @@ function wholeTask(i){
       </div> 
     </div>
     `;
-  } 
-  
-    showWholeTask();
+  }
+
+  showWholeTask();
 }
 
-function showWholeTask(){
+function showWholeTask() {
   document.getElementById('taskBigger').classList.add('transform-task');
 }
 
-function closeWholeTask(){
+function closeWholeTask() {
   document.getElementById('taskBigger').classList.remove('transform-task');
 }
 
