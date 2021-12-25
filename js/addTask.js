@@ -19,6 +19,7 @@ function addTask() {
     description: description,
     status: 'ToDo',
     user: user,
+    board: 'false',
   };
 
   tasks.push(task);
@@ -43,7 +44,7 @@ function showUsers() {
 }
 
 function addUserToTask(i) {
-  TheUsers.push(users[i].name);
+  TheUsers.push(users[i]); //! .name war hier nicht nötig, wir wollen den ganzen User übergeben damit wir auch die Email adresse haben
   let userSelectMenu = document.getElementById('userSelectMenu');
   userSelectMenu.classList.toggle('userSelectClose');
 }

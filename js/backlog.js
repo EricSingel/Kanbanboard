@@ -5,28 +5,30 @@ async function init() {
 }
 
 function renderBacklogTask() {
+  let table = document.getElementById('backlogTable');
   for (let i = 0; i < tasks.length; i++) {
     const task = tasks[i];
     addNewBacklogTR(task, i);
   }
+  addRowHandler(table);
 }
 
 function addNewBacklogTR(task, i) {
   let table = document.getElementById('backlogTable');
   let newRow = table.insertRow(table.rows.length);
   newRow.classList.add('task-row');
-  newRow.setAttribute('id', newRow.rowIndex);
+  // newRow.setAttribute('id', newRow.rowIndex);
   let cell1 = newRow.insertCell(0);
   let cell2 = newRow.insertCell(1);
   let cell3 = newRow.insertCell(2);
 
   cell1.innerHTML = `
   <div class="user-container">
-    <div id="userColorBL${i}"></div>
+    <div id="userColorBL${i}" class="userColorBL"></div>
     <img id="userImgBL${i}" src="assets/img/icon plus.png" alt="" />
     <div class="name-div">
-      <span id='nameBL${i}'>${task.user}</span>
-      <span id='emailBL${i}' class="email">${task.user}</span>
+      <span id='nameBL${i}'>${task.user.name}</span>
+      <span id='emailBL${i}' class="email">${task.user.email}</span>
     </div>
   </div>
   `;
@@ -47,6 +49,7 @@ function addNewBacklogTR(task, i) {
   `;
 
   addTasksValues(task, i);
+  addUserColor(task, i);
 }
 
 function addTasksValues(task, i) {
@@ -63,8 +66,22 @@ function addTasksValues(task, i) {
 
 function addRowHandler(table) {
   let rows = table.getElementsByTagName('tr');
-  for (i = 1; i < rows.length; i++) {
+  for (i = 0; i < rows.length; i++) {
     let row = table.rows[i];
-    row.onclick = () => {};
+    row.onclick = () => {
+      tasks[row.rowIndex].board = 'true';
+    };
+  }
+}
+
+function addUserColor(task, i) {
+  let category = task.category;
+  let userColorDiv = document.getElementById('userColorBL' + i);
+  if (category == 'Marketing') {
+    userColorDiv.style.backgroundColor = 'blue';
+  } else if (category == 'Sale') {
+    userColorDiv.style.backgroundColor = 'red';
+  } else {
+    userColorDiv.style.backgroundColor = 'green';
   }
 }
