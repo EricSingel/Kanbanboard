@@ -105,8 +105,8 @@ function wholeTask(i) {
       <div class="user-div">
         <p>Assigned to</p>
           <div class="user-div-person">
-            <img src="${users[0].img}">
-            <p>${users[0].name}</p>
+            <img src="${task.user.img}">
+            <p>${task.user.name}</p>
           </div>      
       </div> 
     </div>
