@@ -16,7 +16,7 @@ function showTasks() {
       element,
       element.id
     );
-    paintTasks(element.id);   
+    paintTasks(element.id);
   }
 
   let inProgressTask = tasks.filter((t) => t['status'] == 'inProgress');
@@ -29,7 +29,6 @@ function showTasks() {
       element.id
     );
     paintTasks(element.id);
-    
   }
 
   let testingTask = tasks.filter((t) => t['status'] == 'Testing');
@@ -81,47 +80,47 @@ function generateTask(element, i) {
         <div id="color-line${i}" class="color-line"></div>
         <p class="title">${element['title']}</p>
             <div class="person-info">
-                <img src="${users[0].img}">
-                <p>${users[0].name}</p>
+                <img src="${element.user.img}">
+                <p>${element.user.name}</p>
             </div>
         <button>Delete</button>
     </div>`;
 }
 
-function wholeTask(i){
-  
+function wholeTask(i) {
   document.getElementById('taskBigger').innerHTML = '';
-  const task = tasks[i]
-  for(let i = 0;i < tasks.length; i++){
-    
+  const task = tasks[i];
+  for (let i = 0; i < tasks.length; i++) {
     document.getElementById('taskBigger').innerHTML = `
     <div>
       <div class="close-whole-task">
-        <img onclick="closeWholeTask()" src="assets/img/chevron-up.png">
+        <img onclick="closeWholeTask()" src="assets/img/chevron-up.ico">
       </div>
      
       <div class="task-title-div">
         <h1>${task['title']}</h1>
         <p>${task['description']}</p>
       </div>
-      
+     
       <div class="user-div">
         <p>Assigned to</p>
-        <img src="${users[0].img}">
-        <p>${users[0].name}</p>
+          <div class="user-div-person">
+            <img src="${task.user.img}">
+            <p>${task.user.name}</p>
+          </div>      
       </div> 
     </div>
     `;
-  } 
-  
-    showWholeTask();
+  }
+
+  showWholeTask();
 }
 
-function showWholeTask(){
+function showWholeTask() {
   document.getElementById('taskBigger').classList.add('transform-task');
 }
 
-function closeWholeTask(){
+function closeWholeTask() {
   document.getElementById('taskBigger').classList.remove('transform-task');
 }
 

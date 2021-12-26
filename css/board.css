@@ -108,6 +108,13 @@ main {
   margin-top: 15px;
 }
 
+.person-info img{
+  height: 2em;
+  width: 2em;
+  border-radius: 100%;
+  object-fit: cover;
+}
+
 .background-fields {
   background-color: rgb(209, 209, 209);
 }
@@ -131,7 +138,7 @@ main {
   height: 100%;
   transform: translateY(-1100px);
   z-index: 55;
-  background: url("/assets/img/light-bg.jpg") rgba(0,0,0,0.4);
+  background: url("/assets/img/light-bg.jpg") rgba(0,0,0,0.6);
   background-blend-mode: darken;
   background-size: cover;
   background-position: left;
@@ -152,8 +159,15 @@ main {
 }
 
 .close-whole-task img {
-  width: 30px;
+  width: 50px;
   cursor: pointer;
+  transition: 225ms ease-in-out;
+}
+
+.close-whole-task img:hover{
+  background: rgba(0,0,0,0.5);
+  padding: 20px;
+  border-radius: 100%;
 }
 
 .task-title-div {
@@ -170,15 +184,18 @@ main {
 
 .user-div {
   display: flex;
-  
   flex-direction: column;
   align-items: center;
+  width: 40%;
   margin-top: 50px;
   background-color: rgba(0,0,0,0.5);
-  width: 50%;
   margin-left: 4.5em;
   height: 30vh;
   border-radius: 15px;
+  margin-left: 4%;
+  margin-top: 50px;
+  padding: 20px;
+  flex: 1;
 }
 
 .user-div p {
@@ -186,8 +203,15 @@ main {
   margin-left: 20px;
 }
 
-hr {
-  width: 70%;
-  margin: auto;
-  margin-top: 50px;
+.user-div-person{
+  display: flex;
+  align-items: center;
+  margin-top: 60px;
+}
+
+.user-div img{
+  width: 8em;
+  height: 8em;
+  border-radius: 100%;
+  object-fit: cover;
 }

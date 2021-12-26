@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Backlog</title>
+    <title>Backlog | My Tasks</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="css/nav-bar.css" />
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/backlog.css" />
-    <link rel="icon" href="assets/img/logo.png">
+    <link rel="icon" href="assets/img/logo.png" />
   </head>
   <body onload="init()">
     <div w3-include-html="templates/nav-bar.html"></div>
@@ -28,13 +28,15 @@
         <span class="text">Learning Management System Project</span>
       </div>
       <div class="table-container">
-        <table id="backlogTable">
+        <table>
           <tr>
             <th>ASSIGNED TO</th>
             <th>CATEGORY</th>
             <th>DETAILS</th>
           </tr>
-          <tr class="task-row">
+        </table>
+        <table id="backlogTable"></table>
+        <!-- <tr class="task-row">
             <td>
               <div class="user-container">
                 <div id="userColorBL"></div>
@@ -52,8 +54,7 @@
               Sed dolor maxime placeat. Ipsum possimus ab unde expedita vero
               perspiciatis.
             </td>
-          </tr>
-        </table>
+          </tr> -->
       </div>
     </main>
   </body>

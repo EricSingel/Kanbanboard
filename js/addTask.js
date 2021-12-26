@@ -1,6 +1,5 @@
-async function init() {
+function init() {
   includeHTML();
-  await load();
 }
 
 TheUsersOfTheTask = [];
@@ -18,8 +17,9 @@ function addTask() {
     category: category,
     urgency: urgency,
     description: description,
-    status: 'ToDo',
+    status: '',
     user: user,
+    board: 'false',
   };
 
   tasks.push(task);
@@ -44,7 +44,7 @@ function showUsers() {
 }
 
 function addUserToTask(i) {
-  TheUsersOfTheTask.push(users[i].name);
+  TheUsersOfTheTask.push(users[i]);
   let userSelectMenu = document.getElementById('userSelectMenu');
   userSelectMenu.classList.toggle('userSelectClose');
 }

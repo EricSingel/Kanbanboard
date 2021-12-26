@@ -7,19 +7,19 @@ let users = [
   {
     name: 'Alex Todor',
     img: 'assets/img/user1.jpg',
-    email: 'hans@gmail.com',
+    email: 'alex@gmail.com',
   },
 
   {
     name: 'Vincent Botella',
     img: 'assets/img/user2.jpg',
-    email: 'dieter@gmx.de',
+    email: 'vincent@gmx.de',
   },
 
   {
     name: 'Eric Singelmann-Seimel',
     img: 'assets/img/user3.jpg',
-    email: 'juergen@web.de',
+    email: 'eric@web.de',
   },
 ];
 
