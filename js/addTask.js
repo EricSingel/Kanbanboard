@@ -3,7 +3,7 @@ async function init() {
   await load();
 }
 
-TheUsers = [];
+TheUsersOfTheTask = [];
 
 function addTask() {
   let title = document.getElementById('title').value;
@@ -11,7 +11,7 @@ function addTask() {
   let category = document.getElementById('category').value;
   let urgency = document.getElementById('urgency').value;
   let description = document.getElementById('description').value;
-  let user = TheUsers[TheUsers.length - 1];
+  let user = TheUsersOfTheTask[TheUsersOfTheTask.length - 1];
   let task = {
     title: title,
     date: date,
@@ -44,7 +44,7 @@ function showUsers() {
 }
 
 function addUserToTask(i) {
-  TheUsers.push(users[i].name);
+  TheUsersOfTheTask.push(users[i].name);
   let userSelectMenu = document.getElementById('userSelectMenu');
   userSelectMenu.classList.toggle('userSelectClose');
 }
