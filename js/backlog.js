@@ -5,15 +5,14 @@ async function init() {
 }
 
 function renderBacklogTask() {
-  let table = document.getElementById('backlogTable');
   for (let i = 0; i < tasks.length; i++) {
     const task = tasks[i];
     if (task.status != '') {
     } else {
-      addNewBacklogTR(task, i);
+      // addNewBacklogTR(task, i);
+      addRowHandler(addNewBacklogTR(task, i), i);
     }
   }
-  addRowHandler(table);
 }
 
 function addNewBacklogTR(task, i) {
@@ -53,6 +52,7 @@ function addNewBacklogTR(task, i) {
 
   addTasksValues(task, i);
   addUserColor(task, i);
+  return newRow;
 }
 
 function addTasksValues(task, i) {
@@ -67,17 +67,13 @@ function addTasksValues(task, i) {
   `;
 }
 
-function addRowHandler(table) {
-  let rows = table.getElementsByTagName('tr');
-  for (i = 0; i < rows.length; i++) {
-    let row = table.rows[i];
-    row.onclick = () => {
-      tasks[row.rowIndex].board = 'true';
-      tasks[row.rowIndex].status = 'ToDo';
-      save();
-      table.deleteRow(row.rowIndex);
-    };
-  }
+function addRowHandler(row, i) {
+  let table = document.getElementById('backlogTable');
+  row.onclick = () => {
+    tasks[i].status = 'ToDo';
+    save();
+    table.deleteRow(row.rowIndex);
+  };
 }
 
 function addUserColor(task, i) {
