@@ -116,7 +116,7 @@ main {
 }
 
 .background-fields {
-  background-color: rgb(209, 209, 209);
+  background-color: rgb(209, 209, 209) !important;
 }
 
 .title {
@@ -136,7 +136,7 @@ main {
   right: 0;
   width: 100%;
   height: 100%;
-  transform: translateY(-1100px);
+  transform: translateY(-110rem);
   z-index: 55;
   background: url("/assets/img/light-bg.jpg") rgba(0,0,0,0.6);
   background-blend-mode: darken;
@@ -147,7 +147,7 @@ main {
 }
 
 .transform-task {
-  transform: translateY(0px);
+  transform: translateY(0);
 }
 
 .close-whole-task {

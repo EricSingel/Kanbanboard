@@ -1,0 +1,131 @@
+/*WICHTIG*/
+:root {
+    --clr-light: #ffffff;
+    --clr-dark: #000000;
+    --clr-dark-field: #0f0f0f;
+    --clr-light-field: #ebebeb;
+    --clr-light-navbar: #0B2185;
+    --clr-primary: #dbffa2;
+    --clr-secondary: #c3fcf2;
+    --clr-accent: #ff7750;
+  
+    --foreground: var(--clr-dark);
+    --background: var(--clr-light);
+    --background-field: var(--clr-light-field);
+    --background-navbar: var(--clr-light-navbar);
+  
+    --ff-title: "Playfair Display", serif;
+    --ff-body: "Assistant", sans-serif;
+  }
+  
+  /*WICHTIG*/
+  .darkmode {
+    --clr-light: #ffffff;
+    --clr-dark: #252525;
+    --clr-dark-field: #0f0f0f;
+    --clr-dark-navbar: #0f0f0f;
+    --clr-primary: #202302;
+    --clr-secondary: #00100d;
+    --clr-accent: #ff7750;
+  
+    --foreground: var(--clr-light);
+    --background: var(--clr-dark);
+    --background-field: var(--clr-dark-field);
+    --background-navbar: var(--clr-dark-navbar);
+  }
+  
+  /*WICHTIG*/
+  body {
+    background: var(--background);
+    color: var(--foreground);
+    font-size: 18px;
+    line-height: 1.6;
+    transition: 400ms ease;
+  }
+  
+  .board-field{
+    background: var(--background-field) !important;
+    transition: 400ms ease;
+  }
+
+  h1{
+    transition: 400ms ease;
+  }
+
+  .nav-bar{
+    background: var(--background-navbar) !important;
+  }
+
+  p{
+    transition: 400ms ease;
+  }
+  
+  .subtitle {
+    max-width: 600px;
+  }
+  
+  .btn-group {
+    margin: 2em 0;
+    display: relative;
+  }
+  
+  .btn {
+    padding: 1em 2em;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 5px;
+    position: relative;
+    display: inline-block;
+    line-height: 1;
+  }
+  
+  .btn + .btn {
+    margin-left: 1em;
+  }
+  
+  .btn-secondary {
+    background: var(--foreground);
+    color: var(--background);
+    border: currentColor solid 2px;
+  }
+  
+  .btn-accent {
+    background: var(--clr-accent);
+    color: var(--foreground);
+  }
+  
+  .btn::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: var(--foreground) 2px solid;
+    left: -4px;
+    top: 4px;
+    border-radius: inherit;
+    z-index: -1;
+  }
+  
+  /*WICHTIG*/
+  .dark-mode-toggle {
+    position: absolute;
+    z-index: 100;
+    top: 1em;
+    right: 1em;
+    color: var(--foreground);
+    border: 2px solid currentColor;
+    padding: 4px;
+    background: transparent;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 30px;
+    height: 30px;
+    transition: 400ms ease;
+  }
+  
+  .click-here {
+      width: 100px;
+      right: 1.5em;
+      position: absolute;
+      top: 3em;
+    }
