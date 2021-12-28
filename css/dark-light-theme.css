@@ -5,6 +5,7 @@
     --clr-dark-field: #0f0f0f;
     --clr-light-field: #ebebeb;
     --clr-light-navbar: #0B2185;
+    --clr-light-backlog-field: #D7DDE4;
     --clr-primary: #dbffa2;
     --clr-secondary: #c3fcf2;
     --clr-accent: #ff7750;
@@ -13,6 +14,7 @@
     --background: var(--clr-light);
     --background-field: var(--clr-light-field);
     --background-navbar: var(--clr-light-navbar);
+    --background-backlog-field: var(--clr-light-backlog-field);
   
     --ff-title: "Playfair Display", serif;
     --ff-body: "Assistant", sans-serif;
@@ -24,6 +26,7 @@
     --clr-dark: #252525;
     --clr-dark-field: #0f0f0f;
     --clr-dark-navbar: #0f0f0f;
+    --clr-dark-backlog-field: #0f0f0f;
     --clr-primary: #202302;
     --clr-secondary: #00100d;
     --clr-accent: #ff7750;
@@ -32,6 +35,7 @@
     --background: var(--clr-dark);
     --background-field: var(--clr-dark-field);
     --background-navbar: var(--clr-dark-navbar);
+    --background-backlog-field: var(--clr-dark-backlog-field);
   }
   
   /*WICHTIG*/
@@ -46,6 +50,19 @@
   .board-field{
     background: var(--background-field) !important;
     transition: 400ms ease;
+  }
+
+  #allTasks{
+    background: var(--background) !important;
+  }
+
+  td{
+    background: var(--background-backlog-field) !important;
+    transition: 400ms ease;
+  }
+
+  #allTasks p{
+    transition: 100ms ease !important;
   }
 
   h1{

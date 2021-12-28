@@ -34,7 +34,7 @@ function addNewBacklogTR(task, i) {
   `;
 
   cell2.innerHTML = `
-  <div id='categoryBL${i}'>
+  <div class="user-container2" id='categoryBL${i}'>
     Marketing
   </div>
   `;
