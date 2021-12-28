@@ -8,7 +8,10 @@ function renderBacklogTask() {
   let table = document.getElementById('backlogTable');
   for (let i = 0; i < tasks.length; i++) {
     const task = tasks[i];
-    addNewBacklogTR(task, i);
+    if (task.status != '') {
+    } else {
+      addNewBacklogTR(task, i);
+    }
   }
   addRowHandler(table);
 }
