@@ -10,7 +10,7 @@ function addTask() {
   let category = document.getElementById('category').value;
   let urgency = document.getElementById('urgency').value;
   let description = document.getElementById('description').value;
-  let user = TheUsersOfTheTask[TheUsersOfTheTask.length - 1];
+  // let user = TheUsersOfTheTask[TheUsersOfTheTask.length - 1];
   let task = {
     title: title,
     date: date,
@@ -18,7 +18,7 @@ function addTask() {
     urgency: urgency,
     description: description,
     status: '',
-    user: user,
+    user: TheUsersOfTheTask,
     board: 'false',
   };
 
@@ -35,8 +35,8 @@ function showUsers() {
   for (let i = 0; i < users.length; i++) {
     const user = users[i];
     userSelect.innerHTML += `
-    <div onclick="addUserToTask(${i})" class="Addtask-table-section-Users-Select">
-      <img src="${user.img}" class="cursor-pointer" alt="" />
+    <div onclick="addUserToTask(${i})" class="Addtask-table-section-Users-Select cursor-pointer">
+      <img src="${user.img}" alt="" />
       <span>${user.name}</span>
     </div>
     `;
@@ -44,7 +44,10 @@ function showUsers() {
 }
 
 function addUserToTask(i) {
-  TheUsersOfTheTask.push(users[i]);
   let userSelectMenu = document.getElementById('userSelectMenu');
-  userSelectMenu.classList.toggle('userSelectClose');
+  let userImages = document.getElementById('userImages');
+
+  TheUsersOfTheTask.push(users[i]);
+  userSelectMenu.classList.remove('userSelectOpen');
+  userImages.innerHTML += `<img src="${users[i].img}" />`;
 }

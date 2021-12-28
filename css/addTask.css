@@ -30,9 +30,6 @@ body {
   cursor: pointer;
 }
 
-.Addtask-table-section-Users-Img {
-}
-
 .Addtask-table-section-Users-Menu {
   display: flex;
   justify-content: flex-start;
@@ -77,6 +74,11 @@ body {
 .Addtask-table-section-Users-Select span {
   padding-left: 8px;
   padding-right: 8px;
+}
+.Addtask-table-section-Users-Img img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
 }
 
 /*Addtask header*/
