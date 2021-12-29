@@ -83,11 +83,12 @@ function generateTask(element, i) {
                 <img src="${element.user.img}">
                 <p>${element.user.name}</p>
             </div>
-        <button onclick="deleteTask(${i})">Delete</button>
+        <button onclick="deleteTask(${i}, event)">Delete</button>
     </div>`;
 }
 
-function deleteTask(i){
+function deleteTask(i, event){
+  event.stopPropagation();
   tasks.splice(i, 1);
   save();
   showTasks();
