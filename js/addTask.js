@@ -51,3 +51,4 @@ function addUserToTask(i) {
   userSelectMenu.classList.remove('userSelectOpen');
   userImages.innerHTML += `<img src="${users[i].img}" />`;
 }
+
