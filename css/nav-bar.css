@@ -22,6 +22,7 @@
   border-left-style: solid;
   border-left-width: 5px;
   width: fit-content;
+  transition: ease-in-out 225ms;
 }
 
 .logo-div {
