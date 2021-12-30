@@ -7,7 +7,7 @@ body {
 main {
   display: flex;
   justify-content: flex-end;
-  width: calc(100% - 210px);
+  width: calc(100% - 200px);
 }
 
 .board-fields {
@@ -109,7 +109,7 @@ main {
   margin-top: 15px;
 }
 
-.person-info img{
+.person-info img {
   height: 2em;
   width: 2em;
   border-radius: 100%;
@@ -139,7 +139,7 @@ main {
   height: 100%;
   transform: translateY(-110rem);
   z-index: 55;
-  background: rgba(0,0,0,0.8);
+  background: rgba(0, 0, 0, 0.8);
   background-blend-mode: darken;
   background-size: cover;
   background-position: left;
@@ -165,8 +165,8 @@ main {
   transition: 225ms ease-in-out;
 }
 
-.close-whole-task img:hover{
-  background: rgba(0,0,0,0.5);
+.close-whole-task img:hover {
+  background: rgba(0, 0, 0, 0.5);
   padding: 20px;
   border-radius: 100%;
 }
@@ -176,7 +176,7 @@ main {
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  background-color: rgba(0,0,0,0.7);
+  background-color: rgba(0, 0, 0, 0.7);
   width: 90%;
   padding: 20px;
   margin: auto;
@@ -189,7 +189,7 @@ main {
   align-items: center;
   width: 40%;
   margin-top: 50px;
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgba(0, 0, 0, 0.5);
   margin-left: 4.5em;
   height: 30vh;
   border-radius: 15px;
@@ -204,13 +204,13 @@ main {
   margin-left: 20px;
 }
 
-.user-div-person{
+.user-div-person {
   display: flex;
   align-items: center;
   margin-top: 60px;
 }
 
-.user-div img{
+.user-div img {
   width: 8em;
   height: 8em;
   border-radius: 100%;

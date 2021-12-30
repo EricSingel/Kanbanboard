@@ -3,10 +3,9 @@
   top: 0;
   left: 0;
   background-color: rgb(11, 33, 133);
-  width: 150px;
+  width: 200px;
   height: 100vh;
   color: white;
-  padding: 0px 30px;
   font-family: 'PT Sans', sans-serif;
 }
 
@@ -17,12 +16,13 @@
   font-size: 30px;
 }
 
-.nav-bar a:hover {
-  padding-left: 5px;
-  border-left-style: solid;
-  border-left-width: 5px;
-  width: fit-content;
-  transition: ease-in-out 225ms;
+.links-div div:hover {
+  transform: scale(1.1);
+}
+
+.a-highlight {
+  /* padding-left: 5px; */
+  border-left-color: white !important;
 }
 
 .logo-div {
@@ -39,7 +39,15 @@
   flex-direction: column;
   align-items: flex-start;
   margin-top: 50px;
-  padding-left: 25px;
+}
+
+.links-div a {
+  margin-left: 40px;
+}
+.links-div div {
+  width: 100%;
+  border-left: 7.5px solid transparent;
+  transition: ease-in-out 225ms;
 }
 
 .profile-div {

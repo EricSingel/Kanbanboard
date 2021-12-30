@@ -4,7 +4,7 @@ body {
 }
 main {
   padding: 24px;
-  width: calc(100% - 210px - 48px);
+  width: calc(100% - 248px);
   height: 100vh;
 }
 

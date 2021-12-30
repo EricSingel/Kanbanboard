@@ -1,8 +1,9 @@
-function init() {
+async function init() {
   includeHTML();
+  load();
 }
 
-TheUsersOfTheTask = [];
+TheUsersOfTheTask = {};
 
 function addTask() {
   let title = document.getElementById('title').value;
@@ -47,8 +48,7 @@ function addUserToTask(i) {
   let userSelectMenu = document.getElementById('userSelectMenu');
   let userImages = document.getElementById('userImages');
 
-  TheUsersOfTheTask.push(users[i]);
+  TheUsersOfTheTask = users[i];
   userSelectMenu.classList.remove('userSelectOpen');
-  userImages.innerHTML += `<img src="${users[i].img}" />`;
+  userImages.innerHTML = `<img src="${users[i].img}" />`;
 }
-

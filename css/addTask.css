@@ -5,7 +5,7 @@ body {
 
 .AddTask-section {
   padding: 24px;
-  width: calc(100% - 210px - 48px);
+  width: calc(100% - 200px - 48px);
 }
 
 .d-none {

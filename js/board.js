@@ -87,7 +87,7 @@ function generateTask(element, i) {
     </div>`;
 }
 
-function deleteTask(i, event){
+function deleteTask(i, event) {
   event.stopPropagation();
   tasks.splice(i, 1);
   save();

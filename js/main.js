@@ -53,3 +53,15 @@ async function load() {
     task.id = i;
   }
 }
+
+function navStyle() {
+  if (window.location.pathname == '/Kanbanboard/addTask.html') {
+    document.getElementById('addTask').classList.add('a-highlight');
+  } else if (window.location.pathname == '/Kanbanboard/board.html') {
+    document.getElementById('board').classList.add('a-highlight');
+  } else if (window.location.pathname == '/Kanbanboard/backlog.html') {
+    document.getElementById('backlog').classList.add('a-highlight');
+  } else if (window.location.pathname == '/Kanbanboard/help.html') {
+    document.getElementById('help').classList.add('a-highlight');
+  }
+}
