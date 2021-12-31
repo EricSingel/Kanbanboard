@@ -151,4 +151,5 @@ function moveTo(status) {
   tasks[currentDragged]['status'] = status;
 
   showTasks();
+  save();
 }
