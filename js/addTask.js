@@ -5,6 +5,14 @@ async function init() {
 
 TheUsersOfTheTask = {};
 
+function eraseTask() {
+  document.getElementById('title').value = '';
+  document.getElementById('date').value = '';
+  document.getElementById('category').value = '';
+  document.getElementById('urgency').value = '';
+  document.getElementById('description').value = '';
+}
+
 function addTask() {
   let title = document.getElementById('title').value;
   let date = document.getElementById('date').value;
@@ -25,6 +33,8 @@ function addTask() {
 
   tasks.push(task);
   save();
+
+  eraseTask();
 }
 
 function showUsers() {
