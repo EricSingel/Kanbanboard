@@ -34,7 +34,7 @@ function addTask() {
   tasks.push(task);
   save();
 
-  // eraseTask();
+  eraseTask();
 }
 
 function showUsers() {
