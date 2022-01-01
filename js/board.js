@@ -106,16 +106,25 @@ function wholeTask(i) {
     
       <div class="task-title-div">
         <h1>${task['title']}</h1>
-        <p>${task['description']}</p>
       </div>
-    
+
+    <div class="user-div-and-description-div">
       <div class="user-div">
-        <p>Assigned to</p>
+        <h2>Assigned to</h2>
           <div class="user-div-person">
-            <img src="${task.user.img}">
-            <p>${task.user.name}</p>
-          </div>      
+          <img src="${task.user.img}">
+        <p>${task.user.name}</p>
+      </div>  
+          
       </div> 
+
+      <div class="description-div">
+          <h2>Description</h2>
+          <p>${task['description']}</p>
+      </div>
+    </div>
+    
+      
     </div>
     `;
   }

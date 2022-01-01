@@ -68,6 +68,12 @@
     transition: 400ms ease;
 }
 
+.description-div{
+    background: var(--background-field) !important;
+    color: var(--foreground);
+    transition: 400ms ease;
+}
+
 .task-bigger{
     background: var(--background) !important;
     
