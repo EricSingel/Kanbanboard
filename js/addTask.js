@@ -1,6 +1,6 @@
 async function init() {
   includeHTML();
-  load();
+  await load();
 }
 
 TheUsersOfTheTask = {};
@@ -34,7 +34,7 @@ function addTask() {
   tasks.push(task);
   save();
 
-  eraseTask();
+  // eraseTask();
 }
 
 function showUsers() {

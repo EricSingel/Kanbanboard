@@ -37,7 +37,7 @@ async function save() {
   // localStorage.setItem('tasks', tasksAsText);
   await saveUsers();
 
-  load();
+  await load();
 }
 
 async function load() {
