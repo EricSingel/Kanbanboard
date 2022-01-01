@@ -101,14 +101,14 @@ function wholeTask(i) {
     document.getElementById('taskBigger').innerHTML = `
     <div>
       <div class="close-whole-task">
-        <img onclick="closeWholeTask()" src="assets/img/chevron-up.ico">
+        <button onclick="closeWholeTask()">Close</button>
       </div>
-     
+    
       <div class="task-title-div">
         <h1>${task['title']}</h1>
         <p>${task['description']}</p>
       </div>
-     
+    
       <div class="user-div">
         <p>Assigned to</p>
           <div class="user-div-person">
@@ -136,11 +136,11 @@ function startDragging(id) {
 }
 
 function highlight(id) {
-  document.getElementById(id).classList.add('background-fields');
+  document.getElementById(id).classList.add('background-fields-highlight');
 }
 
 function removeHighlight(id) {
-  document.getElementById(id).classList.remove('background-fields');
+  document.getElementById(id).classList.remove('background-fields-highlight');
 }
 
 function allowDrop(ev) {

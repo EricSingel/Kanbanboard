@@ -42,7 +42,7 @@
     --backlog-text: var(--clr-backlog-dark);
  }
   
-  /*WICHTIG*/
+/*WICHTIG*/
  body {
     background: var(--background);
     color: var(--foreground);
@@ -50,10 +50,27 @@
     line-height: 1.6;
     transition: 400ms ease;
 }
-  
+
 .board-field{
     background: var(--background-field) !important;
     transition: 400ms ease;
+}
+
+.task-title-div{
+    background: var(--background-field) !important;
+    color: var(--foreground);
+    transition: 400ms ease;   
+}
+
+.user-div{
+    background: var(--background-field) !important;
+    color: var(--foreground);
+    transition: 400ms ease;
+}
+
+.task-bigger{
+    background: var(--background) !important;
+    
 }
 
 #allTasks{
