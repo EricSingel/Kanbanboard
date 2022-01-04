@@ -10,5 +10,4 @@ async function login() {
     }
   }
   window.location = 'addTask.html';
-  // init();
 }
