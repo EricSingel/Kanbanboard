@@ -27,7 +27,7 @@ function addNewBacklogTR(task, i) {
   cell1.innerHTML = `
   <div class="user-container">
     <div id="userColorBL${i}" class="userColorBL"></div>
-    <img id="userImgBL${i}" src="assets/img/icon plus.png" alt="" />
+    <img class="user-img-bl" id="userImgBL${i}" src="assets/img/icon plus.png" alt="" />
     <div class="name-div">
       <span id='nameBL${i}'>${task.user.name}</span>
       <span id='emailBL${i}' class="email">${task.user.email}</span>
@@ -58,7 +58,8 @@ function addNewBacklogTR(task, i) {
 function addTasksValues(task, i) {
   let category = document.getElementById('categoryBL' + i);
   let details = document.getElementById('detailsBL' + i);
-
+  let img = document.getElementById('userImgBL' + i);
+  img.src = task.user.img;
   category.innerHTML = task.category;
   details.innerHTML = `
   ${task.title}<br>
