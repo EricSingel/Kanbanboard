@@ -1,6 +1,6 @@
 async function init() {
+  await loadAtAddTask();
   includeHTML();
-  await load();
 }
 
 TheUsersOfTheTask = {};
@@ -28,7 +28,6 @@ function addTask() {
     description: description,
     status: '',
     user: TheUsersOfTheTask,
-    board: 'false',
   };
 
   tasks.push(task);

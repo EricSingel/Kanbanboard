@@ -1,4 +1,3 @@
-//TODO User einbinden
 setURL(
   'http://gruppe-141.developerakademie.net/Kanbanboard/smallest_backend_ever-master'
 );
@@ -23,19 +22,60 @@ let users = [
   },
 ];
 
+let loggedInUser = {};
+
 let tasks = [];
 
+//FUNCTION TO INCLUDE HTML FILES
+
+function includeHTML() {
+  var z, i, elmnt, file, xhttp;
+  /* Loop through a collection of all HTML elements: */
+  z = document.getElementsByTagName('*');
+  for (i = 0; i < z.length; i++) {
+    elmnt = z[i];
+    /*search for elements with a certain atrribute:*/
+    file = elmnt.getAttribute('w3-include-html');
+    if (file) {
+      /* Make an HTTP request using the attribute value as the file name: */
+      xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function () {
+        if (this.readyState == 4) {
+          if (this.status == 200) {
+            elmnt.innerHTML = this.responseText;
+          }
+          if (this.status == 404) {
+            elmnt.innerHTML = 'Page not found.';
+          }
+          /* Remove the attribute, and call this function once more: */
+          elmnt.removeAttribute('w3-include-html');
+          includeHTML();
+        }
+      };
+      xhttp.open('GET', file, true);
+      xhttp.send();
+      /* Exit the function: */
+      return;
+    }
+  }
+  navStyle();
+}
+
+async function saveUserLoggedIn(user) {
+  await backend.setItem('loggedUser', JSON.stringify(user));
+  // let usersAsText = JSON.stringify(users);
+  // localStorage.setItem('users', usersAsText);
+}
 async function saveUsers() {
   await backend.setItem('users', JSON.stringify(users));
   // let usersAsText = JSON.stringify(users);
   // localStorage.setItem('users', usersAsText);
 }
-
 async function save() {
+  await saveUsers();
   await backend.setItem('tasks', JSON.stringify(tasks));
   // let tasksAsText = JSON.stringify(tasks);
   // localStorage.setItem('tasks', tasksAsText);
-  await saveUsers();
 
   await load();
 }
@@ -43,6 +83,7 @@ async function save() {
 async function load() {
   await downloadFromServer();
   users = (await JSON.parse(backend.getItem('users'))) || [];
+  loggedInUser = await JSON.parse(backend.getItem('loggedUser'));
   tasks = (await JSON.parse(backend.getItem('tasks'))) || [];
   // let tasksAsText = localStorage.getItem('tasks');
   // tasks = JSON.parse(tasksAsText);
@@ -54,14 +95,30 @@ async function load() {
   }
 }
 
+async function loadAtAddTask() {
+  await downloadFromServer();
+  users = (await JSON.parse(backend.getItem('users'))) || [];
+  loggedInUser = (await JSON.parse(backend.getItem('loggedUser'))) || {};
+}
+
 function navStyle() {
   if (window.location.pathname == '/Kanbanboard/addTask.html') {
     document.getElementById('addTask').classList.add('a-highlight');
+    loggedInUserImg();
   } else if (window.location.pathname == '/Kanbanboard/board.html') {
     document.getElementById('board').classList.add('a-highlight');
+    loggedInUserImg();
   } else if (window.location.pathname == '/Kanbanboard/backlog.html') {
     document.getElementById('backlog').classList.add('a-highlight');
+    loggedInUserImg();
   } else if (window.location.pathname == '/Kanbanboard/help.html') {
     document.getElementById('help').classList.add('a-highlight');
+    loggedInUserImg();
   }
+}
+
+function loggedInUserImg() {
+  let loggedUser = document.getElementById('loggedUser');
+
+  loggedUser.src = loggedInUser.img;
 }
