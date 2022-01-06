@@ -32,6 +32,7 @@
 
 .logo-img {
   margin-top: 20px;
+  cursor: pointer;
 }
 .profile-img {
   height: 60px;

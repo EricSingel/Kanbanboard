@@ -15,7 +15,7 @@ function eraseTask() {
   document.getElementById('userImages').innerHTML = '';
 }
 
-function addTask() {
+async function addTask() {
   let title = document.getElementById('title').value;
   let date = document.getElementById('date').value;
   let category = document.getElementById('category').value;
@@ -33,9 +33,9 @@ function addTask() {
   };
 
   tasks.push(task);
-  save();
-
+  await save();
   eraseTask();
+  window.location = 'backlog.html';
 }
 
 function showUsers() {

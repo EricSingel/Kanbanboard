@@ -68,12 +68,18 @@ function addTasksValues(task, i) {
   `;
 }
 
+function closeFeedback(){
+  document.getElementById('addedToBoard').classList.add('d-none');
+}
+
 function addRowHandler(row, i) {
   let table = document.getElementById('backlogTable');
+  let add_to_board = document.getElementById('addedToBoard');
   row.onclick = () => {
     tasks[i].status = 'ToDo';
     save();
     table.deleteRow(row.rowIndex);
+    add_to_board.classList.remove('d-none');
   };
 }
 
