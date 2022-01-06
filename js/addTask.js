@@ -11,6 +11,7 @@ function eraseTask() {
   document.getElementById('category').value = '';
   document.getElementById('urgency').value = '';
   document.getElementById('description').value = '';
+  document.getElementById('userImages').innerHTML = '';
 }
 
 function addTask() {

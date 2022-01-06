@@ -28,6 +28,7 @@ body {
   top: 0;
   right: 0;
   cursor: pointer;
+  object-fit: cover;
 }
 
 .Addtask-table-section-Users-Menu {
@@ -46,7 +47,11 @@ body {
 
 .userSelectOpen {
   clip-path: circle(150% at 100% 0);
-  background-color: lightblue;
+  background: linear-gradient(
+    45deg,
+    rgba(97, 97, 97, 1) 0%,
+    rgba(255, 255, 255, 1) 100%
+  );
 }
 
 .userSelectClose {
@@ -62,8 +67,10 @@ body {
 }
 
 #userSelect img {
-  height: 40px;
-  width: 40px;
+  height: 60px;
+  width: 60px;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
 .Addtask-table-section-Users-Select {
@@ -76,9 +83,10 @@ body {
   padding-right: 8px;
 }
 .Addtask-table-section-Users-Img img {
-  height: 40px;
-  width: 40px;
+  height: 60px;
+  width: 60px;
   border-radius: 50%;
+  object-fit: cover;
 }
 
 /*Addtask header*/
@@ -124,6 +132,8 @@ body {
   height: 35px;
   padding-left: 10px;
   outline: none;
+  font-family: 'PT Sans', sans-serif;
+  font-size: 18px;
 }
 
 .calender-container {
@@ -139,6 +149,8 @@ body {
   height: 35px;
   padding-left: 10px;
   outline: none;
+  font-family: 'PT Sans', sans-serif;
+  font-size: 18px;
 }
 
 .dropdown-container {
@@ -155,6 +167,8 @@ body {
   padding-left: 10px;
   cursor: pointer;
   outline: none;
+  font-family: 'PT Sans', sans-serif;
+  font-size: 18px;
 }
 
 .description-container {
@@ -172,6 +186,8 @@ body {
   width: 95, 5%;
   height: 135px;
   padding-left: 10px;
+  font-family: 'PT Sans', sans-serif;
+  font-size: 18px;
 }
 
 .description-input:focus {
