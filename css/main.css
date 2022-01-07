@@ -10,3 +10,7 @@
 body {
   font-family: 'PT Sans', sans-serif;
 }
+
+.d-none {
+  display: none;
+}

@@ -17,6 +17,8 @@ main {
   margin-bottom: 48px;
 }
 
+/* Table */
+
 .table-container {
   width: 100%;
 }
@@ -54,6 +56,7 @@ table td:hover {
   max-height: 100px;
   background-color: rgb(215, 221, 228);
   font-weight: bold;
+  border-radius: 10px;
 }
 
 .task-row td:first-child {
@@ -62,7 +65,7 @@ table td:hover {
   overflow: hidden;
 }
 .task-row td:last-child {
-  width: 50%;
+  width: 10%;
   border-radius: 0 16px 16px 0;
 }
 
@@ -101,7 +104,7 @@ table td:hover {
   object-fit: cover;
 }
 
-.added-to-board-div{
+.added-to-board-div {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -110,10 +113,10 @@ table td:hover {
   height: 100vh;
   position: absolute;
   top: 0;
-  background-color: rgba(0,0,0,0.3);
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
-.added-to-board-div div{
+.added-to-board-div div {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -126,28 +129,35 @@ table td:hover {
   border-radius: 15px;
 }
 
-.added-to-board-div div p{
+.added-to-board-div div p {
   font-size: 25px;
   color: white;
   margin-bottom: 25px;
 }
 
-.added-to-board-div div img{
+.added-to-board-div div img {
   width: 100px;
   margin-bottom: 50px;
 }
 
-.added-to-board-div div button{
+.added-to-board-div div button {
   border: none;
   padding: 10px 30px;
   border-radius: 5px;
   cursor: pointer;
 }
 
-.added-to-board-div div button:hover{
+.added-to-board-div div button:hover {
   background-color: rgb(0, 151, 0);
 }
 
-.d-none{
+.d-none {
   display: none;
+}
+
+.highlight {
+  box-shadow: 0px 0px 2px 5px rgb(0 0 205);
+}
+
+@media all and (max-width: 1000px) {
 }

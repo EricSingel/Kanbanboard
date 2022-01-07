@@ -73,3 +73,33 @@
   justify-content: center;
   margin-top: 500px;
 }
+
+.menu {
+  display: none;
+  margin-right: 32px;
+  cursor: pointer;
+  transition: 225ms ease-in-out;
+}
+
+@media all and (max-width: 1000px) {
+  .nav-bar {
+    width: 100vw;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .menu {
+    display: block;
+  }
+
+  .profile-img {
+    height: 40px;
+    width: 40px;
+  }
+
+  .profile-img-container {
+    bottom: 20%;
+  }
+}

@@ -87,10 +87,10 @@ function generateTask(element, i) {
     </div>`;
 }
 
-function deleteTask(i, event) {
+async function deleteTask(i, event) {
   event.stopPropagation();
   tasks.splice(i, 1);
-  save();
+  await save();
   showTasks();
 }
 

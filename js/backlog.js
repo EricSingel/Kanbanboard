@@ -9,8 +9,7 @@ function renderBacklogTask() {
     const task = tasks[i];
     if (task.status != '') {
     } else {
-      // addNewBacklogTR(task, i);
-      addRowHandler(addNewBacklogTR(task, i), i);
+      addNewBacklogTR(task, i);
     }
   }
 }
@@ -19,10 +18,11 @@ function addNewBacklogTR(task, i) {
   let table = document.getElementById('backlogTable');
   let newRow = table.insertRow(table.rows.length);
   newRow.classList.add('task-row');
-  // newRow.setAttribute('id', newRow.rowIndex);
+  newRow.setAttribute('id', i);
   let cell1 = newRow.insertCell(0);
   let cell2 = newRow.insertCell(1);
   let cell3 = newRow.insertCell(2);
+  let cell4 = newRow.insertCell(3);
 
   cell1.innerHTML = `
   <div class="user-container">
@@ -50,6 +50,11 @@ function addNewBacklogTR(task, i) {
   </div>
   `;
 
+  cell4.innerHTML = `
+  <button onclick="addTaskToBoard(${i})" class="bl-btn">to Board</button>
+  <button onclick="deleteTask(${i})" class="bl-btn">Delete</button>
+  `;
+
   addTasksValues(task, i);
   addUserColor(task, i);
   return newRow;
@@ -68,19 +73,24 @@ function addTasksValues(task, i) {
   `;
 }
 
-function closeFeedback(){
+async function deleteTask(i) {
+  let row = document.getElementById(i);
+  tasks.splice(i, 1);
+  await save();
+  row.parentNode.removeChild(row);
+}
+
+function closeFeedback() {
   document.getElementById('addedToBoard').classList.add('d-none');
 }
 
-function addRowHandler(row, i) {
-  let table = document.getElementById('backlogTable');
+async function addTaskToBoard(i) {
+  let row = document.getElementById(i);
   let add_to_board = document.getElementById('addedToBoard');
-  row.onclick = () => {
-    tasks[i].status = 'ToDo';
-    save();
-    table.deleteRow(row.rowIndex);
-    add_to_board.classList.remove('d-none');
-  };
+  tasks[i].status = 'ToDo';
+  await save();
+  row.parentNode.removeChild(row);
+  add_to_board.classList.remove('d-none');
 }
 
 function addUserColor(task, i) {
