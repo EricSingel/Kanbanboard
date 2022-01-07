@@ -235,3 +235,14 @@ main {
   border-radius: 100%;
   object-fit: cover;
 }
+
+@media all and (max-width: 1000px) {
+  .board-fields{
+    width: 100%;
+  }
+
+  .board-div{
+    min-width: 20rem ;
+    margin: 0px 10px;
+  }
+}
