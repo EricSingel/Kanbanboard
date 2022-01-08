@@ -47,7 +47,7 @@ function showUsers() {
   for (let i = 0; i < users.length; i++) {
     const user = users[i];
     userSelect.innerHTML += `
-    <div onclick="addUserToTask(${i})" class="Addtask-table-section-Users-Select cursor-pointer">
+    <div onclick="addUserToTask(${i})" class="user-pic-and-name cursor-pointer-br50">
       <img src="${user.img}" alt="" />
       <span>${user.name}</span>
     </div>

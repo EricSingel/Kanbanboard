@@ -3,126 +3,45 @@ body {
   justify-content: flex-end;
 }
 
-.AddTask-section {
+.addTask-section {
   padding: 24px;
   width: calc(100% - 200px - 48px);
 }
 
-.d-none {
-  display: none;
-}
-
-.cursor-pointer {
-  cursor: pointer;
-  border-radius: 50%;
-}
-
-.Addtask-table-section-Users {
-  position: relative;
-}
-
-.Addtask-table-section-Users-Button {
-  height: 40px;
-  width: 40px;
-  position: absolute;
-  top: 0;
-  right: 0;
-  cursor: pointer;
-  object-fit: cover;
-}
-
-.Addtask-table-section-Users-Menu {
-  display: flex;
-  justify-content: flex-start;
-  flex-direction: column;
-  width: max-content;
-  height: min-content;
-  position: absolute;
-  top: -50px;
-  right: 0;
-  clip-path: circle(52px at 100% 0);
-  transition: ease-in-out 225ms;
-  border-radius: 16px;
-}
-
-.userSelectOpen {
-  clip-path: circle(150% at 100% 0);
-  background: linear-gradient(
-    45deg,
-    rgba(97, 97, 97, 1) 0%,
-    rgba(255, 255, 255, 1) 100%
-  );
-}
-
-.userSelectClose {
-  background-color: lightblue;
-}
-
-#userSelect {
-  padding-top: 40px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-}
-
-#userSelect img {
-  height: 60px;
-  width: 60px;
-  object-fit: cover;
-  border-radius: 50%;
-}
-
-.Addtask-table-section-Users-Select {
-  align-items: center;
-  margin: 4px;
-  display: flex;
-}
-.Addtask-table-section-Users-Select span {
-  padding-left: 8px;
-  padding-right: 8px;
-}
-.Addtask-table-section-Users-Img img {
-  height: 60px;
-  width: 60px;
-  border-radius: 50%;
-  object-fit: cover;
-}
-
 /*Addtask header*/
 
-.AddTask-header {
+.header {
   margin-bottom: 24px;
 }
 
-.AddTask-header-subtitle {
+.subtitle {
   color: var(--text-color);
   font-weight: bold;
 }
 
 /*Addtask table*/
 
-.Addtask-table-section {
+.table {
   background-color: #ebf2f8;
   border-radius: 5px;
 }
 
-.Addtask-table-section-Row {
+.table-row {
   display: flex;
   justify-content: space-around;
   padding: 24px;
 }
 
-.title-container {
-  width: 20rem;
-  display: flex;
-  flex-direction: column;
-}
-
-.Addtask-table-section-span {
+.input-name {
   font-weight: bold;
   color: var(--text-color);
   margin-bottom: 10px;
+}
+
+.titleInput-container {
+  width: 20rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .title-input {
@@ -136,7 +55,7 @@ body {
   font-size: 18px;
 }
 
-.calender-container {
+.calenderInput-container {
   display: flex;
   flex-direction: column;
   width: 20rem;
@@ -153,7 +72,7 @@ body {
   font-size: 18px;
 }
 
-.dropdown-container {
+.dropdownInput-container {
   width: 20rem;
   display: flex;
   flex-direction: column;
@@ -171,7 +90,7 @@ body {
   font-size: 18px;
 }
 
-.description-container {
+.descriptionInput-container {
   width: 20rem;
   display: flex;
   flex-direction: column;
@@ -194,19 +113,19 @@ body {
   outline: none;
 }
 
-.Addtask-table-section-thirdRow-assignedTo {
+.assignedToInput-container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   width: 20rem;
 }
 
-.Addtask-table-section-buttons-section {
+.btns-container {
   display: flex;
   justify-content: end;
 }
 
-.cancel-createTask-buttons {
+.cancel-createTask-btns {
   color: rgb(68, 68, 209);
   margin-right: 10px;
   margin-left: 10px;
@@ -217,8 +136,150 @@ body {
   border: 0;
 }
 
-.cancel-createTask-buttons:hover {
+.cancel-createTask-btns:hover {
   background-color: rgb(68, 68, 209);
   color: white;
   cursor: pointer;
+}
+
+.users-container {
+  position: relative;
+}
+
+.selectUser-btn {
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  object-fit: cover;
+}
+
+.users-menu {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  width: max-content;
+  height: min-content;
+  position: absolute;
+  top: -50px;
+  right: 0;
+  clip-path: circle(52px at 100% 0);
+  transition: ease-in-out 225ms;
+  border-radius: 16px;
+}
+
+.userSelectOpen {
+  clip-path: circle(150% at 100% 0);
+  background: linear-gradient(45deg,
+      rgba(97, 97, 97, 1) 0%,
+      rgba(255, 255, 255, 1) 100%);
+}
+
+#userSelect {
+  padding-top: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+#userSelect img {
+  height: 60px;
+  width: 60px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.user-pic-and-name {
+  align-items: center;
+  margin: 4px;
+  display: flex;
+}
+
+.user-pic-and-name span {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.users-img img {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+@media all and (max-width: 1000px) {
+
+  .addTask-section {
+    padding: 0px;
+    width: 100%;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+
+  .header {
+    margin-top: 96px;
+    margin-bottom: 24px;
+  }
+
+  .table {
+    background-color: #ebf2f8;
+    border-radius: 0px;
+  }
+
+  .table-row {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0px;
+  }
+
+  .titleInput-container {
+    width: 20rem;
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+
+  .calenderInput-container {
+    display: flex;
+    flex-direction: column;
+    width: 20rem;
+    margin-bottom: 25px;
+  }
+
+  .dropdownInput-container {
+    width: 20rem;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px
+  }
+
+  .descriptionInput-container {
+    width: 20rem;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+  }
+
+  .assignedToInput-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 20rem;
+    margin-bottom: 25px;
+  }
+}
+
+.d-none {
+  display: none;
+}
+
+.cursor-pointer-br50 {
+  cursor: pointer;
+  border-radius: 50%;
 }
