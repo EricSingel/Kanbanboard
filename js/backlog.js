@@ -1,3 +1,6 @@
+let x = window.matchMedia('(max-width: 1000px)');
+x.addEventListener('change', responsiveStyle);
+
 async function init() {
   await load();
   includeHTML();
@@ -102,5 +105,14 @@ function addUserColor(task, i) {
     userColorDiv.style.backgroundColor = 'red';
   } else {
     userColorDiv.style.backgroundColor = 'green';
+  }
+}
+
+function responsiveStyle(x) {
+  let 
+  if (x.matches) {
+    // If media query matches
+
+  } else {
   }
 }
