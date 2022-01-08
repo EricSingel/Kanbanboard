@@ -222,6 +222,7 @@ body {
   .header {
     margin-top: 96px;
     margin-bottom: 24px;
+    text-align: center;
   }
 
   .table {
