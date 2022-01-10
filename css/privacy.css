@@ -1,0 +1,12 @@
+.privacy {
+    margin-left: 200px;
+    padding: 24px;
+}
+
+@media all and (max-width: 1000px) {
+    .privacy {
+        margin: 24px;
+        margin-top: 96px;
+        text-align: center;
+    }
+}

@@ -14,24 +14,3 @@ body {
 .d-none {
   display: none;
 }
-
-.imprint {
-  margin-left: 200px;
-  padding: 24px;
-}
-.privacy {
-  margin-left: 200px;
-  padding: 24px;
-}
-
-@media all and (max-width: 1000px) {
-  .privacy {
-    margin-top: 100px;
-    width: 100%;
-  }
-
-  .imprint {
-    margin-top: 100px;
-    width: 100%;
-  }
-}
