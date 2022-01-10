@@ -8,12 +8,27 @@ async function init() {
 }
 
 function renderBacklogTask() {
-  for (let i = 0; i < tasks.length; i++) {
-    const task = tasks[i];
-    if (task.status != '') {
-    } else {
-      if (x.matches) {
+  let tasksTable = document.getElementById('backlogTable');
+  let headerTable = document.getElementById('table-heading');
+
+  tasksTable.innerHTML = '';
+  if (x.matches) {
+    headerTable.innerHTML = `
+    <tr>
+      <th>TASKS</th>
+    </tr>
+    `;
+    for (let i = 0; i < tasks.length; i++) {
+      const task = tasks[i];
+      if (task.status != '') {
+      } else {
         addNewBacklogTRMobile(task, i);
+      }
+    }
+  } else {
+    for (let i = 0; i < tasks.length; i++) {
+      const task = tasks[i];
+      if (task.status != '') {
       } else {
         addNewBacklogTR(task, i);
       }
@@ -86,9 +101,9 @@ function addTasksValuesMobile(task, i) {
 
   img.src = task.user.img;
   details.innerHTML = `
-  ${task.title}<br>
-  ${task.category}<br>
-  ${task.user.name}
+  <span title="Title">${task.title}</span><br>
+  <span title="Category">${task.category}</span><br>
+  <span title="Name">${task.user.name}</span>
   `;
 }
 
@@ -124,16 +139,6 @@ function addUserColor(task, i) {
   }
 }
 
-function responsiveStyle(x) {
-  let backlogTable = document.getElementById('backlogTable');
-  if (x.matches) {
-    // If media query matches
-    backlogTable.style.backgroundColor = 'yellow';
-  } else {
-    backlogTable.style.backgroundColor = 'green';
-  }
-}
-
 function addNewBacklogTRMobile(task, i) {
   let table = document.getElementById('backlogTable');
   let newRow = table.insertRow(table.rows.length);
@@ -146,13 +151,12 @@ function addNewBacklogTRMobile(task, i) {
   <div class="user-container">
     <div id="userColorBL${i}" class="userColorBL"></div>
     <img class="user-img-bl" id="userImgBL${i}" src="assets/img/icon plus.png" alt="" />
-    <div id = 'detailsBL${i}'></div>
+    <div class="details-bl" id = 'detailsBL${i}'></div>
   </div>
   `;
-
   cell2.innerHTML = `
-  <button onclick="addTaskToBoard(${i})" class="bl-btn">to Board</button>
-  <button onclick="deleteTask(${i})" class="bl-btn">Delete</button>
+  <button onclick="addTaskToBoard(${i})" class="bl-btn"><img title="Add to Board" src='assets/img/analysis.png'></button>
+  <button onclick="deleteTask(${i})" class="bl-btn"><img title="Delete" src='assets/img/bin.png'></button>
   `;
 
   addTasksValuesMobile(task, i);

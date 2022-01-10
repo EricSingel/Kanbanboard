@@ -46,9 +46,6 @@ table th:first-child {
 table th:nth-child(2) {
   text-align: left;
 }
-table td:hover {
-  cursor: pointer;
-}
 
 .task-row {
   width: 100%;
@@ -67,6 +64,18 @@ table td:hover {
 .task-row td:last-child {
   width: 10%;
   border-radius: 0 16px 16px 0;
+}
+
+.task-row td:last-child img {
+  height: 32px;
+  width: 32px;
+  cursor: pointer;
+}
+
+.task-row td:last-child button {
+  border: none;
+  outline: none;
+  background-color: #d7dde4;
 }
 
 .user-container {
@@ -164,5 +173,28 @@ table td:hover {
     width: 100%;
     height: auto;
     margin-top: 100px;
+  }
+
+  .header-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  table th:first-child {
+    text-align: center;
+  }
+
+  .details-bl {
+    margin-left: 12px;
+    font-size: 14px;
+  }
+
+  .task-row td:last-child {
+    align-content: center;
+  }
+
+  .added-to-board-div div {
+    height: auto;
   }
 }
