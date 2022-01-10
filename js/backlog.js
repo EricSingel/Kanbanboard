@@ -1,5 +1,5 @@
 let x = window.matchMedia('(max-width: 1000px)');
-x.addEventListener('change', responsiveStyle);
+x.addEventListener('change', renderBacklogTask);
 
 async function init() {
   await load();

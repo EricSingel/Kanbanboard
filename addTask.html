@@ -30,95 +30,102 @@
         <h1>Add Task</h1>
         <span class="subtitle">Learning Management System Project</span>
       </div>
-      <div class="table">
-        <div class="table-row">
-          <div class="titleInput-container">
-            <span class="input-name">TITLE</span>
-            <input
-              id="title"
-              class="title-input"
-              type="text"
-              placeholder="Write a title for your new task"
-              required
-            />
+      <form onsubmit="addTask(); return false;">
+        <div class="table">
+          <div class="table-row">
+            <div class="titleInput-container">
+              <span class="input-name">TITLE</span>
+              <input
+                id="title"
+                class="title-input"
+                type="text"
+                placeholder="Write a title for your new task"
+                required
+              />
+            </div>
+            <div class="calenderInput-container">
+              <span class="input-name">DUE DATE</span>
+              <input
+                id="date"
+                min="2022-01-01"
+                max="2022-12-31"
+                required
+                class="calender-input"
+                type="date"
+              />
+            </div>
           </div>
-          <div class="calenderInput-container">
-            <span class="input-name">DUE DATE</span>
-            <input
-              id="date"
-              min="2022-01-01"
-              max="2022-12-31"
-              required
-              class="calender-input"
-              type="date"
-            />
+          <div class="table-row">
+            <div class="dropdownInput-container">
+              <span class="input-name">CATEGORY</span>
+              <select
+                class="dropdown-input"
+                id="category"
+                name="category"
+                required
+              >
+                <option value="" disabled selected>
+                  Select the task category
+                </option>
+                <option value="Marketing">Marketing</option>
+                <option value="Product">Product</option>
+                <option value="Sale">Sale</option>
+              </select>
+            </div>
+            <div class="dropdownInput-container">
+              <span class="input-name">URGENCY</span>
+              <select
+                class="dropdown-input"
+                id="urgency"
+                name="urgency"
+                required
+              >
+                <option value="" disabled selected>
+                  How urgent is the task?
+                </option>
+                <option value="High">High</option>
+                <option value="Medium">Medium</option>
+                <option value="Low">Low</option>
+              </select>
+            </div>
           </div>
-        </div>
-        <div class="table-row">
-          <div class="dropdownInput-container">
-            <span class="input-name">CATEGORY</span>
-            <select
-              class="dropdown-input"
-              id="category"
-              name="category"
-              required
-            >
-              <option value="" disabled selected>
-                Select the task category
-              </option>
-              <option value="Marketing">Marketing</option>
-              <option value="Product">Product</option>
-              <option value="Sale">Sale</option>
-            </select>
-          </div>
-          <div class="dropdownInput-container">
-            <span class="input-name">URGENCY</span>
-            <select class="dropdown-input" id="urgency" name="urgency" required>
-              <option value="" disabled selected>
-                How urgent is the task?
-              </option>
-              <option value="High">High</option>
-              <option value="Medium">Medium</option>
-              <option value="Low">Low</option>
-            </select>
-          </div>
-        </div>
-        <div class="table-row">
-          <div class="descriptionInput-container">
-            <span class="input-name">DESCRIPTION</span>
-            <textarea
-              class="description-input"
-              id="description"
-              name="description"
-              required
-            ></textarea>
-          </div>
-          <div class="assignedToInput-container">
-            <span class="input-name">ASSIGNED TO</span>
-            <div class="users-container">
-              <div id="userImages" class="users-img"></div>
-              <div id="userSelectMenu" class="users-menu">
-                <img
-                  class="selectUser-btn"
-                  onclick="showUsers()"
-                  src="assets/img/icon plus.png"
-                  alt="User"
-                />
-                <div id="userSelect"></div>
+          <div class="table-row">
+            <div class="descriptionInput-container">
+              <span class="input-name">DESCRIPTION</span>
+              <textarea
+                class="description-input"
+                id="description"
+                name="description"
+                required
+              ></textarea>
+            </div>
+            <div class="assignedToInput-container">
+              <span class="input-name">ASSIGNED TO</span>
+              <div class="users-container">
+                <div id="userImages" class="users-img"></div>
+                <div id="userSelectMenu" class="users-menu">
+                  <img
+                    class="selectUser-btn"
+                    onclick="showUsers()"
+                    src="assets/img/icon plus.png"
+                    alt="User"
+                  />
+                  <div id="userSelect"></div>
+                </div>
+              </div>
+              <div class="btns-container">
+                <button onclick="eraseTask()" class="cancel-createTask-btns">
+                  CANCEL
+                </button>
+                <button type="submit" class="cancel-createTask-btns">
+                  <!--type="submit"-->
+                  CREATE TASK
+                </button>
               </div>
             </div>
-            <div class="btns-container">
-              <button onclick="eraseTask()" class="cancel-createTask-btns">
-                CANCEL
-              </button>
-              <button onclick="addTask()" class="cancel-createTask-btns">
-                <!--type="submit"-->
-                CREATE TASK
-              </button>
-            </div>
           </div>
         </div>
-      </div>
+      </form>
     </div>
 
     <button id="dark-mode-toggle" class="dark-mode-toggle">
