@@ -61,7 +61,6 @@ video {
 .name-form-div {
   display: flex;
   justify-content: center;
-  margin-top: 60px;
 }
 
 .email-form-div {
@@ -77,7 +76,7 @@ label {
 }
 
 input {
-  width: 40%;
+  width: 70%;
   outline: none;
   background: none;
   border: none;
@@ -87,17 +86,18 @@ input {
 
 .login-as-guest {
   color: white;
+  margin-bottom: 50px;
+  margin-top: 12px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  height: 80%;
+  align-items: center;
+  justify-content: center;
 }
 
 @media all and (max-width: 1000px) {
-  form {
-    display: flex;
-    flex-direction: column;
-    height: 80%;
-    align-items: center;
-    justify-content: center;
-  }
-
   a {
     margin-top: 24px;
   }
@@ -109,6 +109,10 @@ input {
   input {
     margin-top: 16px;
     width: 80%;
+  }
+
+  .login-as-guest {
+    margin-bottom: 0;
   }
 
   .login-div {

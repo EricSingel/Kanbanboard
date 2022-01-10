@@ -1,6 +1,5 @@
 async function init() {
   await load();
-  await loadAtAddTask();
   includeHTML();
 }
 

@@ -149,9 +149,6 @@ body {
 .selectUser-btn {
   height: 40px;
   width: 40px;
-  position: absolute;
-  top: 0;
-  right: 0;
   cursor: pointer;
   object-fit: cover;
 }
@@ -159,6 +156,7 @@ body {
 .users-menu {
   display: flex;
   justify-content: flex-start;
+  align-items: flex-end;
   flex-direction: column;
   width: max-content;
   height: min-content;
@@ -172,13 +170,14 @@ body {
 
 .userSelectOpen {
   clip-path: circle(150% at 100% 0);
-  background: linear-gradient(45deg,
-      rgba(97, 97, 97, 1) 0%,
-      rgba(255, 255, 255, 1) 100%);
+  background: linear-gradient(
+    45deg,
+    rgb(91, 217, 255) 0%,
+    rgba(255, 255, 255, 1) 100%
+  );
 }
 
 #userSelect {
-  padding-top: 40px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -211,6 +210,41 @@ body {
 }
 
 @media all and (max-width: 1000px) {
+  .users-menu {
+    clip-path: circle(52px at 100% 100%);
+    flex-direction: column-reverse;
+    top: auto;
+    bottom: 0;
+  }
+  .userSelectOpen {
+    clip-path: circle(150% at 100% 100%);
+    background: linear-gradient(
+      135deg,
+      rgb(91, 217, 255) 0%,
+      rgba(255, 255, 255, 1) 100%
+    );
+  }
+
+  .btns-container {
+    margin-top: 16px;
+  }
+
+  .btns-container button {
+    width: 50%;
+    background-color: var(--background-navbar);
+  }
+  .btns-container button:first-child {
+    border-right: 4px solid white;
+  }
+  .btns-container button:last-child {
+    border-left: 4px solid white;
+  }
+
+  .cancel-createTask-btns {
+    margin-inline: 0;
+    border-radius: 0;
+    color: white;
+  }
 
   .addTask-section {
     padding: 0px;
@@ -221,7 +255,7 @@ body {
 
   .header {
     margin-top: 96px;
-    margin-bottom: 24px;
+    margin-bottom: 0;
     text-align: center;
   }
 
@@ -258,7 +292,7 @@ body {
     width: 100%;
     display: flex;
     flex-direction: column;
-    margin-bottom: 25px
+    margin-bottom: 25px;
   }
 
   .descriptionInput-container {
@@ -273,7 +307,6 @@ body {
     flex-direction: column;
     justify-content: space-between;
     width: 100%;
-    margin-bottom: 25px;
   }
 }
 

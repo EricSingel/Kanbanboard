@@ -1,1 +1,1 @@
-{}
+{"users":"[{\"name\":\"Alex Todor\",\"img\":\"assets/img/user1.jpg\",\"email\":\"alex@gmail.com\"},{\"name\":\"Vincent Botella\",\"img\":\"assets/img/user2.jpg\",\"email\":\"vincent@gmx.de\"},{\"name\":\"Eric Singelmann-Seimel\",\"img\":\"assets/img/user3.jpg\",\"email\":\"eric@web.de\"}]","tasks":"[{\"title\":\"rewawr\",\"date\":\"2022-02-02\",\"category\":\"Marketing\",\"urgency\":\"Medium\",\"description\":\"dwadwa\",\"status\":\"ToDo\",\"user\":{},\"id\":0}]"}
