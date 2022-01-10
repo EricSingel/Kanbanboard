@@ -12,7 +12,11 @@ function renderBacklogTask() {
     const task = tasks[i];
     if (task.status != '') {
     } else {
-      addNewBacklogTR(task, i);
+      if (x.matches) {
+        addNewBacklogTRMobile(task, i);
+      } else {
+        addNewBacklogTR(task, i);
+      }
     }
   }
 }
@@ -76,6 +80,18 @@ function addTasksValues(task, i) {
   `;
 }
 
+function addTasksValuesMobile(task, i) {
+  let details = document.getElementById('detailsBL' + i);
+  let img = document.getElementById('userImgBL' + i);
+
+  img.src = task.user.img;
+  details.innerHTML = `
+  ${task.title}<br>
+  ${task.category}<br>
+  ${task.user.name}
+  `;
+}
+
 async function deleteTask(i) {
   let row = document.getElementById(i);
   tasks.splice(i, 1);
@@ -109,10 +125,37 @@ function addUserColor(task, i) {
 }
 
 function responsiveStyle(x) {
-  let 
+  let backlogTable = document.getElementById('backlogTable');
   if (x.matches) {
     // If media query matches
-
+    backlogTable.style.backgroundColor = 'yellow';
   } else {
+    backlogTable.style.backgroundColor = 'green';
   }
+}
+
+function addNewBacklogTRMobile(task, i) {
+  let table = document.getElementById('backlogTable');
+  let newRow = table.insertRow(table.rows.length);
+  newRow.classList.add('task-row');
+  newRow.setAttribute('id', i);
+  let cell1 = newRow.insertCell(0);
+  let cell2 = newRow.insertCell(1);
+
+  cell1.innerHTML = `
+  <div class="user-container">
+    <div id="userColorBL${i}" class="userColorBL"></div>
+    <img class="user-img-bl" id="userImgBL${i}" src="assets/img/icon plus.png" alt="" />
+    <div id = 'detailsBL${i}'></div>
+  </div>
+  `;
+
+  cell2.innerHTML = `
+  <button onclick="addTaskToBoard(${i})" class="bl-btn">to Board</button>
+  <button onclick="deleteTask(${i})" class="bl-btn">Delete</button>
+  `;
+
+  addTasksValuesMobile(task, i);
+  addUserColor(task, i);
+  return newRow;
 }

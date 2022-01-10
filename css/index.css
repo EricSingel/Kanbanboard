@@ -84,3 +84,53 @@ input {
   border-bottom: 1px solid white;
   color: white;
 }
+
+.login-as-guest {
+  color: white;
+}
+
+@media all and (max-width: 1000px) {
+  form {
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  a {
+    margin-top: 24px;
+  }
+
+  label {
+    margin-right: 0;
+  }
+
+  input {
+    margin-top: 16px;
+    width: 80%;
+  }
+
+  .login-div {
+    border-radius: 0;
+    height: 100vh;
+    width: 100%;
+  }
+
+  .name-form-div {
+    width: 100%;
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .email-form-div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}

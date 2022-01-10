@@ -40,6 +40,7 @@
   margin-top: 20px;
   border-radius: 50%;
   object-fit: cover;
+  filter: brightness(0) invert(1);
 }
 
 .profile-img-container {
@@ -112,6 +113,18 @@
   clip-path: circle(150% at 100% 0%);
 }
 
+.imp-priv-links {
+  position: absolute;
+  bottom: 2.5%;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+.imp-priv-links a {
+  font-size: 12px;
+  text-decoration: underline;
+}
+
 @media all and (max-width: 1000px) {
   .nav-bar {
     width: 100%;
@@ -131,8 +144,6 @@
 
   .profile-img {
     margin-block: auto;
-    height: 40px;
-    width: 40px;
   }
 
   .profile-img-container {
@@ -150,5 +161,9 @@
 
   .logo-div {
     margin-left: 32px;
+  }
+
+  .imp-priv-links {
+    display: none;
   }
 }
