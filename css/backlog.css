@@ -179,6 +179,7 @@ table th:nth-child(2) {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 0;
   }
 
   table th:first-child {
@@ -187,7 +188,7 @@ table th:nth-child(2) {
 
   .details-bl {
     margin-left: 12px;
-    font-size: 14px;
+    font-size: clamp(1em, 2vw, 1.5em);
   }
 
   .task-row td:last-child {

@@ -10,27 +10,48 @@ async function init() {
 function renderBacklogTask() {
   let tasksTable = document.getElementById('backlogTable');
   let headerTable = document.getElementById('table-heading');
+  let backlogTasks = tasks.filter((t) => t['status'] == '');
 
-  tasksTable.innerHTML = '';
-  if (x.matches) {
-    headerTable.innerHTML = `
+  if (backlogTasks.length == 0) {
+    tasksTable.innerHTML =
+      '<tr><td style="text-align: center">No Tasks</td></tr>';
+    if (x.matches) {
+      headerTable.innerHTML = `
     <tr>
       <th>TASKS</th>
     </tr>
     `;
-    for (let i = 0; i < tasks.length; i++) {
-      const task = tasks[i];
-      if (task.status != '') {
-      } else {
-        addNewBacklogTRMobile(task, i);
-      }
     }
   } else {
-    for (let i = 0; i < tasks.length; i++) {
-      const task = tasks[i];
-      if (task.status != '') {
-      } else {
-        addNewBacklogTR(task, i);
+    tasksTable.innerHTML = '';
+    if (x.matches) {
+      headerTable.innerHTML = `
+    <tr>
+      <th>TASKS</th>
+    </tr>
+    `;
+      for (let i = 0; i < tasks.length; i++) {
+        const task = tasks[i];
+        if (task.status != '') {
+        } else {
+          addNewBacklogTRMobile(task, i);
+        }
+      }
+    } else {
+      headerTable.innerHTML = '';
+      headerTable.innerHTML = `
+      <tr>
+      <th>ASSIGNED TO</th>
+      <th>CATEGORY</th>
+      <th>DETAILS</th>
+      </tr>
+      `;
+      for (let i = 0; i < tasks.length; i++) {
+        const task = tasks[i];
+        if (task.status != '') {
+        } else {
+          addNewBacklogTR(task, i);
+        }
       }
     }
   }
@@ -73,8 +94,8 @@ function addNewBacklogTR(task, i) {
   `;
 
   cell4.innerHTML = `
-  <button onclick="addTaskToBoard(${i})" class="bl-btn">to Board</button>
-  <button onclick="deleteTask(${i})" class="bl-btn">Delete</button>
+  <button onclick="addTaskToBoard(${i})" class="bl-btn"><img title="Add to Board" src='assets/img/analysis.png'></button>
+  <button onclick="deleteTask(${i})" class="bl-btn"><img title="Delete" src='assets/img/bin.png'></button>
   `;
 
   addTasksValues(task, i);

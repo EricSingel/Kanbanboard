@@ -3,10 +3,10 @@ function menuOpen() {
   let menuImg = document.getElementById('menuImg');
 
   menu.classList.toggle('menu-links-open');
-  if (menuImg.src == 'http://127.0.0.1:5500/assets/img/menu-4-32.ico') {
-    menuImg.src = 'http://127.0.0.1:5500/assets/img/x-mark-32.ico';
+  if (menuImg.src == '/assets/img/menu-4-32.ico') {
+    menuImg.src = '/assets/img/x-mark-32.ico';
   } else {
-    menuImg.src = 'http://127.0.0.1:5500/assets/img/menu-4-32.ico';
+    menuImg.src = '/assets/img/menu-4-32.ico';
   }
 }
 
@@ -19,6 +19,6 @@ window.addEventListener('mouseup', function (event) {
     event.target != menuBtn
   ) {
     menu.classList.remove('menu-links-open');
-    menuBtn.src = 'http://127.0.0.1:5500/assets/img/menu-4-32.ico';
+    menuBtn.src = '/assets/img/menu-4-32.ico';
   }
 });
