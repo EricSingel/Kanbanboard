@@ -286,4 +286,38 @@ main {
     overflow-y: hidden;
     position: relative;
   }
+
+  .biggerTask{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .user-div-and-description-div{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .user-div{
+    width: 90%;
+    height: 20vh;
+  }
+
+  .user-div-person{
+    margin-top: 0;
+  }
+
+  .user-div-person img{
+    width: 10vh;
+    height: 10vh;
+  }
+
+  .user-div-person p{
+    font-size: 20px;
+  }
+
+  .description-div{
+    width: 90%;
+    margin-top: 50px;
+    height: 20%;
+  }
 }
