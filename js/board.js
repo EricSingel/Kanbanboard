@@ -76,7 +76,7 @@ function paintTasks(i) {
 
 function generateTask(element, i) {
   return `
-    <div onclick="wholeTask(${i})" id="allTasks" ondragstart="startDragging(${element['id']})" draggable="true">
+    <div class="taskDiv" onclick="wholeTask(${i})" id="allTasks" ondragstart="startDragging(${element['id']})" draggable="true">
         <div id="color-line${i}" class="color-line"></div>
         <p class="title">${element['title']}</p>
             <div class="person-info">
