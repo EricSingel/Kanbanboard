@@ -103,16 +103,13 @@ th {
   color: var(--backlog-text) !important;
 }
 
-.AddTask-header-subtitle {
-  color: var(--backlog-text) !important;
+.table {
+  background: var(--background-field) !important;
+  transition: 400ms ease;
 }
 
-.Addtask-table-section-span {
+.input-name{
   color: var(--backlog-text) !important;
-}
-
-.Addtask-table-section {
-  background: var(--background-backlog-field) !important;
 }
 
 .email {
