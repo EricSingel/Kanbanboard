@@ -119,6 +119,9 @@ function navStyle() {
 
 function loggedInUserImg() {
   let loggedUser = document.getElementById('loggedUser');
-
-  loggedUser.src = loggedInUser.img;
+  try {
+    loggedUser.src = loggedInUser.img;
+  } catch (error) {
+    console.log('No Image');
+  }
 }

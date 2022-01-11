@@ -13,47 +13,66 @@ function renderBacklogTask() {
   let backlogTasks = tasks.filter((t) => t['status'] == '');
 
   if (backlogTasks.length == 0) {
-    tasksTable.innerHTML =
-      '<tr><td style="text-align: center">No Tasks</td></tr>';
-    if (x.matches) {
-      headerTable.innerHTML = `
-    <tr>
-      <th>TASKS</th>
-    </tr>
-    `;
-    }
+    noTasksInArray(tasksTable, headerTable);
   } else {
     tasksTable.innerHTML = '';
     if (x.matches) {
-      headerTable.innerHTML = `
-    <tr>
-      <th>TASKS</th>
-    </tr>
-    `;
-      for (let i = 0; i < tasks.length; i++) {
-        const task = tasks[i];
-        if (task.status != '') {
-        } else {
-          addNewBacklogTRMobile(task, i);
-        }
-      }
+      mobielView(headerTable);
     } else {
-      headerTable.innerHTML = '';
-      headerTable.innerHTML = `
-      <tr>
-      <th>ASSIGNED TO</th>
-      <th>CATEGORY</th>
-      <th>DETAILS</th>
-      </tr>
-      `;
-      for (let i = 0; i < tasks.length; i++) {
-        const task = tasks[i];
-        if (task.status != '') {
-        } else {
-          addNewBacklogTR(task, i);
-        }
-      }
+      desktopView(headerTable);
     }
+  }
+}
+
+function mobielView(headerTable) {
+  hTableSmaller1000px(headerTable);
+  for (let i = 0; i < tasks.length; i++) {
+    const task = tasks[i];
+    if (task.status != '') {
+    } else {
+      addNewBacklogTRMobile(task, i);
+    }
+  }
+}
+
+function desktopView(headerTable) {
+  headerTable.innerHTML = '';
+  hTableBigger1000px(headerTable);
+
+  for (let i = 0; i < tasks.length; i++) {
+    const task = tasks[i];
+    if (task.status != '') {
+    } else {
+      addNewBacklogTR(task, i);
+    }
+  }
+}
+
+function hTableBigger1000px(headerTable) {
+  headerTable.innerHTML = `
+  <tr>
+  <th>ASSIGNED TO</th>
+  <th>CATEGORY</th>
+  <th>DETAILS</th>
+  </tr>
+  `;
+}
+
+function hTableSmaller1000px(headerTable) {
+  headerTable.innerHTML = `
+  <tr>
+    <th>TASKS</th>
+  </tr>
+  `;
+}
+
+function noTasksInArray(tasksTable, headerTable) {
+  tasksTable.innerHTML =
+    '<tr><td style="text-align: center">No Tasks</td></tr>';
+  if (x.matches) {
+    hTableSmaller1000px(headerTable);
+  } else {
+    hTableBigger1000px(headerTable);
   }
 }
 

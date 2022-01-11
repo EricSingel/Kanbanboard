@@ -108,7 +108,7 @@ th {
   transition: 400ms ease;
 }
 
-.input-name{
+.input-name {
   color: var(--backlog-text) !important;
 }
 
@@ -196,9 +196,9 @@ p {
 
 @media all and (max-width: 1000px) {
   .dark-mode-toggle {
-    top: auto;
-    bottom: 1em;
-    right: 1em;
+    top: 34px;
+    right: 170px;
+    background-color: white;
   }
 
   .click-here {

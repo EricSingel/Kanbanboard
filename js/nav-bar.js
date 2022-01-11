@@ -3,10 +3,15 @@ function menuOpen() {
   let menuImg = document.getElementById('menuImg');
 
   menu.classList.toggle('menu-links-open');
-  if (menuImg.src == '/assets/img/menu-4-32.ico') {
-    menuImg.src = '/assets/img/x-mark-32.ico';
+  if (
+    menuImg.src ==
+    'http://gruppe-141.developerakademie.net/assets/img/menu-4-32.ico'
+  ) {
+    menuImg.src =
+      'http://gruppe-141.developerakademie.net/assets/img/x-mark-32.ico';
   } else {
-    menuImg.src = '/assets/img/menu-4-32.ico';
+    menuImg.src =
+      'http://gruppe-141.developerakademie.net/assets/img/menu-4-32.ico';
   }
 }
 
@@ -19,6 +24,7 @@ window.addEventListener('mouseup', function (event) {
     event.target != menuBtn
   ) {
     menu.classList.remove('menu-links-open');
-    menuBtn.src = '/assets/img/menu-4-32.ico';
+    menuBtn.src =
+      'http://gruppe-141.developerakademie.net/assets/img/menu-4-32.ico';
   }
 });

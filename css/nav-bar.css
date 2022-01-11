@@ -21,7 +21,6 @@
 }
 
 .a-highlight {
-  /* padding-left: 5px; */
   border-left-color: white !important;
 }
 
@@ -40,7 +39,7 @@
   margin-top: 20px;
   border-radius: 50%;
   object-fit: cover;
-  filter: brightness(0) invert(1);
+  border: 2px solid white;
 }
 
 .profile-img-container {
@@ -166,5 +165,13 @@
 
   .imp-priv-links {
     display: none;
+  }
+}
+
+@media all and (max-width: 450px) {
+  .profile-img {
+    margin-block: auto;
+    height: 40px;
+    width: 40px;
   }
 }
