@@ -76,7 +76,7 @@ function paintTasks(i) {
 
 function generateTask(element, i) {
   return `
-    <div onclick="wholeTask(${i})" id="allTasks" ondragstart="startDragging(${element['id']})" draggable="true">
+    <div class="taskDiv" onclick="wholeTask(${i})" id="allTasks" ondragstart="startDragging(${element['id']})" draggable="true">
         <div id="color-line${i}" class="color-line"></div>
         <p class="title">${element['title']}</p>
             <div class="person-info">
@@ -99,7 +99,7 @@ function wholeTask(i) {
   const task = tasks[i];
   for (let i = 0; i < tasks.length; i++) {
     document.getElementById('taskBigger').innerHTML = `
-    <div>
+    <div class="biggerTask">
       <div class="close-whole-task">
         <button onclick="closeWholeTask()">Close</button>
       </div>
@@ -115,7 +115,7 @@ function wholeTask(i) {
           <img src="${task.user.img}">
         <p>${task.user.name}</p>
       </div>  
-          
+         
       </div> 
 
       <div class="description-div">
