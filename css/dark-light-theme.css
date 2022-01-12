@@ -196,6 +196,7 @@ p {
 
 @media all and (max-width: 1000px) {
   .dark-mode-toggle {
+    position: fixed;
     top: 34px;
     right: 170px;
     background-color: white;

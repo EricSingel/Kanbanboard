@@ -187,7 +187,7 @@ main {
   border-radius: 15px;
 }
 
-.user-div-and-description-div{
+.user-div-and-description-div {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -197,7 +197,7 @@ main {
   margin-top: 50px;
 }
 
-.description-div{
+.description-div {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -236,47 +236,50 @@ main {
   object-fit: cover;
 }
 
+.dropdown-state {
+  display: none;
+}
+
 @media all and (max-width: 1000px) {
-  .board-fields{
+  .board-fields {
     display: flex;
     flex-direction: column;
     align-items: center;
     height: 80%;
   }
 
-  main{
+  main {
     width: 100%;
     height: 80vh;
     margin-top: 200px;
   }
 
-  .board-div{
+  .board-div {
     width: 100%;
   }
 
-  .board-div h1{
+  .board-div h1 {
     font-size: 100%;
   }
 
-  .taskDiv{
+  .taskDiv {
     max-width: 200px;
     min-width: 200px;
     min-height: 90%;
     max-height: 90%;
     margin: 5px 5px !important;
-    
   }
 
-  .taskDiv p{
+  .taskDiv p {
     font-size: 15px;
   }
 
-  .taskDiv img{
+  .taskDiv img {
     width: 30px;
     height: 30px;
   }
 
-  .board-field{
+  .board-field {
     display: flex;
     flex-direction: row;
     height: 15vh;
@@ -287,37 +290,45 @@ main {
     position: relative;
   }
 
-  .biggerTask{
+  .biggerTask {
     display: flex;
     flex-direction: column;
   }
 
-  .user-div-and-description-div{
+  .user-div-and-description-div {
     display: flex;
     flex-direction: column;
   }
 
-  .user-div{
+  .user-div {
     width: 90%;
     height: 20vh;
   }
 
-  .user-div-person{
+  .user-div-person {
     margin-top: 0;
   }
 
-  .user-div-person img{
+  .user-div-person img {
     width: 10vh;
     height: 10vh;
   }
 
-  .user-div-person p{
+  .user-div-person p {
     font-size: 20px;
   }
 
-  .description-div{
+  .description-div {
     width: 90%;
     margin-top: 50px;
     height: 20%;
+  }
+
+  .dropdown-state {
+    display: block;
+    width: 20px;
+    position: absolute;
+    top: 9px;
+    right: 1px;
   }
 }

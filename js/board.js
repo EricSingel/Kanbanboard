@@ -84,7 +84,43 @@ function generateTask(element, i) {
                 <p>${element.user.name}</p>
             </div>
         <button onclick="deleteTask(${i}, event)">Delete</button>
+        <select name="state${i}" id="state${i}" class="dropdown-state" onclick="stopPropogation(event)" onchange="switchState(this, ${i})">
+        <option id="todoOpt" value="ToDo">ToDo</option>
+        <option id="inprogOpt" value="inProgress">InProgress</option>
+        <option id="testOpt" value="Testing">Testing</option>
+        <option id="doneOpt" value="Done">Done</option>
+      </select>
     </div>`;
+}
+
+function stopPropogation(e) {
+  e.stopPropagation();
+}
+
+async function switchState(selOption, taskId) {
+  let dropdownState = selOption.value;
+  console.log(dropdownState);
+
+  tasks[taskId].status = dropdownState;
+  await showTasks();
+  switch (dropdownState) {
+    case 'ToDo':
+      document.getElementById('todoOpt').selected = 'true';
+      break;
+    case 'inProgress':
+      document.getElementById('inprogOpt').selected = 'true';
+      document.getElementById('todoOpt').selected = 'false';
+      break;
+    case 'Testing':
+      document.getElementById('testOpt').selected = 'true';
+      document.getElementById('todoOpt').selected = 'false';
+      break;
+    case 'Done':
+      document.getElementById('doneOpt').selected = 'true';
+      document.getElementById('todoOpt').selected = 'false';
+      break;
+  }
+  await save();
 }
 
 async function deleteTask(i, event) {
