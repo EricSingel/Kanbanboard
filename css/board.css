@@ -207,6 +207,11 @@ main {
   padding: 20px;
 }
 
+.description-div p{
+  word-break: break-word;
+  text-align: center;
+}
+
 .user-div {
   display: flex;
   flex-direction: column;
@@ -260,6 +265,10 @@ main {
 
   .board-div h1 {
     font-size: 100%;
+  }
+
+  .task-title-div p{
+    font-size: 20px;
   }
 
   .taskDiv {
@@ -322,6 +331,12 @@ main {
     width: 90%;
     margin-top: 50px;
     height: 20%;
+    word-wrap: break-word;
+  }
+
+  .description-div p{
+    word-break: break-word;
+    text-align: center;
   }
 
   .dropdown-state {
