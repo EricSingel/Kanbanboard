@@ -152,8 +152,6 @@ async function deleteTask(i) {
   tasks.splice(i, 1);
   await save();
   row.parentNode.removeChild(row);
-  document.getElementById('backlogTable').innerHTML =
-    `<tr><td style="text-align: center">No Tasks</td></tr>`;
 }
 
 function closeFeedback() {
@@ -167,8 +165,6 @@ async function addTaskToBoard(i) {
   await save();
   row.parentNode.removeChild(row);
   add_to_board.classList.remove('d-none');
-  document.getElementById('backlogTable').innerHTML =
-    `<tr><td style="text-align: center">No Tasks</td></tr>`;
 }
 
 function addUserColor(task, i) {
