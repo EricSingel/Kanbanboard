@@ -140,6 +140,7 @@
 
   .menu-img {
     display: flex;
+    cursor: pointer;
   }
 
   .profile-img {
