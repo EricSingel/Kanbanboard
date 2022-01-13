@@ -152,6 +152,7 @@ async function deleteTask(i) {
   tasks.splice(i, 1);
   await save();
   row.parentNode.removeChild(row);
+  renderBacklogTask();
 }
 
 function closeFeedback() {
@@ -165,6 +166,7 @@ async function addTaskToBoard(i) {
   await save();
   row.parentNode.removeChild(row);
   add_to_board.classList.remove('d-none');
+  renderBacklogTask();
 }
 
 function addUserColor(task, i) {
