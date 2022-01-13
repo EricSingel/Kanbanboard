@@ -141,7 +141,6 @@ table th:nth-child(2) {
 .added-to-board-div div p {
   font-size: 25px;
   color: white;
-  margin-bottom: 25px;
 }
 
 .added-to-board-div div img {
@@ -197,7 +196,19 @@ table th:nth-child(2) {
     align-content: center;
   }
 
+  
+
+  .added-to-board-div img{
+    width: 60px !important;
+    margin-bottom: 20px !important;
+  }
+
+  .added-to-board-div p{
+    font-size: 20px !important;
+  }
+
   .added-to-board-div div {
     height: auto;
+    width: 70%;
   }
 }
