@@ -1,3 +1,6 @@
+/**
+ * Onload async function
+ */
 async function init() {
   await load();
   includeHTML();
@@ -6,6 +9,9 @@ async function init() {
 
 let currentDragged;
 
+/**
+ * Function to filter the state and show the task
+ */
 function showTasks() {
   let ToDoTask = tasks.filter((t) => t['status'] == 'ToDo');
   document.getElementById('ToDo').innerHTML = '';
@@ -56,6 +62,10 @@ function showTasks() {
   }
 }
 
+/**
+ * function that paint the color div
+ * @param {number} i - the index of the task
+ */
 function paintTasks(i) {
   if (tasks[i].status == 'ToDo') {
     document.getElementById('color-line' + i).classList.add('blue');
@@ -74,6 +84,13 @@ function paintTasks(i) {
   }
 }
 
+/**
+ * this function generates the task in the board secion
+ * 
+ * @param {object} element - element is the variable in the showTasks() function
+ * @param {number} i - 
+ * 
+ */
 function generateTask(element, i) {
   return `
     <div class="taskDiv" onclick="wholeTask(${i})" id="allTasks" ondragstart="startDragging(${element['id']})" draggable="true">
@@ -124,6 +141,11 @@ async function switchState(selOption, taskId) {
   await save();
 }
 
+/**
+ * Function to delete the asks in board
+ * @param {number} i - index to know which task should be deleted
+ * @param {*} event - this event is for the stopPropagation
+ */
 async function deleteTask(i, event) {
   event.stopPropagation();
   tasks.splice(i, 1);
@@ -131,6 +153,10 @@ async function deleteTask(i, event) {
   showTasks();
 }
 
+/**
+ * this function opens the task with more details
+ * @param {number} i - index to know whick task should be opened
+ */
 function wholeTask(i) {
   document.getElementById('taskBigger').innerHTML = '';
   const task = tasks[i];
@@ -142,7 +168,8 @@ function wholeTask(i) {
       </div>
     
       <div class="task-title-div">
-        <h1>${task['title']}</h1>
+        <h2>Title</h2>
+        <p>${task['title']}</p>
       </div>
 
     <div class="user-div-and-description-div">
@@ -169,14 +196,24 @@ function wholeTask(i) {
   showWholeTask();
 }
 
+/**
+ * function that shows the whole task with more informaton
+ */
 function showWholeTask() {
   document.getElementById('taskBigger').classList.add('transform-task');
 }
 
+/**
+ *this function closes the whole task with more information 
+ */
 function closeWholeTask() {
   document.getElementById('taskBigger').classList.remove('transform-task');
 }
 
+/**
+ * function to move the task
+ * @param {HTMLElement} id 
+ */
 function startDragging(id) {
   currentDragged = id;
 }
@@ -193,9 +230,12 @@ function allowDrop(ev) {
   ev.preventDefault();
 }
 
+/**
+ * this function moves the task to the right state
+ * @param {Parameters} status - the state of the board fields: todo, inprogress, testing and done
+ */
 function moveTo(status) {
   tasks[currentDragged]['status'] = status;
-
   showTasks();
   save();
 }
