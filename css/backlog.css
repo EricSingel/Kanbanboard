@@ -190,20 +190,20 @@ table th:nth-child(2) {
   .details-bl {
     margin-left: 12px;
     font-size: clamp(1em, 2vw, 1.5em);
+    width: 100%;
+    text-align: center;
   }
 
   .task-row td:last-child {
     align-content: center;
   }
 
-  
-
-  .added-to-board-div img{
+  .added-to-board-div img {
     width: 60px !important;
     margin-bottom: 20px !important;
   }
 
-  .added-to-board-div p{
+  .added-to-board-div p {
     font-size: 20px !important;
   }
 

@@ -30,7 +30,10 @@ async function addTask() {
     status: '',
     user: TheUsersOfTheTask,
   };
-
+  if (Object.keys(task.user).length === 0 && task.user.constructor === Object) {
+    alert('Please assigne a user to the task!');
+    return;
+  }
   tasks.push(task);
   await save();
   eraseTask();
