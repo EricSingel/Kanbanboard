@@ -231,7 +231,7 @@ main {
 .user-div-person {
   display: flex;
   align-items: center;
-  margin-top: 60px;
+  margin: 15px 0px;
 }
 
 .user-div img {
