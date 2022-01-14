@@ -87,7 +87,7 @@ table th:nth-child(2) {
 .userColorBL {
   margin: 0;
   width: 8px;
-  height: inherit;
+  height: calc(100% + 16px);
   background-color: tomato;
 }
 
@@ -187,9 +187,13 @@ table th:nth-child(2) {
     text-align: center;
   }
 
+  table td:first-child {
+    padding-block: 8px;
+  }
+
   .details-bl {
     margin-left: 12px;
-    font-size: clamp(1em, 2vw, 1.5em);
+    font-size: clamp(0.8em, 0.8em + 1vw, 1.3em);
     width: 100%;
     text-align: center;
   }
