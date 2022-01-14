@@ -1,4 +1,32 @@
-let x = window.matchMedia('(max-width: 1000px)');
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: backlog.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: backlog.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>let x = window.matchMedia('(max-width: 1000px)');
 x.addEventListener('change', renderBacklogTask);
 
 /**
@@ -37,7 +65,7 @@ function renderBacklogTask() {
  */
 function mobielView(headerTable) {
   hTableSmaller1000px(headerTable);
-  for (let i = 0; i < tasks.length; i++) {
+  for (let i = 0; i &lt; tasks.length; i++) {
     const task = tasks[i];
     if (task.status != '') {
     } else {
@@ -55,7 +83,7 @@ function desktopView(headerTable) {
   headerTable.innerHTML = '';
   hTableBigger1000px(headerTable);
 
-  for (let i = 0; i < tasks.length; i++) {
+  for (let i = 0; i &lt; tasks.length; i++) {
     const task = tasks[i];
     if (task.status != '') {
     } else {
@@ -71,11 +99,11 @@ function desktopView(headerTable) {
  */
 function hTableBigger1000px(headerTable) {
   headerTable.innerHTML = `
-  <tr>
-  <th>ASSIGNED TO</th>
-  <th>CATEGORY</th>
-  <th>DETAILS</th>
-  </tr>
+  &lt;tr>
+  &lt;th>ASSIGNED TO&lt;/th>
+  &lt;th>CATEGORY&lt;/th>
+  &lt;th>DETAILS&lt;/th>
+  &lt;/tr>
   `;
 }
 
@@ -86,9 +114,9 @@ function hTableBigger1000px(headerTable) {
  */
 function hTableSmaller1000px(headerTable) {
   headerTable.innerHTML = `
-  <tr>
-    <th>TASKS</th>
-  </tr>
+  &lt;tr>
+    &lt;th>TASKS&lt;/th>
+  &lt;/tr>
   `;
 }
 
@@ -100,7 +128,7 @@ function hTableSmaller1000px(headerTable) {
  */
 function noTasksInArray(tasksTable, headerTable) {
   tasksTable.innerHTML =
-    '<tr><td style="text-align: center">No Tasks</td></tr>';
+    '&lt;tr>&lt;td style="text-align: center">No Tasks&lt;/td>&lt;/tr>';
   if (x.matches) {
     hTableSmaller1000px(headerTable);
   } else {
@@ -125,34 +153,34 @@ function addNewBacklogTR(task, i) {
   let cell4 = newRow.insertCell(3);
 
   cell1.innerHTML = `
-  <div class="user-container">
-    <div id="userColorBL${i}" class="userColorBL"></div>
-    <img class="user-img-bl" id="userImgBL${i}" src="assets/img/icon plus.png" alt="" />
-    <div class="name-div">
-      <span id='nameBL${i}'>${task.user.name}</span>
-      <span id='emailBL${i}' class="email">${task.user.email}</span>
-    </div>
-  </div>
+  &lt;div class="user-container">
+    &lt;div id="userColorBL${i}" class="userColorBL">&lt;/div>
+    &lt;img class="user-img-bl" id="userImgBL${i}" src="assets/img/icon plus.png" alt="" />
+    &lt;div class="name-div">
+      &lt;span id='nameBL${i}'>${task.user.name}&lt;/span>
+      &lt;span id='emailBL${i}' class="email">${task.user.email}&lt;/span>
+    &lt;/div>
+  &lt;/div>
   `;
 
   cell2.innerHTML = `
-  <div class="user-container2" id='categoryBL${i}'>
+  &lt;div class="user-container2" id='categoryBL${i}'>
     Marketing
-  </div>
+  &lt;/div>
   `;
 
   cell3.innerHTML = `
-  <div id = 'detailsBL${i}'>
+  &lt;div id = 'detailsBL${i}'>
   Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio
   similique, tempora atque rem ea delectus minus sed maxime nisi.
   Sed dolor maxime placeat. Ipsum possimus ab unde expedita vero
   perspiciatis.
-  </div>
+  &lt;/div>
   `;
 
   cell4.innerHTML = `
-  <button onclick="addTaskToBoard(${i})" class="bl-btn"><img title="Add to Board" src='assets/img/analysis.png'></button>
-  <button onclick="deleteTask(${i})" class="bl-btn"><img title="Delete" src='assets/img/bin.png'></button>
+  &lt;button onclick="addTaskToBoard(${i})" class="bl-btn">&lt;img title="Add to Board" src='assets/img/analysis.png'>&lt;/button>
+  &lt;button onclick="deleteTask(${i})" class="bl-btn">&lt;img title="Delete" src='assets/img/bin.png'>&lt;/button>
   `;
 
   addTasksValues(task, i);
@@ -172,8 +200,8 @@ function addTasksValues(task, i) {
   img.src = task.user.img;
   category.innerHTML = task.category;
   details.innerHTML = `
-  ${task.title}<br>
-  Due Date: ${task.date}<br>
+  ${task.title}&lt;br>
+  Due Date: ${task.date}&lt;br>
   Urgency: ${task.urgency}
   `;
 }
@@ -190,9 +218,9 @@ function addTasksValuesMobile(task, i) {
 
   img.src = task.user.img;
   details.innerHTML = `
-  <span title="Title">${task.title}</span><br>
-  <span title="Category">${task.category}</span><br>
-  <span title="Name">${task.user.name}</span>
+  &lt;span title="Title">${task.title}&lt;/span>&lt;br>
+  &lt;span title="Category">${task.category}&lt;/span>&lt;br>
+  &lt;span title="Name">${task.user.name}&lt;/span>
   `;
 }
 
@@ -264,18 +292,41 @@ function addNewBacklogTRMobile(task, i) {
   let cell2 = newRow.insertCell(1);
 
   cell1.innerHTML = `
-  <div class="user-container">
-    <div id="userColorBL${i}" class="userColorBL"></div>
-    <img class="user-img-bl" id="userImgBL${i}" src="assets/img/icon plus.png" alt="" />
-    <div class="details-bl" id = 'detailsBL${i}'></div>
-  </div>
+  &lt;div class="user-container">
+    &lt;div id="userColorBL${i}" class="userColorBL">&lt;/div>
+    &lt;img class="user-img-bl" id="userImgBL${i}" src="assets/img/icon plus.png" alt="" />
+    &lt;div class="details-bl" id = 'detailsBL${i}'>&lt;/div>
+  &lt;/div>
   `;
   cell2.innerHTML = `
-  <button onclick="addTaskToBoard(${i})" class="bl-btn"><img title="Add to Board" src='assets/img/analysis.png'></button>
-  <button onclick="deleteTask(${i})" class="bl-btn"><img title="Delete" src='assets/img/bin.png'></button>
+  &lt;button onclick="addTaskToBoard(${i})" class="bl-btn">&lt;img title="Add to Board" src='assets/img/analysis.png'>&lt;/button>
+  &lt;button onclick="deleteTask(${i})" class="bl-btn">&lt;img title="Delete" src='assets/img/bin.png'>&lt;/button>
   `;
 
   addTasksValuesMobile(task, i);
   addUserColor(task, i);
   return newRow;
 }
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#addNewBacklogTR">addNewBacklogTR</a></li><li><a href="global.html#addNewBacklogTRMobile">addNewBacklogTRMobile</a></li><li><a href="global.html#addTasksValues">addTasksValues</a></li><li><a href="global.html#addTasksValuesMobile">addTasksValuesMobile</a></li><li><a href="global.html#addTaskToBoard">addTaskToBoard</a></li><li><a href="global.html#addUserColor">addUserColor</a></li><li><a href="global.html#closeFeedback">closeFeedback</a></li><li><a href="global.html#deleteTask">deleteTask</a></li><li><a href="global.html#desktopView">desktopView</a></li><li><a href="global.html#hTableBigger1000px">hTableBigger1000px</a></li><li><a href="global.html#hTableSmaller1000px">hTableSmaller1000px</a></li><li><a href="global.html#init">init</a></li><li><a href="global.html#mobielView">mobielView</a></li><li><a href="global.html#noTasksInArray">noTasksInArray</a></li><li><a href="global.html#renderBacklogTask">renderBacklogTask</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.7</a> on Fri Jan 14 2022 15:35:00 GMT+0100 (Mitteleuropäische Normalzeit)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>
