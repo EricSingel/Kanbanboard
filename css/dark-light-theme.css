@@ -176,7 +176,7 @@ p {
   z-index: 100;
   top: 1em;
   right: 1em;
-  color: white;
+  color: var(--foreground);
   border: 2px solid currentColor;
   padding: 4px;
   background: transparent;
@@ -199,6 +199,7 @@ p {
     position: fixed;
     top: 34px;
     right: 170px;
+    color: white;
   }
 
   .click-here {
