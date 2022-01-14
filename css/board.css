@@ -205,6 +205,11 @@ main {
   border-radius: 15px;
   height: 30vh;
   padding: 20px;
+  overflow: scroll;
+}
+
+.description-div::-webkit-scrollbar {
+  display: none;
 }
 
 .description-div p{
@@ -331,8 +336,11 @@ main {
   .description-div {
     width: 90%;
     margin-top: 50px;
-    height: 20%;
+    margin-bottom: 20px;
+    min-height: 15vh;
+    max-height: 15vh;
     word-wrap: break-word;
+    overflow: scroll;
   }
 
   .description-div p{
