@@ -104,7 +104,7 @@
     
 
     
-    <h4 class="name" id="addNewBacklogTR"><span class="type-signature"></span>addNewBacklogTR<span class="signature">(task, i)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="allowDrop"><span class="type-signature"></span>allowDrop<span class="signature">(ev)</span><span class="type-signature"></span></h4>
     
 
     
@@ -112,7 +112,7 @@
 
 
 <div class="description">
-    function to render a new task in a table row for desktopview
+    function that drops the task in the board field
 </div>
 
 
@@ -148,13 +148,13 @@
 
         <tr>
             
-                <td class="name"><code>task</code></td>
+                <td class="name"><code>ev</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">Object</span>
+<span class="param-type">*</span>
 
 
             
@@ -168,29 +168,6 @@
         </tr>
 
     
-
-        <tr>
-            
-                <td class="name"><code>i</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">number</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">is the index of the task in the tasks array</td>
-        </tr>
-
-    
     </tbody>
 </table>
 
@@ -228,7 +205,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="backlog.js.html">backlog.js</a>, <a href="backlog.js.html#line117">line 117</a>
+        <a href="board.js.html">board.js</a>, <a href="board.js.html#line241">line 241</a>
     </li></ul></dd>
     
 
@@ -264,7 +241,7 @@
     
 
     
-    <h4 class="name" id="addNewBacklogTRMobile"><span class="type-signature"></span>addNewBacklogTRMobile<span class="signature">(task, i)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="closeWholeTask"><span class="type-signature"></span>closeWholeTask<span class="signature">()</span><span class="type-signature"></span></h4>
     
 
     
@@ -272,7 +249,7 @@
 
 
 <div class="description">
-    function to render a new task in a table row for mobileview
+    this function closes the whole task with more information
 </div>
 
 
@@ -283,78 +260,6 @@
 
 
 
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>task</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Object</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>i</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">number</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">is the index of the task in the tasks array</td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
 
 
 
@@ -388,7 +293,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="backlog.js.html">backlog.js</a>, <a href="backlog.js.html#line258">line 258</a>
+        <a href="board.js.html">board.js</a>, <a href="board.js.html#line209">line 209</a>
     </li></ul></dd>
     
 
@@ -424,7 +329,7 @@
     
 
     
-    <h4 class="name" id="addTasksValues"><span class="type-signature"></span>addTasksValues<span class="signature">(task, i)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="deleteTask"><span class="type-signature">(async) </span>deleteTask<span class="signature">(i, event)</span><span class="type-signature"></span></h4>
     
 
     
@@ -432,327 +337,7 @@
 
 
 <div class="description">
-    function to put the values in the rendered table row at desktopview
-</div>
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>task</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Object</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>i</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">number</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">is the index of the task in the tasks array</td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="backlog.js.html">backlog.js</a>, <a href="backlog.js.html#line168">line 168</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-            
-
-    
-
-    
-    <h4 class="name" id="addTasksValuesMobile"><span class="type-signature"></span>addTasksValuesMobile<span class="signature">(task, i)</span><span class="type-signature"></span></h4>
-    
-
-    
-
-
-
-<div class="description">
-    function to put the values in the rendered table row at mobileview
-</div>
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>task</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Object</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>i</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">number</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">is the index of the task in the tasks array</td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="backlog.js.html">backlog.js</a>, <a href="backlog.js.html#line187">line 187</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-            
-
-    
-
-    
-    <h4 class="name" id="addTaskToBoard"><span class="type-signature">(async) </span>addTaskToBoard<span class="signature">(i)</span><span class="type-signature"></span></h4>
-    
-
-    
-
-
-
-<div class="description">
-    function to add the task to the board
+    Function to delete the asks in board
 </div>
 
 
@@ -804,7 +389,30 @@
 
             
 
-            <td class="description last">is the index of the task at the table</td>
+            <td class="description last">index to know which task should be deleted</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>event</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">*</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">this event is for the stopPropagation</td>
         </tr>
 
     
@@ -845,7 +453,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="backlog.js.html">backlog.js</a>, <a href="backlog.js.html#line224">line 224</a>
+        <a href="board.js.html">board.js</a>, <a href="board.js.html#line149">line 149</a>
     </li></ul></dd>
     
 
@@ -881,7 +489,7 @@
     
 
     
-    <h4 class="name" id="addUserColor"><span class="type-signature"></span>addUserColor<span class="signature">(task, i)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="generateTask"><span class="type-signature"></span>generateTask<span class="signature">(element, i)</span><span class="type-signature"></span></h4>
     
 
     
@@ -889,7 +497,7 @@
 
 
 <div class="description">
-    function to show the category with a color in a div
+    this function generates the task in the board secion
 </div>
 
 
@@ -925,13 +533,13 @@
 
         <tr>
             
-                <td class="name"><code>task</code></td>
+                <td class="name"><code>element</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">Object</span>
+<span class="param-type">object</span>
 
 
             
@@ -941,7 +549,7 @@
 
             
 
-            <td class="description last"></td>
+            <td class="description last">element is the variable in the showTasks() function</td>
         </tr>
 
     
@@ -964,7 +572,7 @@
 
             
 
-            <td class="description last">is the index of the task at the table</td>
+            <td class="description last">-</td>
         </tr>
 
     
@@ -1005,7 +613,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="backlog.js.html">backlog.js</a>, <a href="backlog.js.html#line240">line 240</a>
+        <a href="board.js.html">board.js</a>, <a href="board.js.html#line94">line 94</a>
     </li></ul></dd>
     
 
@@ -1041,7 +649,7 @@
     
 
     
-    <h4 class="name" id="closeFeedback"><span class="type-signature"></span>closeFeedback<span class="signature">()</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="highlight"><span class="type-signature"></span>highlight<span class="signature">(id)</span><span class="type-signature"></span></h4>
     
 
     
@@ -1049,95 +657,7 @@
 
 
 <div class="description">
-    function to close the feedback div
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="backlog.js.html">backlog.js</a>, <a href="backlog.js.html#line215">line 215</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-            
-
-    
-
-    
-    <h4 class="name" id="deleteTask"><span class="type-signature">(async) </span>deleteTask<span class="signature">(i)</span><span class="type-signature"></span></h4>
-    
-
-    
-
-
-
-<div class="description">
-    function to delete a task in the table
+    function that highlight the board field when you move the task over it
 </div>
 
 
@@ -1173,144 +693,7 @@
 
         <tr>
             
-                <td class="name"><code>i</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">number</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">is the index of the task at the table</td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="backlog.js.html">backlog.js</a>, <a href="backlog.js.html#line204">line 204</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-            
-
-    
-
-    
-    <h4 class="name" id="desktopView"><span class="type-signature"></span>desktopView<span class="signature">(headerTable)</span><span class="type-signature"></span></h4>
-    
-
-    
-
-
-
-<div class="description">
-    function to walk through the tasks array at change to desktopview
-</div>
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>headerTable</code></td>
+                <td class="name"><code>id</code></td>
             
 
             <td class="type">
@@ -1367,281 +750,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="backlog.js.html">backlog.js</a>, <a href="backlog.js.html#line54">line 54</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-            
-
-    
-
-    
-    <h4 class="name" id="hTableBigger1000px"><span class="type-signature"></span>hTableBigger1000px<span class="signature">(headerTable)</span><span class="type-signature"></span></h4>
-    
-
-    
-
-
-
-<div class="description">
-    function for the table tags at desktopview
-</div>
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>headerTable</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">HTMLElement</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="backlog.js.html">backlog.js</a>, <a href="backlog.js.html#line72">line 72</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-            
-
-    
-
-    
-    <h4 class="name" id="hTableSmaller1000px"><span class="type-signature"></span>hTableSmaller1000px<span class="signature">(headerTable)</span><span class="type-signature"></span></h4>
-    
-
-    
-
-
-
-<div class="description">
-    function for the table tags at mobileview
-</div>
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>headerTable</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">HTMLElement</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="backlog.js.html">backlog.js</a>, <a href="backlog.js.html#line87">line 87</a>
+        <a href="board.js.html">board.js</a>, <a href="board.js.html#line225">line 225</a>
     </li></ul></dd>
     
 
@@ -1685,7 +794,7 @@
 
 
 <div class="description">
-    Onload function
+    Onload async function
 </div>
 
 
@@ -1729,7 +838,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="backlog.js.html">backlog.js</a>, <a href="backlog.js.html#line7">line 7</a>
+        <a href="board.js.html">board.js</a>, <a href="board.js.html#line4">line 4</a>
     </li></ul></dd>
     
 
@@ -1765,7 +874,7 @@
     
 
     
-    <h4 class="name" id="mobielView"><span class="type-signature"></span>mobielView<span class="signature">(headerTable)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="moveTo"><span class="type-signature"></span>moveTo<span class="signature">(status)</span><span class="type-signature"></span></h4>
     
 
     
@@ -1773,7 +882,7 @@
 
 
 <div class="description">
-    function to render new headertable at change to mobileview
+    this function moves the task to the right state
 </div>
 
 
@@ -1809,13 +918,13 @@
 
         <tr>
             
-                <td class="name"><code>headerTable</code></td>
+                <td class="name"><code>status</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">HTMLElement</span>
+<span class="param-type">Parameters</span>
 
 
             
@@ -1825,7 +934,7 @@
 
             
 
-            <td class="description last">is the table to describe the tasks</td>
+            <td class="description last">the state of the board fields: todo, inprogress, testing and done</td>
         </tr>
 
     
@@ -1866,7 +975,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="backlog.js.html">backlog.js</a>, <a href="backlog.js.html#line38">line 38</a>
+        <a href="board.js.html">board.js</a>, <a href="board.js.html#line249">line 249</a>
     </li></ul></dd>
     
 
@@ -1902,7 +1011,7 @@
     
 
     
-    <h4 class="name" id="noTasksInArray"><span class="type-signature"></span>noTasksInArray<span class="signature">(tasksTable, headerTable)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="paintTasks"><span class="type-signature"></span>paintTasks<span class="signature">(i)</span><span class="type-signature"></span></h4>
     
 
     
@@ -1910,7 +1019,7 @@
 
 
 <div class="description">
-    function to render view if no tasks available
+    function that paint the color div
 </div>
 
 
@@ -1946,13 +1055,13 @@
 
         <tr>
             
-                <td class="name"><code>tasksTable</code></td>
+                <td class="name"><code>i</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">HTMLElement</span>
+<span class="param-type">number</span>
 
 
             
@@ -1962,14 +1071,128 @@
 
             
 
-            <td class="description last"></td>
+            <td class="description last">the index of the task</td>
         </tr>
 
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="board.js.html">board.js</a>, <a href="board.js.html#line69">line 69</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="removeHighlight"><span class="type-signature"></span>removeHighlight<span class="signature">(id)</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    function that remove the highlight from the board field when you take the mouse from the board
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
     
 
         <tr>
             
-                <td class="name"><code>headerTable</code></td>
+                <td class="name"><code>id</code></td>
             
 
             <td class="type">
@@ -2026,7 +1249,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="backlog.js.html">backlog.js</a>, <a href="backlog.js.html#line101">line 101</a>
+        <a href="board.js.html">board.js</a>, <a href="board.js.html#line233">line 233</a>
     </li></ul></dd>
     
 
@@ -2062,7 +1285,7 @@
     
 
     
-    <h4 class="name" id="renderBacklogTask"><span class="type-signature"></span>renderBacklogTask<span class="signature">()</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="showTasks"><span class="type-signature"></span>showTasks<span class="signature">()</span><span class="type-signature"></span></h4>
     
 
     
@@ -2070,7 +1293,7 @@
 
 
 <div class="description">
-    function to render new Tasks in Desktopview
+    Function to filter the state and show the task
 </div>
 
 
@@ -2114,7 +1337,369 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="backlog.js.html">backlog.js</a>, <a href="backlog.js.html#line16">line 16</a>
+        <a href="board.js.html">board.js</a>, <a href="board.js.html#line15">line 15</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="showWholeTask"><span class="type-signature"></span>showWholeTask<span class="signature">()</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    function that shows the whole task with more informaton
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="board.js.html">board.js</a>, <a href="board.js.html#line202">line 202</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="startDragging"><span class="type-signature"></span>startDragging<span class="signature">(id)</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    function to move the task
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>id</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">HTMLElement</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="board.js.html">board.js</a>, <a href="board.js.html#line217">line 217</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="wholeTask"><span class="type-signature"></span>wholeTask<span class="signature">(i)</span><span class="type-signature"></span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    this function opens the task with more details
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>i</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">index to know whick task should be opened</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="board.js.html">board.js</a>, <a href="board.js.html#line160">line 160</a>
     </li></ul></dd>
     
 
@@ -2160,13 +1745,13 @@
 </div>
 
 <nav>
-    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#addNewBacklogTR">addNewBacklogTR</a></li><li><a href="global.html#addNewBacklogTRMobile">addNewBacklogTRMobile</a></li><li><a href="global.html#addTasksValues">addTasksValues</a></li><li><a href="global.html#addTasksValuesMobile">addTasksValuesMobile</a></li><li><a href="global.html#addTaskToBoard">addTaskToBoard</a></li><li><a href="global.html#addUserColor">addUserColor</a></li><li><a href="global.html#closeFeedback">closeFeedback</a></li><li><a href="global.html#deleteTask">deleteTask</a></li><li><a href="global.html#desktopView">desktopView</a></li><li><a href="global.html#hTableBigger1000px">hTableBigger1000px</a></li><li><a href="global.html#hTableSmaller1000px">hTableSmaller1000px</a></li><li><a href="global.html#init">init</a></li><li><a href="global.html#mobielView">mobielView</a></li><li><a href="global.html#noTasksInArray">noTasksInArray</a></li><li><a href="global.html#renderBacklogTask">renderBacklogTask</a></li></ul>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#allowDrop">allowDrop</a></li><li><a href="global.html#closeWholeTask">closeWholeTask</a></li><li><a href="global.html#deleteTask">deleteTask</a></li><li><a href="global.html#generateTask">generateTask</a></li><li><a href="global.html#highlight">highlight</a></li><li><a href="global.html#init">init</a></li><li><a href="global.html#moveTo">moveTo</a></li><li><a href="global.html#paintTasks">paintTasks</a></li><li><a href="global.html#removeHighlight">removeHighlight</a></li><li><a href="global.html#showTasks">showTasks</a></li><li><a href="global.html#showWholeTask">showWholeTask</a></li><li><a href="global.html#startDragging">startDragging</a></li><li><a href="global.html#wholeTask">wholeTask</a></li></ul>
 </nav>
 
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.7</a> on Fri Jan 14 2022 15:35:00 GMT+0100 (Mitteleuropäische Normalzeit)
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.7</a> on Sat Jan 15 2022 10:26:36 GMT+0100 (Mitteleuropäische Normalzeit)
 </footer>
 
 <script> prettyPrint(); </script>
