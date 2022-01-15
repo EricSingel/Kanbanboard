@@ -1,3 +1,6 @@
+/**
+ * Onload function
+ */
 async function init() {
   await load();
   includeHTML();
@@ -5,6 +8,9 @@ async function init() {
 
 TheUsersOfTheTask = {};
 
+/**
+ * function to empty all input fields when the user clicks the "cancel" button
+ */
 function eraseTask() {
   document.getElementById('title').value = '';
   document.getElementById('date').value = '';
@@ -14,13 +20,15 @@ function eraseTask() {
   document.getElementById('userImages').innerHTML = '';
 }
 
+/**
+ * function to create a new task and send the user to the "backlog" section once the "create task" button is clicked
+ */
 async function addTask() {
   let title = document.getElementById('title').value;
   let date = document.getElementById('date').value;
   let category = document.getElementById('category').value;
   let urgency = document.getElementById('urgency').value;
   let description = document.getElementById('description').value;
-  // let user = TheUsersOfTheTask[TheUsersOfTheTask.length - 1];
   let task = {
     title: title,
     date: date,
@@ -44,6 +52,9 @@ async function addTask() {
   window.location = 'backlog.html';
 }
 
+/**
+ * function to display the available users to whom the user can assign the new task
+ */
 function showUsers() {
   let userSelectMenu = document.getElementById('userSelectMenu');
   let userSelect = document.getElementById('userSelect');
@@ -61,6 +72,9 @@ function showUsers() {
   }
 }
 
+/**
+ * function to add the selected user to the "assigned to" area
+ */
 function addUserToTask(i) {
   let userSelectMenu = document.getElementById('userSelectMenu');
   let userImages = document.getElementById('userImages');

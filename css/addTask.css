@@ -216,6 +216,7 @@ body {
     top: auto;
     bottom: 0;
   }
+
   .userSelectOpen {
     clip-path: circle(150% at 100% 100%);
     background: linear-gradient(
@@ -233,9 +234,11 @@ body {
     width: 50%;
     background-color: var(--background-navbar);
   }
+
   .btns-container button:first-child {
     border-right: 4px solid white;
   }
+  
   .btns-container button:last-child {
     border-left: 4px solid white;
   }
