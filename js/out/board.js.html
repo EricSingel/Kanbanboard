@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: board.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: board.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * Onload async function
+ */
+async function init() {
+  await load();
+  includeHTML();
+  showTasks();
+}
+
+let currentDragged;
+
+/**
+ * Function to filter the state and show the task
+ */
+function showTasks() {
+  let ToDoTask = tasks.filter((t) => t['status'] == 'ToDo');
+  document.getElementById('ToDo').innerHTML = '';
+
+  for (let i = 0; i &lt; ToDoTask.length; i++) {
+    const element = ToDoTask[i];
+    document.getElementById('ToDo').innerHTML += generateTask(
+      element,
+      element.id
+    );
+    paintTasks(element.id);
+  }
+
+  let inProgressTask = tasks.filter((t) => t['status'] == 'inProgress');
+  document.getElementById('inProgress').innerHTML = '';
+
+  for (let i = 0; i &lt; inProgressTask.length; i++) {
+    const element = inProgressTask[i];
+    document.getElementById('inProgress').innerHTML += generateTask(
+      element,
+      element.id
+    );
+    paintTasks(element.id);
+  }
+
+  let testingTask = tasks.filter((t) => t['status'] == 'Testing');
+  document.getElementById('Testing').innerHTML = '';
+
+  for (let i = 0; i &lt; testingTask.length; i++) {
+    const element = testingTask[i];
+    document.getElementById('Testing').innerHTML += generateTask(
+      element,
+      element.id
+    );
+    paintTasks(element.id);
+  }
+
+  let doneTask = tasks.filter((t) => t['status'] == 'Done');
+  document.getElementById('Done').innerHTML = '';
+
+  for (let i = 0; i &lt; doneTask.length; i++) {
+    const element = doneTask[i];
+    document.getElementById('Done').innerHTML += generateTask(
+      element,
+      element.id
+    );
+    paintTasks(element.id);
+  }
+}
+
+/**
+ * function that paint the color div
+ * @param {number} i - the index of the task
+ */
+function paintTasks(i) {
+  if (tasks[i].status == 'ToDo') {
+    document.getElementById('color-line' + i).classList.add('blue');
+  }
+
+  if (tasks[i].status == 'inProgress') {
+    document.getElementById('color-line' + i).classList.add('yellow');
+  }
+
+  if (tasks[i].status == 'Done') {
+    document.getElementById('color-line' + i).classList.add('green');
+  }
+
+  if (tasks[i].status == 'Testing') {
+    document.getElementById('color-line' + i).classList.add('red');
+  }
+}
+
+/**
+ * this function generates the task in the board secion
+ * 
+ * @param {object} element - element is the variable in the showTasks() function
+ * @param {number} i - 
+ * 
+ */
+function generateTask(element, i) {
+  return `
+    &lt;div class="taskDiv" onclick="wholeTask(${i})" id="allTasks" ondragstart="startDragging(${element['id']})" draggable="true">
+        &lt;div id="color-line${i}" class="color-line">&lt;/div>
+        &lt;p class="title">${element['title']}&lt;/p>
+            &lt;div class="person-info">
+                &lt;img src="${element.user.img}">
+                &lt;p>${element.user.name}&lt;/p>
+            &lt;/div>
+        &lt;button onclick="deleteTask(${i}, event)">Delete&lt;/button>
+        &lt;select name="state${i}" id="state${i}" class="dropdown-state" onclick="stopPropogation(event)" onchange="switchState(this, ${i})">
+          &lt;option hidden value="" selected>&lt;/option>
+          &lt;option id="todoOpt" value="ToDo">ToDo&lt;/option>
+          &lt;option id="inprogOpt" value="inProgress">InProgress&lt;/option>
+          &lt;option id="testOpt" value="Testing">Testing&lt;/option>
+          &lt;option id="doneOpt" value="Done">Done&lt;/option>
+      &lt;/select>
+    &lt;/div>`;
+}
+
+function stopPropogation(e) {
+  e.stopPropagation();
+}
+
+async function switchState(selOption, taskId) {
+  let dropdownState = selOption.value;
+  console.log(dropdownState);
+
+  tasks[taskId].status = dropdownState;
+  showTasks();
+  // switch (dropdownState) {
+  //   case 'ToDo':
+  //     document.getElementById('todoOpt').selected = 'true';
+  //     break;
+  //   case 'inProgress':
+  //     document.getElementById('inprogOpt').selected = 'true';
+  //     document.getElementById('todoOpt').selected = 'false';
+  //     break;
+  //   case 'Testing':
+  //     document.getElementById('testOpt').selected = 'true';
+  //     document.getElementById('todoOpt').selected = 'false';
+  //     break;
+  //   case 'Done':
+  //     document.getElementById('doneOpt').selected = 'true';
+  //     document.getElementById('todoOpt').selected = 'false';
+  //     break;
+  // }
+  await save();
+}
+
+/**
+ * Function to delete the asks in board
+ * @param {number} i - index to know which task should be deleted
+ * @param {*} event - this event is for the stopPropagation
+ */
+async function deleteTask(i, event) {
+  event.stopPropagation();
+  tasks.splice(i, 1);
+  await save();
+  showTasks();
+}
+
+/**
+ * this function opens the task with more details
+ * @param {number} i - index to know whick task should be opened
+ */
+function wholeTask(i) {
+  document.getElementById('taskBigger').innerHTML = '';
+  const task = tasks[i];
+  for (let i = 0; i &lt; tasks.length; i++) {
+    document.getElementById('taskBigger').innerHTML = `
+    &lt;div class="biggerTask">
+      &lt;div class="close-whole-task">
+        &lt;button onclick="closeWholeTask()">Close&lt;/button>
+      &lt;/div>
+    
+      &lt;div class="task-title-div">
+        &lt;h2>Title&lt;/h2>
+        &lt;p>${task['title']}&lt;/p>
+      &lt;/div>
+
+    &lt;div class="user-div-and-description-div">
+      &lt;div class="user-div">
+        &lt;h2>Assigned to&lt;/h2>
+          &lt;div class="user-div-person">
+          &lt;img src="${task.user.img}">
+        &lt;p>${task.user.name}&lt;/p>
+      &lt;/div>  
+         
+      &lt;/div> 
+
+      &lt;div class="description-div">
+          &lt;h2>Description&lt;/h2>
+          &lt;p>${task['description']}&lt;/p>
+      &lt;/div>
+    &lt;/div>
+    
+      
+    &lt;/div>
+    `;
+  }
+
+  showWholeTask();
+}
+
+/**
+ * function that shows the whole task with more informaton
+ */
+function showWholeTask() {
+  document.getElementById('taskBigger').classList.add('transform-task');
+}
+
+/**
+ *this function closes the whole task with more information 
+ */
+function closeWholeTask() {
+  document.getElementById('taskBigger').classList.remove('transform-task');
+}
+
+/**
+ * function to move the task
+ * @param {HTMLElement} id 
+ */
+function startDragging(id) {
+  currentDragged = id;
+}
+
+/**
+ * function that highlight the board field when you move the task over it
+ * @param {HTMLElement} id 
+ */
+function highlight(id) {
+  document.getElementById(id).classList.add('background-fields-highlight');
+}
+
+/**
+ * function that remove the highlight from the board field when you take the mouse from the board
+ * @param {HTMLElement} id 
+ */
+function removeHighlight(id) {
+  document.getElementById(id).classList.remove('background-fields-highlight');
+}
+
+/**
+ * function that drops the task in the board field
+ * @param {*} ev 
+ */
+function allowDrop(ev) {
+  ev.preventDefault();
+}
+
+/**
+ * this function moves the task to the right state
+ * @param {Parameters} status - the state of the board fields: todo, inprogress, testing and done
+ */
+function moveTo(status) {
+  tasks[currentDragged]['status'] = status;
+  showTasks();
+  save();
+}
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#allowDrop">allowDrop</a></li><li><a href="global.html#closeWholeTask">closeWholeTask</a></li><li><a href="global.html#deleteTask">deleteTask</a></li><li><a href="global.html#generateTask">generateTask</a></li><li><a href="global.html#highlight">highlight</a></li><li><a href="global.html#init">init</a></li><li><a href="global.html#moveTo">moveTo</a></li><li><a href="global.html#paintTasks">paintTasks</a></li><li><a href="global.html#removeHighlight">removeHighlight</a></li><li><a href="global.html#showTasks">showTasks</a></li><li><a href="global.html#showWholeTask">showWholeTask</a></li><li><a href="global.html#startDragging">startDragging</a></li><li><a href="global.html#wholeTask">wholeTask</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.7</a> on Sat Jan 15 2022 17:05:55 GMT+0100 (Mitteleuropäische Normalzeit)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

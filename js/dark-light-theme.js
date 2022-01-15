@@ -3,6 +3,9 @@ let darkMode = localStorage.getItem('darkMode');
 
 const darkModeToggle = document.getElementById('dark-mode-toggle');
 
+/**
+ * function that enable and disable the dark/light mode 
+ */
 function enableDarkMode() {
     // 1. Add the class to the body
     document.body.classList.add('darkmode');
@@ -11,7 +14,9 @@ function enableDarkMode() {
 }
 
 const disableDarkMode = () => {
-  // 1. Remove the class from the body
+  /**
+   * Remove the class from the body
+   */
   document.body.classList.remove('darkmode');
   // 2. Update darkMode in localStorage 
   localStorage.setItem('darkMode', null);
