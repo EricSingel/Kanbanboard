@@ -218,14 +218,26 @@ function startDragging(id) {
   currentDragged = id;
 }
 
+/**
+ * function that highlight the board field when you move the task over it
+ * @param {HTMLElement} id 
+ */
 function highlight(id) {
   document.getElementById(id).classList.add('background-fields-highlight');
 }
 
+/**
+ * function that remove the highlight from the board field when you take the mouse from the board
+ * @param {HTMLElement} id 
+ */
 function removeHighlight(id) {
   document.getElementById(id).classList.remove('background-fields-highlight');
 }
 
+/**
+ * function that drops the task in the board field
+ * @param {*} ev 
+ */
 function allowDrop(ev) {
   ev.preventDefault();
 }
