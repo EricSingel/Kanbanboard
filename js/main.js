@@ -26,7 +26,10 @@ let loggedInUser = {};
 
 let tasks = [];
 
-//FUNCTION TO INCLUDE HTML FILES
+/**FUNCTION TO INCLUDE HTML FILES
+ *
+ *
+ */
 
 function includeHTML() {
   var z, i, elmnt, file, xhttp;
@@ -61,16 +64,31 @@ function includeHTML() {
   navStyle();
 }
 
+/**
+ * function to save the logged in user on the server
+ *
+ * @param {Array} user
+ */
 async function saveUserLoggedIn(user) {
   await backend.setItem('loggedUser', JSON.stringify(user));
   // let usersAsText = JSON.stringify(users);
   // localStorage.setItem('users', usersAsText);
 }
+
+/**
+ * function to save the users array on the server
+ *
+ * @param {Array} user
+ */
 async function saveUsers() {
   await backend.setItem('users', JSON.stringify(users));
   // let usersAsText = JSON.stringify(users);
   // localStorage.setItem('users', usersAsText);
 }
+
+/**
+ * function to save the tasks on the server
+ */
 async function save() {
   await saveUsers();
   await backend.setItem('tasks', JSON.stringify(tasks));
@@ -80,6 +98,10 @@ async function save() {
   await load();
 }
 
+/**
+ * function to load the tasks from the server
+ * and give every task a id
+ */
 async function load() {
   await downloadFromServer();
   users = (await JSON.parse(backend.getItem('users'))) || [];
@@ -95,12 +117,9 @@ async function load() {
   }
 }
 
-async function loadAtAddTask() {
-  await downloadFromServer();
-  users = (await JSON.parse(backend.getItem('users'))) || [];
-  loggedInUser = (await JSON.parse(backend.getItem('loggedUser'))) || {};
-}
-
+/**
+ * function to style the navbar so you see on which page you are
+ */
 function navStyle() {
   if (window.location.pathname == '/Kanbanboard/addTask.html') {
     document.getElementById('addTask').classList.add('a-highlight');
@@ -117,6 +136,9 @@ function navStyle() {
   }
 }
 
+/**
+ * function to remove an error if no userImg can be found
+ */
 function loggedInUserImg() {
   let loggedUser = document.getElementById('loggedUser');
   try {
