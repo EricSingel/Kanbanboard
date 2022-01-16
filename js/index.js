@@ -1,3 +1,6 @@
+/**
+ * If the user logs in with a username and password stored in the application, this function allows him/her to enter and use the application as user X and not as a guest.
+ */
 async function login() {
   await saveUsers();
 

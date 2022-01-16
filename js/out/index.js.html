@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Home</title>
+    <title>JSDoc: Source: index.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,32 +17,34 @@
 
 <div id="main">
 
-    <h1 class="page-title">Home</h1>
+    <h1 class="page-title">Source: index.js</h1>
 
     
 
 
 
     
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * If the user logs in with a username and password stored in the application, this function allows him/her to enter and use the application as user X and not as a guest.
+ */
+async function login() {
+  await saveUsers();
 
-
-    <h3> </h3>
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
+  let name = document.getElementById('name').value;
+  let email = document.getElementById('email').value;
+  for (let i = 0; i &lt; users.length; i++) {
+    const user = users[i];
+    if (name == user.name &amp;&amp; email == user.email) {
+      saveUserLoggedIn(user);
+    }
+  }
+  window.location = 'addTask.html';
+}
+</code></pre>
+        </article>
+    </section>
 
 
 
