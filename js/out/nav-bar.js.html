@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Home</title>
+    <title>JSDoc: Source: nav-bar.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,32 +17,53 @@
 
 <div id="main">
 
-    <h1 class="page-title">Home</h1>
+    <h1 class="page-title">Source: nav-bar.js</h1>
 
     
 
 
 
     
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * Changes the menu icon when the user clicks on it.
+ */
+function menuOpen() {
+  let menu = document.getElementById('menuLinks');
+  let menuImg = document.getElementById('menuImg');
 
-
-    <h3> </h3>
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
+  menu.classList.toggle('menu-links-open');
+  if (
+    menuImg.src ==
+    'http://gruppe-141.developerakademie.net/Kanbanboard/assets/img/menu-4-32.ico'
+  ) {
+    menuImg.src =
+      'http://gruppe-141.developerakademie.net/Kanbanboard/assets/img/x-mark-32.ico';
+  } else {
+    menuImg.src =
+      'http://gruppe-141.developerakademie.net/Kanbanboard/assets/img/menu-4-32.ico';
+  }
+}
+/**
+ * Displays vertical menu when the user clicks on the menu icon.
+ */
+window.addEventListener('mouseup', function (event) {
+  let menu = document.getElementById('menuLinks');
+  let menuBtn = document.getElementById('menuImg');
+  if (
+    event.target != menu &amp;&amp;
+    event.target.parentNode != menu &amp;&amp;
+    event.target != menuBtn
+  ) {
+    menu.classList.remove('menu-links-open');
+    menuBtn.src =
+      'http://gruppe-141.developerakademie.net/Kanbanboard/assets/img/menu-4-32.ico';
+  }
+});
+</code></pre>
+        </article>
+    </section>
 
 
 
