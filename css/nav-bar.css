@@ -34,8 +34,8 @@
   cursor: pointer;
 }
 .profile-img {
-  height: 60px;
-  width: 60px;
+  height: 40px;
+  width: 40px;
   margin-top: 20px;
   border-radius: 50%;
   object-fit: cover;
@@ -90,26 +90,27 @@
 
 .menu-links {
   position: absolute;
-  right: 0;
   top: 0;
-  min-height: min-content;
-  min-width: 200px;
+  right: 0;
+  width: 100%;
+  height: 100vh;
   background-color: rgb(255, 255, 255);
-  box-shadow: 5px 5px 10px rgb(0 0 0 / 20%);
-  transition: ease-in-out 225ms;
   padding-top: 5em;
   padding-bottom: 1em;
   display: flex;
   flex-direction: column;
   align-items: center;
   z-index: 998;
-  border-radius: 10px;
-  clip-path: circle(0% at 100% 0%);
+  clip-path: circle(0px at 4.7% 4.5%);
+  -webkit-clip-path: circle(0px at 95% 5%);
+  transition: ease-out 0.5s;
   background-color: var(--background-navbar);
 }
 
 .menu-links-open {
-  clip-path: circle(150% at 100% 0%);
+  clip-path:circle(850px at 0% 0%);
+  -webkit-clip-path:circle(850px at 100% 0%);
+  width: 100%;
 }
 
 .imp-priv-links {
@@ -157,7 +158,7 @@
 
   .logo-img {
     margin-top: 0;
-    height: 60px;
+    height: 50px;
   }
 
   .logo-div {
