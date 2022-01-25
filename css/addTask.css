@@ -209,7 +209,7 @@ body {
   object-fit: cover;
 }
 
-@media all and (max-width: 1000px) {
+@media all and (max-width: 1024px) {
   .users-menu {
     clip-path: circle(52px at 100% 100%);
     flex-direction: column-reverse;
@@ -238,7 +238,7 @@ body {
   .btns-container button:first-child {
     border-right: 4px solid white;
   }
-  
+
   .btns-container button:last-child {
     border-left: 4px solid white;
   }

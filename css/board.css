@@ -212,7 +212,7 @@ main {
   display: none;
 }
 
-.description-div p{
+.description-div p {
   word-break: break-word;
   text-align: center;
 }
@@ -250,7 +250,7 @@ main {
   display: none;
 }
 
-@media all and (max-width: 1000px) {
+@media all and (max-width: 1024px) {
   .board-fields {
     display: flex;
     flex-direction: column;
@@ -272,7 +272,7 @@ main {
     font-size: 100%;
   }
 
-  .task-title-div p{
+  .task-title-div p {
     font-size: 20px;
   }
 
@@ -344,22 +344,22 @@ main {
     overflow: scroll;
   }
 
-  .description-div p{
+  .description-div p {
     word-break: break-word;
     text-align: center;
   }
 
-  .person-info{
+  .person-info {
     margin-top: 5px;
     width: 80%;
   }
 
-  .person-info p{
+  .person-info p {
     font-size: 12.5px;
     line-height: 15px;
   }
 
-  .taskDiv button{
+  .taskDiv button {
     font-size: 7.5px;
   }
 
