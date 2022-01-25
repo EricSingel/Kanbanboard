@@ -86,10 +86,10 @@ function paintTasks(i) {
 
 /**
  * this function generates the task in the board secion
- * 
+ *
  * @param {object} element - element is the variable in the showTasks() function
- * @param {number} i - 
- * 
+ * @param {number} i -
+ *
  */
 function generateTask(element, i) {
   return `
@@ -121,23 +121,6 @@ async function switchState(selOption, taskId) {
 
   tasks[taskId].status = dropdownState;
   showTasks();
-  // switch (dropdownState) {
-  //   case 'ToDo':
-  //     document.getElementById('todoOpt').selected = 'true';
-  //     break;
-  //   case 'inProgress':
-  //     document.getElementById('inprogOpt').selected = 'true';
-  //     document.getElementById('todoOpt').selected = 'false';
-  //     break;
-  //   case 'Testing':
-  //     document.getElementById('testOpt').selected = 'true';
-  //     document.getElementById('todoOpt').selected = 'false';
-  //     break;
-  //   case 'Done':
-  //     document.getElementById('doneOpt').selected = 'true';
-  //     document.getElementById('todoOpt').selected = 'false';
-  //     break;
-  // }
   await save();
 }
 
@@ -204,7 +187,7 @@ function showWholeTask() {
 }
 
 /**
- *this function closes the whole task with more information 
+ *this function closes the whole task with more information
  */
 function closeWholeTask() {
   document.getElementById('taskBigger').classList.remove('transform-task');
@@ -212,7 +195,7 @@ function closeWholeTask() {
 
 /**
  * function to move the task
- * @param {HTMLElement} id 
+ * @param {HTMLElement} id
  */
 function startDragging(id) {
   currentDragged = id;
@@ -220,7 +203,7 @@ function startDragging(id) {
 
 /**
  * function that highlight the board field when you move the task over it
- * @param {HTMLElement} id 
+ * @param {HTMLElement} id
  */
 function highlight(id) {
   document.getElementById(id).classList.add('background-fields-highlight');
@@ -228,7 +211,7 @@ function highlight(id) {
 
 /**
  * function that remove the highlight from the board field when you take the mouse from the board
- * @param {HTMLElement} id 
+ * @param {HTMLElement} id
  */
 function removeHighlight(id) {
   document.getElementById(id).classList.remove('background-fields-highlight');
@@ -236,7 +219,7 @@ function removeHighlight(id) {
 
 /**
  * function that drops the task in the board field
- * @param {*} ev 
+ * @param {*} ev
  */
 function allowDrop(ev) {
   ev.preventDefault();

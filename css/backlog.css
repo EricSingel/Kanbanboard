@@ -62,7 +62,7 @@ table th:nth-child(2) {
   overflow: hidden;
 }
 .task-row td:last-child {
-  width: 10%;
+  width: 13%;
   border-radius: 0 16px 16px 0;
 }
 
@@ -76,6 +76,7 @@ table th:nth-child(2) {
   border: none;
   outline: none;
   background-color: #d7dde4;
+  margin-right: 8px;
 }
 
 .user-container {
@@ -165,6 +166,52 @@ table th:nth-child(2) {
 
 .highlight {
   box-shadow: 0px 0px 2px 5px rgb(0 0 205);
+}
+
+.tooltip {
+  display: none;
+  width: max-content;
+  height: auto;
+  padding: 4px;
+  border-radius: 8px;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.tt-add {
+  display: block !important;
+  position: absolute;
+  bottom: -40px;
+  right: 28px;
+  color: var(--text-color);
+  animation: 225ms ease-in-out show;
+}
+
+.tt-hide-animation {
+  animation: 225ms ease-in-out hide;
+}
+
+.tt-delete {
+  display: block !important;
+  position: absolute;
+  bottom: -40px;
+  right: 0.5%;
+  color: var(--text-color);
+  animation: 225ms ease-in-out show;
+}
+
+.btn-container {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+}
+
+@keyframes show {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
 }
 
 @media all and (max-width: 1000px) {

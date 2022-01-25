@@ -43,7 +43,7 @@ async function addTask() {
     Object.keys(task.user).length === 0 &&
     task.user.constructor === Object
   ) {
-    alert('Please assigne a user to the task!');
+    alert('Please assign a user to the task!');
     return;
   }
   tasks.push(task);
@@ -74,7 +74,7 @@ function showUsers() {
 
 /**
  * Function to add the selected user to the "assigned to" area
- * 
+ *
  * @param {number} i - This is the index of the user
  */
 function addUserToTask(i) {
@@ -85,5 +85,3 @@ function addUserToTask(i) {
   userSelectMenu.classList.remove('userSelectOpen');
   userImages.innerHTML = `<img src="${users[i].img}" />`;
 }
-
-

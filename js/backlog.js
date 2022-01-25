@@ -151,12 +151,43 @@ function addNewBacklogTR(task, i) {
   `;
 
   cell4.innerHTML = `
-  <button onclick="addTaskToBoard(${i})" class="bl-btn"><img title="Add to Board" src='assets/img/analysis.png'></button>
-  <button onclick="deleteTask(${i})" class="bl-btn"><img title="Delete" src='assets/img/bin.png'></button>
+  <div class="btn-container">
+  <button  onclick="addTaskToBoard(${i})" class="bl-btn"><img id="btnAdd" class="img-add" src='assets/img/analysis.png'></button>
+  <div id="ttAdd" class="tooltip">Add to Board</div>
+  <button id="btnDelete" onclick="deleteTask(${i})" class="bl-btn"><img class="img-delete" src='assets/img/bin.png'></button>
+  <div id="ttDelete" class="tooltip">Delete</div>
+  </div>
   `;
 
   addTasksValues(task, i);
   addUserColor(task, i);
+  addTooltip();
+}
+
+function addTooltip() {
+  let btnAdd = document.getElementById('btnAdd');
+  let ttAdd = document.getElementById('ttAdd');
+  let btnDelete = document.getElementById('btnDelete');
+  let ttDelete = document.getElementById('ttDelete');
+  btnAdd.addEventListener('mouseover', showTooltip);
+  btnAdd.addEventListener('mouseout', hideTooltip);
+  btnDelete.addEventListener('mouseover', showTooltip1);
+  btnDelete.addEventListener('mouseout', hideTooltip1);
+  function showTooltip() {
+    ttAdd.classList.add('tt-add');
+  }
+
+  function hideTooltip() {
+    ttAdd.classList.remove('tt-add');
+  }
+
+  function showTooltip1() {
+    ttDelete.classList.add('tt-delete');
+  }
+
+  function hideTooltip1() {
+    ttDelete.classList.remove('tt-delete');
+  }
 }
 
 /**
