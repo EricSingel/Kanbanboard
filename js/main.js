@@ -133,6 +133,10 @@ function navStyle() {
   } else if (window.location.pathname == '/Kanbanboard/help.html') {
     document.getElementById('help').classList.add('a-highlight');
     loggedInUserImg();
+  } else if (window.location.pathname == '/Kanbanboard/imprint.html') {
+    loggedInUserImg();
+  } else if (window.location.pathname == '/Kanbanboard/privacy.html') {
+    loggedInUserImg();
   }
 }
 
