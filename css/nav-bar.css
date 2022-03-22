@@ -40,6 +40,7 @@
   border-radius: 50%;
   object-fit: cover;
   border: 2px solid white;
+  margin-right: -20px;
 }
 
 .profile-img-container {
@@ -142,6 +143,7 @@
   .menu-img {
     display: flex;
     cursor: pointer;
+    width: 25px;
   }
 
   .profile-img {
@@ -158,7 +160,7 @@
 
   .logo-img {
     margin-top: 0;
-    height: 50px;
+    height: 40px;
   }
 
   .logo-div {

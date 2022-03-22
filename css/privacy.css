@@ -3,6 +3,10 @@
   padding: 24px;
 }
 
+a{
+  color: grey;
+}
+
 @media all and (max-width: 1024px) {
   .privacy {
     margin: 24px;

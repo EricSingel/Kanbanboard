@@ -112,6 +112,21 @@ th {
   color: var(--backlog-text) !important;
 }
 
+.whole-form input{
+  background: var(--background) !important;
+  color: var(--foreground);
+}
+
+.whole-form select{
+  background: var(--background) !important;
+  color: var(--foreground);
+}
+
+.whole-form textarea{
+  background: var(--background) !important;
+  color: var(--foreground);
+}
+
 .email {
   color: var(--backlog-text) !important;
 }
@@ -194,11 +209,14 @@ p {
   top: 3em;
 }
 
-@media all and (max-width: 1000px) {
+@media all and (max-width: 1024px) {
   .dark-mode-toggle {
+    display: flex;
+    width: 25px;
+    height: 25px;
     position: fixed;
     top: 34px;
-    right: 170px;
+    right: 150px;
     color: white;
   }
 
